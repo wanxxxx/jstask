@@ -1,8 +1,5 @@
-function tiao() {
-	window.open('../task2.html');
-}
-
-function arra(m) { //0-m的随机排列数组
+window.onload=function(){
+function arra(m) {
 	var arr = new Array(m);
 	arr[0] = 0;
 	for (var i = 1; i < m; i++) {
@@ -12,34 +9,49 @@ function arra(m) { //0-m的随机排列数组
 	}
 	return arr;
 }
-var arr2 = document.getElementsByName('unknown'); //将name为unknown的元素组成一个集合
 
-function checkField(val) {
-	var arr1 = arra(val);
-	if (val >= 6 && val <= 18) {
-		civilian.value = val - killer.value;
-	} else {
-		alert("请输入正确数字")
-	}
-	for (i = 0; i < val; i++) { //全赋予平民
-		arr2[arr1[i]].value = "1";
-	}
-	if (val >= 6 && val <= 8) {
-		killer.value = 1;
-	} else if (val >= 9 && val <= 11) {
-		killer.value = 2;
-	} else if (val >= 12 && val <= 15) {
-		killer.value = 3;
-	} else if (val >= 16 && val <= 18) {
-		killer.value = 4;
-	} else {
-		alert("请输入正确数字")
-	}
-	for (i = 0; i < val; i++) { //全赋予平民
-		arr2[arr1[i]].value = "";
-	}
-	for (i = 0; i < killer.value; i++) { //随机赋予杀手
-		arr2[arr1[i]].value = "杀手";
-	}
 
+
+var div = document.getElementsByTagName('div');
+var start;
+start = document.getElementById('sss');
+var end;
+end = document.getElementById('eee');
+var all;
+start.onclick = function() { //点击开始
+	clearInterval(all);
+	all = setInterval(function() {
+		var arr1 = arra(8);
+		//随机颜色
+		var colornum1 = '#' + ('00000' + (Math.random() * 0x1000000 << 0).toString(16)).substr(-6);
+		var colornum2 = '#' + ('00000' + (Math.random() * 0x1000000 << 0).toString(16)).substr(-6);
+		var colornum3 = '#' + ('00000' + (Math.random() * 0x1000000 << 0).toString(16)).substr(-6);
+
+		function arrbg() { //随机不重复颜色数组
+			var arr = [];
+			while (colornum1 == colornum2) {
+				colornum2 = bg()
+			};
+			while (colornum1 == colornum3 || colornum2 == colornum3) {
+				colornum3 = bg()
+			};
+			arr.push(colornum1, colornum2, colornum3);
+			return arr;
+		}
+		for (i = 0; i < div.length; i++) {
+			div[i].style.background = "orange";
+		}
+		var color = arrbg();
+		for (i = 0; i < 3; i++) {
+			div[arr1[i]].style.background = color[i]
+		}
+	}, 1000);
+}
+
+end.onclick = function() {
+	clearInterval(all);
+	for (i = 0; i < div.length; i++) {
+		div[i].style.background = "orange";
+	}
+}
 }

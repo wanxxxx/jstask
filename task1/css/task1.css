@@ -14,7 +14,7 @@ body {
     margin: 1vw;
     background: orange; }
 
-button {
+input {
   width: 70vw;
   height: 60px;
   border: 1px solid orange;
@@ -23,6 +23,6 @@ button {
   border-radius: 10px;
   font: 20px 黑体;
   color: orange; }
-  button:hover {
+  input:hover {
     background: orange;
     color: #fff; }
