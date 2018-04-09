@@ -1,0 +1,28 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100vw; }
+  body > div {
+    width: 25vw;
+    height: 25vw;
+    border-radius: 5%;
+    margin: 1vw;
+    background: orange; }
+
+button {
+  width: 70vw;
+  height: 60px;
+  border: 1px solid orange;
+  margin: 20px 15vw;
+  background: #fff;
+  border-radius: 10px;
+  font: 20px 黑体;
+  color: orange; }
+  button:hover {
+    background: orange;
+    color: #fff; }

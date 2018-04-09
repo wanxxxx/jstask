@@ -1,0 +1,346 @@
+@charset "UTF-8";
+/* reset */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, textarea, p, blockquote, th, td, input, select, textarea, button {
+  margin: 0;
+  padding: 0; }
+
+/* 初始化标签在所有浏览器中的margin、padding值 */
+fieldset, img {
+  border: 0 none; }
+
+/* 重置fieldset（表单分组）、图片的边框为0*/
+dl, ul, ol, menu, li {
+  list-style: none; }
+
+/* 重置类表前导符号为onne,menu在HTML5中有效 */
+blockquote, q {
+  quotes: none; }
+
+/* 重置嵌套引用的引号类型 */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+/* 重置嵌套引用*/
+input, select, textarea, button {
+  vertical-align: middle; }
+
+/* 重置表单控件垂直居中*/
+button {
+  border: 0 none;
+  background-color: transparent;
+  cursor: pointer; }
+
+/* 重置表单button按钮效果 */
+body {
+  background: #fff; }
+
+/* 重置body 页面背景为白色 */
+body, th, td, input, select, textarea, button {
+  font-size: 20px;
+  line-height: 1;
+  color: #666; }
+
+/* 重置页面文字属性 */
+a {
+  color: #666;
+  text-decoration: none; }
+
+/* 重置链接a标签 */
+a:active, a:hover {
+  text-decoration: none; }
+
+/* 重置链接a标签的鼠标滑动效果 */
+address, caption, cite, code, dfn, em, var {
+  font-style: normal;
+  font-weight: normal; }
+
+/* 重置样式标签的样式 */
+caption {
+  display: none; }
+
+/* 重置表格标题为隐藏 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  table-layout: fixed; }
+
+/* 重置table属性 */
+img {
+  vertical-align: top; }
+
+/* 图片在当前行内的垂直位置 */
+/* 页面设置 */
+/* 取消a标签点击后的虚线框 */
+a {
+  outline: none; }
+
+a:active {
+  star: expression(this.onFocus=this.blur()); }
+
+/* 设置页面文字等在拖动鼠标选中情况下的背景色与文字颜色 */
+/*
+::selection {color: #fff;background-color: #4C6E78;}
+::-moz-selection {color: #fff;background-color: #4C6E78;}
+*/
+/*清除浮动*/
+.clear {
+  clear: both; }
+
+/*清除浮动--推荐使用*/
+.clearfix:before, .clearfix:after {
+  content: '';
+  display: table; }
+
+.clearfix:after {
+  clear: both; }
+
+hr {
+  width: 100%;
+  border: none;
+  height: 1px;
+  margin: 0;
+  padding: 0; }
+
+body {
+  overflow-x: hidden;
+  background: #eee; }
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: arial; }
+
+.center, .main-part1-div2 > div:nth-child(1) > div > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+
+.center2, .main-part1-div2 {
+  display: flex;
+  align-items: center;
+  flex-direction: column; }
+
+.center3, .main-part1, .main-part1-div1, .main-part1-div2 > div:nth-child(1), .main-part1-div2 > div:nth-child(2) {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.padding-a, .main-part1-div1 > p {
+  padding: 0 5vw; }
+
+.padding-b {
+  padding: 10px 0; }
+
+.size-l, .main-part1 {
+  font-size: 18px; }
+
+.size-m, .main-part1-div2 > div:nth-child(1) > div > div input {
+  font-size: 16px; }
+
+.size-s {
+  font-size: 12px; }
+
+body {
+  margin: 0;
+  padding: 0; }
+
+.header {
+  background: #5fc0cd;
+  width: 90%;
+  height: 60px;
+  padding: 0 5%;
+  color: #FFF;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 0; }
+
+.main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  flex-direction: column;
+  transform: translateX(0);
+  transition: transform 500ms ease;
+  position: relative; }
+
+.orange {
+  color: orange; }
+
+.center-v {
+  position: absolute;
+  top: 50%;
+  transform: translatey(-50%); }
+
+.center-x {
+  position: absolute;
+  left: 50%;
+  transform: translatex(-50%); }
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 80vw;
+  height: 60px;
+  background: #5fc0cd;
+  padding: 0 10vw; }
+
+.menu {
+  position: fixed;
+  top: 15px;
+  left: 5vw;
+  z-index: 5; }
+
+.main2 {
+  position: fixed;
+  top: 60px;
+  left: -70vw;
+  width: 70vw;
+  color: #5fc0cd;
+  background: #fff;
+  height: 100%;
+  box-shadow: #a0a1a2 -2px 0 10px inset; }
+  .main2 > div {
+    border-bottom: 1px solid #c4c4c4;
+    padding: 10px 20px;
+    font-size: 18px; }
+    .main2 > div .center, .main-part1-div2 > div.main2:nth-child(1) > div > div {
+      width: 15vw; }
+
+#menu {
+  display: none; }
+  #menu:checked ~ .main2 {
+    left: 0; }
+  #menu:checked ~ .main {
+    transform: translateX(65vw);
+    transition: transform 500ms ease; }
+
+.main input {
+  border: none;
+  text-align: center;
+  font-size: 20px; }
+.main > div {
+  margin-top: 10px;
+  width: 90vw;
+  background: #fff; }
+.main-part1-div1 {
+  width: 20vw;
+  height: 340px;
+  border-right: 1px solid #c4c4c4; }
+  .main-part1-div1 > p {
+    width: 20px; }
+.main-part1-div2 {
+  width: 70vw;
+  background: #fbfbfb;
+  height: 350px; }
+  .main-part1-div2 > div {
+    width: 60vw;
+    padding: 0 5vw; }
+    .main-part1-div2 > div:nth-child(1) {
+      height: 300px;
+      border-bottom: 1px solid #c4c4c4;
+      color: #ccc;
+      flex-wrap: wrap; }
+      .main-part1-div2 > div:nth-child(1) > div > div {
+        margin: 5px 1vw;
+        width: 90px; }
+        .main-part1-div2 > div:nth-child(1) > div > div span {
+          width: 10px;
+          height: 10px;
+          background: orange;
+          margin: 5px; }
+        .main-part1-div2 > div:nth-child(1) > div > div input {
+          height: 15px;
+          background: none; }
+          .main-part1-div2 > div:nth-child(1) > div > div input:nth-of-type(1) {
+            width: 2em; }
+          .main-part1-div2 > div:nth-child(1) > div > div input:nth-of-type(2) {
+            width: 1em; }
+    .main-part1-div2 > div:nth-child(2) {
+      height: 40px;
+      font-family: 宋体;
+      color: #5fc0cd; }
+.main-part2 {
+  padding-bottom: 15px; }
+  .main-part2 > div {
+    width: 80vw;
+    color: #ccc;
+    padding: 15px 0;
+    border-bottom: 1px solid #ccc;
+    margin: 0 10px; }
+  .main-part2 input {
+    margin: 0 10px;
+    font-size: 14px; }
+.main-part3 {
+  padding-bottom: 15px; }
+  .main-part3 > div {
+    width: 80vw;
+    color: #000;
+    padding: 15px 0; }
+    .main-part3 > div input {
+      width: 40px;
+      height: 35px;
+      background: #f4f5f5;
+      color: orange;
+      margin: 0  10px; }
+.main-part4 {
+  margin: 10px 0;
+  width: 90vw;
+  color: #fff;
+  background: orange;
+  padding: 15px 0; }
+
+input[type=range] {
+  -webkit-appearance: none;
+  border-radius: 10px;
+  /*这个属性设置使填充进度条时的图形为圆角*/
+  width: 80%; }
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none; }
+
+input[type=range]:focus {
+  outline: none; }
+
+input[type=range]::-webkit-slider-runnable-track {
+  height: 3px;
+  border-radius: 1px;
+  /*将轨道设为圆角的*/
+  width: 80%;
+  background: orange; }
+
+input[type=range]::-moz-range-track {
+  height: 3px;
+  border-radius: 1px;
+  /*将轨道设为圆角的*/
+  width: 80%;
+  background: orange; }
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 23px;
+  width: 40px;
+  margin-top: -10px;
+  /*使滑块超出轨道部分的偏移量相等*/
+  background: #fff;
+  border-radius: 5px;
+  /*外观设置为圆形*/
+  border: solid 2px orange;
+  /*设置边框*/ }
+
+input[type=range]::-moz-range-thumb {
+  -webkit-appearance: none;
+  height: 23px;
+  width: 40px;
+  margin-top: -10px;
+  /*使滑块超出轨道部分的偏移量相等*/
+  background: #fff;
+  border-radius: 5px;
+  /*外观设置为圆形*/
+  border: solid 2px orange;
+  /*设置边框*/ }

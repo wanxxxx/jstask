@@ -1,0 +1,104 @@
+@import'common';
+.main{
+	input{border:none;text-align: center;font-size: 20px;}
+	>div{margin-top: 10px;width: 90vw;background: #fff;}
+	&-part1{
+		@extend .center3,.size-l;
+
+
+		&-div1{
+			width: 20vw;
+			height: 340px;@extend .center3;
+			border-right: $border;
+			>p{width: 20px;
+			@extend .padding-a;}
+		}
+		&-div2{
+			width: 70vw;
+			background:#fbfbfb;
+			height: 350px;
+			@extend .center2;
+			>div{width: 60vw;padding: 0 5vw;
+				&:nth-child(1){
+					height: 300px;
+					border-bottom: $border;
+					color: #ccc;
+					@extend .center3;
+					flex-wrap:wrap;
+					>div>div{margin: 5px 1vw;
+						@extend .center;
+						width: 90px;
+					span{width: 10px;height: 10px;background:orange;margin: 5px}
+					input{height: 15px;background: none;@extend .size-m;
+						&:nth-of-type(1){width: 2em;}
+						&:nth-of-type(2){width: 1em;}
+					}}
+				}
+				&:nth-child(2){height: 40px;@extend .center3;font-family: 宋体;color:$blue;}
+			}
+		}
+
+	}
+	&-part2{padding-bottom: 15px;
+		>div{
+			width: 80vw;
+			color: #ccc;
+			padding: 15px 0;
+			border-bottom: 1px solid #ccc;margin: 0 10px;
+		}
+		input{margin: 0 10px;font-size: 14px;}
+	}
+	&-part3{padding-bottom: 15px;
+		>div{
+			width: 80vw;
+			color: #000;
+			padding: 15px 0;
+			input{width:40px;height: 35px;background: #f4f5f5;color: orange;margin:0  10px;}
+
+		}
+	}
+	&-part4{
+		margin: 10px 0;
+		width: 90vw;
+		color: #fff;
+		background: orange;
+		padding: 15px 0;
+	}
+}
+@mixin track{
+	height: 3px;
+    border-radius: 1px; /*将轨道设为圆角的*/
+    width: 80%;
+	background:orange;}
+@mixin thumb{
+	-webkit-appearance: none;
+    height: 23px;
+    width: 40px;
+    margin-top: -10px; /*使滑块超出轨道部分的偏移量相等*/
+    background: #fff;
+    border-radius: 5px; /*外观设置为圆形*/
+    border: solid 2px orange; /*设置边框*/
+}
+input[type=range] {
+    -webkit-appearance: none;
+    border-radius: 10px; /*这个属性设置使填充进度条时的图形为圆角*/
+    width: 80%;
+}
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+}
+input[type=range]:focus {
+    outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+    @include track;
+}
+input[type=range]::-moz-range-track  {
+    @include track;
+}
+input[type=range]::-webkit-slider-thumb {
+    @include thumb;
+}
+input[type=range]::-moz-range-thumb {
+    @include thumb;
+}

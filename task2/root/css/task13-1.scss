@@ -1,0 +1,140 @@
+
+$blue:#5fc0cd;
+@mixin flex($ali:center,$jus:center,$w:100vw,$h:60px){
+	display: flex;
+	align-items: $ali;
+	justify-content: $jus;
+	width: $w;
+	height: $h;
+
+}
+@mixin abs ($top:60px){
+	position: absolute;
+	top:$top;
+}
+$border:1px solid #c4c4c4;
+
+
+body{
+		background: #EEEEEE;
+	width: 100vw;
+
+}
+.main {
+	overflow: hidden;
+	flex-direction: column;
+	transform: translateX(0);
+    transition: transform 500ms ease;
+	position: relative;
+		&-part1{
+			width: 70vw;
+			padding: 0 10vm;
+			height: 60px;
+			background: #fff;
+			margin-top: 80px;
+			color:#ccc;
+			>div:nth-child(3){font-size: 30px;}
+
+				}
+		&-part2{
+		flex-direction: column;
+		justify-content: center;
+		margin: 20px 0;
+		background: #fff;
+		width: 80vw;
+		position: relative;
+
+		>div,>hr,>p,>button{margin: 10px 0}
+		hr{
+			background: orange;
+		}
+		button{
+				background: $blue;
+				height: 60px;
+				width: 80%;
+			color: #fff;
+			}
+		label{
+				@include abs(50%);
+				right: 1vw;
+				height: 0;
+				width: 0;
+				border-left: 16px solid orange;
+				border-top: 16px solid transparent;
+				border-bottom: 16px solid transparent;
+			z-index: 1000;
+
+		}
+	}}
+
+.slide{
+	overflow: hidden;
+	width: 80vw;
+	>ul{
+		width:9999px;
+		transition:all 0.5s;
+
+		>li{
+			float: left;
+			}}
+    input[name="sildeInput"]{
+        display: none;
+    }
+	.bottom{
+		width: 40px;
+		position: absolute;
+		bottom: 25px;
+		left:50%;
+		transform: translate(-50%, 0);
+		z-index: 2;
+
+
+    label{
+        width: 10px;
+        height: 10px;
+		background: #ccc;
+		border-radius: 50%;
+		&:hover{background:$blue;}
+		}}
+
+}
+	#sildeInput1:checked ~ ul{ margin-left: 0;}
+    #sildeInput2:checked ~ ul{ margin-left: -80vw;}
+    #sildeInput3:checked ~ ul{ margin-left: -160vw;}
+
+
+#menu {
+	display: none;
+
+  &:checked ~ .main2 {
+    left: 0;
+    }
+  &:checked ~ .main {
+    transform: translateX(65vw);
+    transition: transform 500ms ease; }
+	}
+
+.main2{
+	position: fixed;
+	top:60px;
+	left:-70vw;
+	width: 70vw;
+	color: $blue;
+	background: #fff;
+	height: 100%;
+  	box-shadow: #a0a1a2 -2px 0 10px inset;
+
+	>div{
+		border-bottom: $border;padding: 10px 20px;
+		font-size: 18px;
+		.center{
+			width: 15vw
+		}
+
+		}
+
+	}
+
+
+
+
