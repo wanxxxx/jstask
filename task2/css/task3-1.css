@@ -122,7 +122,7 @@ body {
   align-items: center;
   flex-direction: column; }
 
-.center3 {
+.center3, .main > div, .main > div > span, footer {
   display: flex;
   align-items: center;
   justify-content: center; }
@@ -186,3 +186,49 @@ body {
   height: 60px;
   background: #29bde0;
   padding: 0 10vw; }
+
+input {
+  border: none;
+  text-align: center;
+  background: none;
+  font-size: 20px; }
+
+.main {
+  background: #29bde0;
+  height: 450px; }
+  .main > div {
+    width: 70vw;
+    height: 350px;
+    background: #ffedc5;
+    border: 3.5px solid #fff;
+    position: relative; }
+    .main > div > div:nth-of-type(1) {
+      display: none; }
+    .main > div > span {
+      width: 50px;
+      height: 50px;
+      border: 2px solid #ffedc5;
+      border-radius: 50%;
+      position: absolute;
+      top: -25px;
+      background: #fff; }
+      .main > div > span > input {
+        color: #f3425e;
+        font-size: 24px; }
+    .main > div > div:nth-of-type(2) > input {
+      color: #29bde0;
+      margin: 15px; }
+    .main > div > div:nth-of-type(2) > div {
+      height: 60px;
+      width: 100%; }
+
+footer {
+  height: 100px;
+  background: #29bde0; }
+  footer button {
+    height: 50px;
+    width: 70vw;
+    background: #fbb435; }
+    footer button > input {
+      color: #fff;
+      font-size: 20px; }

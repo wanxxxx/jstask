@@ -36,7 +36,7 @@ a:active {star:expression(this.onFocus=this.blur());}
 .clearfix:after{clear: both;}
 hr{width: 100%;border:none;height: 1px;margin: 0;
 padding: 0}
-$blue:#5fc0cd;
+$blue:#29bde0;
 $border:1px solid #c4c4c4;
 body{
 	overflow-x: hidden;
@@ -79,9 +79,10 @@ body{
 .size-s{
 	font-size: 12px;
 }
+@mixin abs($t:50px){position: absolute;top:$t;}
 body{margin: 0;padding: 0;}
 .header{
-	background:#5fc0cd;
+	background:#29bde0;
 	width: 90%;
 	height: 60px;
 	padding: 0 5%;
@@ -90,8 +91,8 @@ body{margin: 0;padding: 0;}
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	top:0;
-	  }
+	top:0;}
+
 .main{
 	width: 100%;
 	display: flex;
@@ -99,9 +100,6 @@ body{margin: 0;padding: 0;}
 	align-items: center;
 	overflow: hidden;
 	flex-direction: column;
-	transform: translateX(0);
-    transition: transform 500ms ease;
-	position: relative;
 }
 .orange{
 	color: orange;
@@ -121,43 +119,11 @@ body{margin: 0;padding: 0;}
 	bottom:0;
 	width: 80vw;
 	height: 60px;
-	background: #5fc0cd;
+	background: #29bde0;
 	padding: 0 10vw;
 }
 
-.menu{
-	position: fixed;
-	top:15px;
-	left: 5vw;
-	z-index: 5;
-}
 
-.main2{
-	position: fixed;
-	top:60px;
-	left:-70vw;
-	width: 70vw;
-	color: $blue;
-	background: #fff;
-	height: 100%;
-  	box-shadow: #a0a1a2 -2px 0 10px inset;
-	>div{
-		border-bottom: $border;padding: 10px 20px;
-		font-size: 18px;
-		.center{
-			width: 15vw
-		}
-		}
-	}
-#menu {
-	display: none;
-  &:checked ~ .main2 {
-    left: 0;
-    }
-  &:checked ~ .main {
-    transform: translateX(65vw);
-    transition: transform 500ms ease; }
-	}
 
 
 

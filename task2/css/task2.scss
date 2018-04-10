@@ -40,6 +40,7 @@
 
 	}
 	&-part2{padding-bottom: 15px;
+		input{text-align:left!important;;}
 		>div{
 			width: 80vw;
 			color: #ccc;
@@ -52,8 +53,8 @@
 		>div{
 			width: 80vw;
 			color: #000;
-			padding: 15px 0;
-			input{width:40px;height: 35px;background: #f4f5f5;color: orange;margin:0  10px;}
+			margin: 30px 0;
+			>input{width:40px;height: 35px;background: #f4f5f5;color: orange;margin:0  10px;}
 
 		}
 	}

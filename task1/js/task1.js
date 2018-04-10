@@ -43,8 +43,10 @@ start.onclick = function() { //µã»÷¿ªÊ¼
 		}
 		var color = arrbg();
 		for (i = 0; i < 3; i++) {
-			div[arr1[i]].style.background = color[i]
+			div[arr1[i]].style.background = color[i];
+console.info(color[i]);
 		}
+		
 	}, 1000);
 }
 
