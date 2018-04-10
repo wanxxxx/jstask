@@ -112,7 +112,7 @@ body {
   margin: 0;
   font-family: arial; }
 
-.center, .main-part1-div2 > div:nth-child(1) > div > div {
+.center, .main-part1-div2 > div:nth-child(1) > div {
   display: flex;
   align-items: center;
   justify-content: space-between; }
@@ -136,7 +136,7 @@ body {
 .size-l, .main-part1 {
   font-size: 18px; }
 
-.size-m, .main-part1-div2 > div:nth-child(1) > div > div input {
+.size-m, .main-part1-div2 > div:nth-child(1) > div input {
   font-size: 16px; }
 
 .size-s {
@@ -197,39 +197,35 @@ body {
   background: #fff; }
 .main-part1-div1 {
   width: 20vw;
-  height: 340px;
+  height: 300px;
   border-right: 1px solid #c4c4c4; }
   .main-part1-div1 > p {
     width: 20px; }
 .main-part1-div2 {
   width: 70vw;
   background: #fbfbfb;
-  height: 350px; }
+  height: 300px; }
   .main-part1-div2 > div {
     width: 60vw;
     padding: 0 5vw; }
     .main-part1-div2 > div:nth-child(1) {
-      height: 300px;
+      height: 250px;
       border-bottom: 1px solid #c4c4c4;
       color: #ccc;
       flex-wrap: wrap; }
-      .main-part1-div2 > div:nth-child(1) > div > div {
-        margin: 5px 1vw;
-        width: 90px; }
-        .main-part1-div2 > div:nth-child(1) > div > div span {
+      .main-part1-div2 > div:nth-child(1) > div {
+        margin: 5px 1vw; }
+        .main-part1-div2 > div:nth-child(1) > div span {
           width: 10px;
           height: 10px;
           background: orange;
           margin: 5px; }
-        .main-part1-div2 > div:nth-child(1) > div > div input {
+        .main-part1-div2 > div:nth-child(1) > div input {
           height: 15px;
-          background: none; }
-          .main-part1-div2 > div:nth-child(1) > div > div input:nth-of-type(1) {
-            width: 2em; }
-          .main-part1-div2 > div:nth-child(1) > div > div input:nth-of-type(2) {
-            width: 1em; }
+          background: none;
+          width: 1em; }
     .main-part1-div2 > div:nth-child(2) {
-      height: 40px;
+      height: 50px;
       font-family: 宋体;
       color: #29bde0; }
 .main-part2 {
@@ -250,13 +246,13 @@ body {
   .main-part3 > div {
     width: 80vw;
     color: #000;
-    margin: 30px 0; }
+    margin: 20px 0; }
     .main-part3 > div > input {
       width: 40px;
       height: 35px;
       background: #f4f5f5;
       color: orange;
-      margin: 0  10px; }
+      margin: 0 10px; }
 .main-part4 {
   margin: 10px 0;
   width: 90vw;

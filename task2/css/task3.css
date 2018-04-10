@@ -202,8 +202,6 @@ input {
     background: #ffedc5;
     border: 3.5px solid #fff;
     position: relative; }
-    .main > div > div:nth-of-type(1) {
-      display: none; }
     .main > div > span {
       width: 50px;
       height: 50px;
@@ -215,12 +213,14 @@ input {
       .main > div > span > input {
         color: #f3425e;
         font-size: 24px; }
-    .main > div > div:nth-of-type(2) > input {
-      color: #29bde0;
-      margin: 15px; }
-    .main > div > div:nth-of-type(2) > div {
-      height: 60px;
-      width: 100%; }
+    .main > div > div:nth-of-type(2) {
+      display: none; }
+      .main > div > div:nth-of-type(2) > input {
+        color: #29bde0;
+        margin: 15px; }
+      .main > div > div:nth-of-type(2) > div {
+        height: 60px;
+        width: 100%; }
 
 footer {
   height: 100px;

@@ -1,9 +1,11 @@
 function tiao() {
-	window.open('../task2.html');
+	window.location.href='../task2.html';
 }
-
 function tiao2() {
-	window.open('root/task13-1.html');
+	window.location.href='root/task13-1.html';
+}
+function tiao3() {
+	window.location.href='task3.html';
 }
 function arra(m) { //0-m的随机排列数组
 	var arr = new Array(m);
@@ -15,9 +17,11 @@ function arra(m) { //0-m的随机排列数组
 	}
 	return arr;
 }
-var arr2 = []; //1-N玩家的集合
-function checkField(val) {
-	var arr1 = arra(val);
+
+
+
+function checkField() { //修改事件
+	var val = document.getElementById('player').value;
 	if (val >= 6 && val <= 18) {
 		killer.value = 1;
 	}
@@ -36,14 +40,22 @@ function checkField(val) {
 	} else {
 		alert("请输入正确数字")
 	}
-
+	var arr1 = arra(val); //1-val随机排列数组
+	var arr2 = []; //1-N玩家的集合
 	for (i = 0; i < val; i++) { //全赋予平民
-		arr2[arr1[i]].value = "平民";
+		arr2[i] = "平民";
 	}
 	for (i = 0; i < killer.value; i++) { //随机赋予杀手
-		arr2[arr1[i]].value = "杀手";
+		arr2[arr1[i]] = "杀手";
 	}
-	return arr2
+	return arr2;
+
+
 
 }
-console.info(arr2);
+console.info(checkField());
+var index = checkField();
+var url = "task3-1.html?index=" + index;
+$("#more").click(function() {
+	window.open(url)
+});
