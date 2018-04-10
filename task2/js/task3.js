@@ -1,26 +1,32 @@
-function arra(m) { //0-m的随机排列数组
-	var arr = new Array(m);
-	arr[0] = 0;
-	for (var i = 1; i < m; i++) {
-		var rnd = Math.floor(Math.random() * (i + 1));
-		arr[i] = arr[rnd];
-		arr[rnd] = i;
-	}
-	return arr;
-}
+var arr33 = sessionStorage.getItem("data");
+var msg = arr33.split(",");
+console.info(msg);
+var main1 = document.getElementById('main1')
+var main2 = document.getElementById('main2')
+var input = $(":input");
+input[2].value = 0;
+$(document).ready(function() {
+	$(".btn").click(function() {
+		$("#main1").toggle();
+		$("#main2").toggle();
+		var num2 = parseInt(input[2].value)
+		if (main1.style.display === "none") {
 
-var msg = sessionStorage.getItem("data");
-console.log(msg);
-var newarr = function() {
-	var arr1 = arra(msg); //1-N随机排列数组
-	var arr2 = []; //1-N玩家的集合
-	for (i = 0; i < val; i++) { //全赋予平民
-		arr2[i] = "平民";
-	}
-	for (i = 0; i < killer.value; i++) { //随机赋予杀手
-		arr2[arr1[i]] = "杀手";
-	}
-	return arr2;
+			input[2].value = num2 + 1;
+			input[3].value = msg[num2]
+			input[4].value = parseInt(input[2].value) + 1
+		}
+		if (main2.style.display === "none") {
+			input[0].value = input[4].value
+			input[1].value = input[0].value
+		}
+		if (input[1].value >= msg.length) {
+			$("#btn1").hide();
+			$("#btn2").show();
+		}
+	});
 
-}
-console.info(newarr);
+	$("#btn2").click(function() {
+		window.location.href = "task4.html"
+	});
+})

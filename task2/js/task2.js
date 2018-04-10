@@ -6,7 +6,7 @@ function tiao3() {
 	window.location.href = 'task3.html';
 }
 
-function arra(m) { //0-m的随机排列数组
+function arra(m) { //1-m的随机排列数组
 	var arr = new Array(m);
 	arr[0] = 0;
 	for (var i = 1; i < m; i++) {
@@ -16,8 +16,6 @@ function arra(m) { //0-m的随机排列数组
 	}
 	return arr;
 }
-
-
 
 function checkField() { //修改事件
 	var val = document.getElementById('player').value;
@@ -39,9 +37,20 @@ function checkField() { //修改事件
 	} else {
 		alert("请输入正确数字")
 	}
-	return val;
+	var arr2 = new Array(val); //1-N玩家的集合
+	var arr1=arra(val);
+	for (i = 0; i < val; i++) { //全赋予平民
+		arr2[i] = "平民";
+	}
+	for (i = 0; i < killer.value; i++) { //随机赋予杀手
+		arr2[arr1[i]] = "杀手";
+	}
+	return arr2;
 }
+
 function fapai() {//存入数据
-		sessionStorage.setItem("data", checkField());
+	    var arr3=checkField();
+	    var arr33=arr3.join(",")
+		sessionStorage.setItem("data", arr3);
 		window.location.href = "task3.html"
 }

@@ -8,8 +8,7 @@
         </title>
         <link href="css/task3.css" rel="stylesheet" type="text/css"/>
         <script src="https://code.jquery.com/jquery-3.2.1.min.js">
-
-    </script>
+        </script>
     </head>
     <body>
         <header class="header">
@@ -23,27 +22,53 @@
                 ×
             </p>
         </header>
-        <main class="main">
+        <main id="main1">
             <div>
                 <span>
-                    <input disabled="" id="unknow1" type="text" value="1"/>
+                    <input disabled="" id="a1" type="text" value="1"/>
                 </span>
-                <div name="img">
-                    <img alt="" height="200" src="img/图层 2.png" width="200"/>
+                <div>
+                    <img alt="" height="150" id="img1" src="img/图层 2.png" width="150">
+                    </img>
                 </div>
-                <div class="center2" name="img">
-                    <img alt="" height="150" src="img/组 2.png" width="150"/>
-                    <input disabled="" id="unknow2" type="text" value="平民"/>
-                    <div>
+            </div>
+            <div class="f">
+                <div>
+                    <div  class="btn">
+                        查看
+                        <input id="a3" type="button" value="1"/>
+                        号身份
                     </div>
                 </div>
             </div>
         </main>
-        <footer>
-            <input  type="button" value="查看1号身份" onClick="aaa()"/>
-        </footer>
+        <main id="main2">
+            <div>
+                <span>
+                    <input disabled="" id="b1" type="text" value="1"/>
+                </span>
+                <div class="center2">
+                    <img alt="" height="130" src="img/组 2.png" width="130">
+                        <input disabled="" id="b2" type="text" value="平民"/>
+                        <div>
+                        </div>
+                    </img>
+                </div>
+            </div>
+            <div class="f">
+                <div  id="btn1" class="btn">
+                    <div>
+                        隐藏并传递给
+                        <input id="b3" type="button" value="1"/>
+                        号
+                    </div>
+                </div>
+                <div id="btn2">
+                    法官查看
+                </div>
+            </div>
+        </main>
     </body>
-
-      <script src="js/task3.js"></script>
-
+    <script src="js/task3.js">
+    </script>
 </html>

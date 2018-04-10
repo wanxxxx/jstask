@@ -37,7 +37,7 @@ a:active {star:expression(this.onFocus=this.blur());}
 hr{width: 100%;border:none;height: 1px;margin: 0;
 padding: 0}
 $blue:#29bde0;
-$border:1px solid #c4c4c4;
+$border:1px solid #eee;
 body{
 	overflow-x: hidden;
 	background:#eee;
@@ -79,21 +79,33 @@ body{
 .size-s{
 	font-size: 12px;
 }
+.center-y{
+	position: absolute;
+	top: 50%;
+	transform: translatey(-50%)
+}
+.center-x{
+	position: absolute;
+	left: 50%;
+	transform: translatex(-50%)
+}
 @mixin abs($t:50px){position: absolute;top:$t;}
 body{margin: 0;padding: 0;}
 .header{
-	background:#29bde0;
+	background:$blue;
 	width: 90%;
-	height: 60px;
+	height: 45px;
 	padding: 0 5%;
 	color: #FFF;
-	z-index: 3;
+	z-index: 2;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	top:0;}
+	border-bottom: $border;
 
-.main{
+}
+
+main{
 	width: 100%;
 	display: flex;
 	justify-content: center;

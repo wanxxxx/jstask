@@ -1,62 +1,69 @@
 @import'common';
+body {
+    background: $blue;
+}
 input {
     border: none;
     text-align: center;
     background: none;
     font-size: 20px;
+    color: #fff;
 }
-.main {
-    background: $blue;
-    height: 450px;
-    >div {
+main {
+    >div:nth-child(1) {
         width: 70vw;
-        height: 350px;
+        height: 300px;
         background: #ffedc5;
-        border: 3.5px solid #fff;
+        border: 3px solid #fff;
         @extend .center3;
         position: relative;
-        >div:nth-of-type(1) {
-            
-        }
+        margin: 25px 0 20px 0;
         >span {
-            width: 50px;
-            height: 50px;
+            width: 35px;
+            height: 35px;
             border: 2px solid #ffedc5;
             border-radius: 50%;
-            @include abs(-25px);
+            @include abs(-17.5px);
             @extend .center3;
             background: #fff;
             >input {
                 color: #f3425e;
-                font-size: 24px;
             }
         }
-        >div:nth-of-type(2) {display: none;
-            >input {
-                color: $blue;
-                margin: 15px;
-            }
-            >div {
-                height: 60px;
-                width: 100%;
-            }
+        >div>input {
+            color: $blue;
+            margin: 20px;
+            width: 50px;
+        }
+        >div>div {
+            height: 10px;
+            width: 70vw;
+            margin: 20px 0;
+            border-top: 2px solid #fff;
         }
     }
 }
-footer {
-    height: 100px;
+.f {
+    margin-bottom: 10px;
     @extend .center3;
-    background: $blue;
-    >input {
-        height: 50px;
-        width: 70vw;
-        background: #fbb435;
-            color: #fff;
-            font-size: 20px;
-
-            &:hover{
-                box-shadow: 0 0 5px #666 inset;
-
-            }
-        }
+    height: 42px;
+    width: 75vw;
+    background: #fbb435;
+    color: #fff;
+    font-size: 20px;
+    position: relative;
+    >div {
+        width: 60vw;
+        text-align: center;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
     }
+    &:hover {
+        box-shadow: 0 0 5px #666 inset;
+    }
+}
+#main2,#btn2 {
+    display: none
+}

@@ -142,6 +142,16 @@ body {
 .size-s {
   font-size: 12px; }
 
+.center-y {
+  position: absolute;
+  top: 50%;
+  transform: translatey(-50%); }
+
+.center-x {
+  position: absolute;
+  left: 50%;
+  transform: translatex(-50%); }
+
 body {
   margin: 0;
   padding: 0; }
@@ -149,16 +159,16 @@ body {
 .header {
   background: #29bde0;
   width: 90%;
-  height: 60px;
+  height: 45px;
   padding: 0 5%;
   color: #FFF;
-  z-index: 3;
+  z-index: 2;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  top: 0; }
+  border-bottom: 1px solid #eee; }
 
-.main {
+main {
   width: 100%;
   display: flex;
   justify-content: center;
