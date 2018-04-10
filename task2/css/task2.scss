@@ -49,7 +49,7 @@
                             height: 15px;
                             background: none;
                             @extend .size-m;
-                            width: 1em;
+                            width: 1.5em;
                         }
                     }
                 }
@@ -95,7 +95,7 @@
             }
         }
     }
-    &-part4 {
+    >input {
         margin: 10px 0;
         width: 90vw;
         color: #fff;

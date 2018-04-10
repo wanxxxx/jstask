@@ -47,13 +47,16 @@ footer {
     height: 100px;
     @extend .center3;
     background: $blue;
-    button {
+    >input {
         height: 50px;
         width: 70vw;
         background: #fbb435;
-        >input {
             color: #fff;
             font-size: 20px;
+
+            &:hover{
+                box-shadow: 0 0 5px #666 inset;
+
+            }
         }
     }
-}

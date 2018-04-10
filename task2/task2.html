@@ -7,8 +7,7 @@
             配比页
         </title>
         <link href="css/task2.css" rel="stylesheet" type="text/css"/>
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js">
-        </script>
+
     </head>
     <body>
         <header class="header">
@@ -59,14 +58,13 @@
             <div class="main-part3 center2 size-m">
                 <div class="size-m">
                     玩家数量
-                    <input id="player" onkeyup="checkField()" type="text" value="6"/>
+                    <input id="player" onkeyup="checkField()" type="text" value=""/>
+
                     人
                 </div>
-                <input id="range" max="18" min="6" type="range" value="15"/>
+                <input id="range" max="18" min="6" type="range" value="12"/>
             </div>
-            <button class="main-part4 center2" onclick="tiao3()">
-                去发牌
-            </button>
+             <input id="setData" type="button" value="去发牌" onClick="fapai()"/> 
         </main>
     </body>
     <script  src="js/task2.js">

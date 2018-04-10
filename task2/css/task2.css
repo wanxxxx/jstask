@@ -223,7 +223,7 @@ body {
         .main-part1-div2 > div:nth-child(1) > div input {
           height: 15px;
           background: none;
-          width: 1em; }
+          width: 1.5em; }
     .main-part1-div2 > div:nth-child(2) {
       height: 50px;
       font-family: 宋体;
@@ -253,7 +253,7 @@ body {
       background: #f4f5f5;
       color: orange;
       margin: 0 10px; }
-.main-part4 {
+.main > input {
   margin: 10px 0;
   width: 90vw;
   color: #fff;

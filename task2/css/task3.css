@@ -225,10 +225,11 @@ input {
 footer {
   height: 100px;
   background: #29bde0; }
-  footer button {
+  footer > input {
     height: 50px;
     width: 70vw;
-    background: #fbb435; }
-    footer button > input {
-      color: #fff;
-      font-size: 20px; }
+    background: #fbb435;
+    color: #fff;
+    font-size: 20px; }
+    footer > input:hover {
+      box-shadow: 0 0 5px #666 inset; }

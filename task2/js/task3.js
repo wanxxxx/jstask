@@ -1,2 +1,3 @@
-var arr3 = window.parent.checkField();
-console.info(arr3);
+
+ 	var msg = sessionStorage.getItem("data");
+ 	console.log(msg)
