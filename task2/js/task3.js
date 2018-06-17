@@ -1,5 +1,10 @@
-var arr33 = sessionStorage.getItem("data");
-var msg = arr33.split(",");
+function back() {
+	window.location.href = 'task2.html';
+}
+function end() {
+	window.location.href = 'task2.html';
+}
+var msg = sessionStorage.getItem("data").split(",");
 console.info(msg);
 var main1 = document.getElementById('main1')
 var main2 = document.getElementById('main2')
@@ -27,6 +32,6 @@ $(document).ready(function() {
 	});
 
 	$("#btn2").click(function() {
-		window.location.href = "task4.html"
+		window.location.href = "task4-1.html"
 	});
 })

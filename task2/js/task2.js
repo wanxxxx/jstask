@@ -1,9 +1,5 @@
-function tiao() {
-	window.location.href = '../task2.html';
-}
-
-function tiao3() {
-	window.location.href = 'task3.html';
+function back() {
+	window.location.href = 'task1.html';
 }
 
 function arra(m) { //1-m的随机排列数组
@@ -49,8 +45,6 @@ function checkField() { //修改事件
 }
 
 function fapai() {//存入数据
-	    var arr3=checkField();
-	    var arr33=arr3.join(",")
-		sessionStorage.setItem("data", arr3);
+		sessionStorage.setItem("data", checkField());
 		window.location.href = "task3.html"
 }
