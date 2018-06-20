@@ -197,6 +197,11 @@ main {
   background: #29bde0;
   padding: 0 10vw; }
 
+input {
+  border: none;
+  text-align: center;
+  background: none; }
+
 body {
   background: #29bde0; }
 

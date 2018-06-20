@@ -112,31 +112,31 @@ body {
   margin: 0;
   font-family: arial; }
 
-.center, .main-part1-div2 > div:nth-child(1) > div {
+.center, .footer {
   display: flex;
   align-items: center;
   justify-content: space-between; }
 
-.center2, .main-part1-div2 {
+.center2, main > div {
   display: flex;
   align-items: center;
   flex-direction: column; }
 
-.center3, .main-part1, .main-part1-div1, .main-part1-div2 > div:nth-child(1), .main-part1-div2 > div:nth-child(2) {
+.center3, main p, main .div1, main .div2 {
   display: flex;
   align-items: center;
   justify-content: center; }
 
-.padding-a, .main-part1-div1 > p {
+.padding-a {
   padding: 0 5vw; }
 
 .padding-b {
   padding: 10px 0; }
 
-.size-l, .main-part1 {
+.size-l {
   font-size: 18px; }
 
-.size-m, .main-part1-div2 > div:nth-child(1) > div input {
+.size-m, main {
   font-size: 16px; }
 
 .size-s {
@@ -202,125 +202,59 @@ input {
   text-align: center;
   background: none; }
 
-.main input {
-  border: none;
-  text-align: center;
-  font-size: 20px; }
-.main > div {
-  margin-top: 10px;
-  width: 90vw;
-  background: #fff; }
-.main-part1-div1 {
-  width: 20vw;
-  height: 300px;
-  border-right: 1px solid #eee; }
-  .main-part1-div1 > p {
-    width: 20px; }
-.main-part1-div2 {
-  width: 70vw;
-  background: #fbfbfb;
-  height: 300px; }
-  .main-part1-div2 > div {
-    width: 60vw;
-    padding: 0 5vw; }
-    .main-part1-div2 > div:nth-child(1) {
-      height: 250px;
-      border-bottom: 1px solid #eee;
-      color: #ccc;
-      flex-wrap: wrap; }
-      .main-part1-div2 > div:nth-child(1) > div {
-        margin: 5px 1vw; }
-        .main-part1-div2 > div:nth-child(1) > div span {
-          width: 10px;
-          height: 10px;
-          background: orange;
-          margin: 5px; }
-        .main-part1-div2 > div:nth-child(1) > div input {
-          height: 15px;
-          background: none;
-          width: 1.5em; }
-    .main-part1-div2 > div:nth-child(2) {
-      height: 50px;
-      font-family: 宋体;
-      color: #29bde0; }
-.main-part2 {
-  padding-bottom: 15px; }
-  .main-part2 input {
-    text-align: left !important; }
-  .main-part2 > div {
-    width: 80vw;
-    color: #ccc;
-    padding: 15px 0;
-    border-bottom: 1px solid #ccc;
-    margin: 0 10px; }
-  .main-part2 input {
-    margin: 0 10px;
-    font-size: 14px; }
-.main-part3 {
-  padding-bottom: 15px; }
-  .main-part3 > div {
-    width: 80vw;
-    color: #000;
-    margin: 20px 0; }
-    .main-part3 > div > input {
-      width: 40px;
-      height: 35px;
-      background: #f4f5f5;
-      color: orange;
-      margin: 0 10px; }
-.main > input {
-  margin: 10px 0;
-  width: 90vw;
-  color: #fff;
-  background: orange;
-  padding: 15px 0; }
+body {
+  background: #29bde0;
+  background: #eee; }
 
-input[type=range] {
-  -webkit-appearance: none;
-  border-radius: 10px;
-  /*这个属性设置使填充进度条时的图形为圆角*/
-  width: 80%; }
-
-input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none; }
-
-input[type=range]:focus {
-  outline: none; }
-
-input[type=range]::-webkit-slider-runnable-track {
-  height: 3px;
-  border-radius: 1px;
-  /*将轨道设为圆角的*/
-  width: 80%;
-  background: orange; }
-
-input[type=range]::-moz-range-track {
-  height: 3px;
-  border-radius: 1px;
-  /*将轨道设为圆角的*/
-  width: 80%;
-  background: orange; }
-
-input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  height: 23px;
-  width: 40px;
-  margin-top: -10px;
-  /*使滑块超出轨道部分的偏移量相等*/
+main > div {
   background: #fff;
-  border-radius: 5px;
-  /*外观设置为圆形*/
-  border: solid 2px orange;
-  /*设置边框*/ }
+  width: 95vw;
+  border: 2px solid #ccc;
+  margin-top: 5px; }
+main .div1 {
+  height: 40px; }
+  main .div1 > p {
+    color: #29bde0; }
+main .div2 {
+  padding: 25px 0;
+  flex-direction: row; }
+  main .div2 span {
+    height: 140px;
+    width: 2px;
+    background: #ccc;
+    margin: 0 20px; }
+  main .div2 > div > div {
+    position: relative; }
+  main .div2 .sj {
+    position: absolute;
+    left: -2px;
+    top: 7px;
+    height: 0;
+    width: 0;
+    border-right: 18px solid #24a7c6;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent; }
+  main .div2 img {
+    position: absolute;
+    left: -37px;
+    height: 30px;
+    width: 30px; }
+  main .div2 p {
+    background: #24a7c6;
+    margin: 12px;
+    height: 30px;
+    width: 70vw;
+    color: #fff;
+    position: relative; }
 
-input[type=range]::-moz-range-thumb {
-  -webkit-appearance: none;
-  height: 23px;
-  width: 40px;
-  margin-top: -10px;
-  /*使滑块超出轨道部分的偏移量相等*/
-  background: #fff;
-  border-radius: 5px;
-  /*外观设置为圆形*/
-  border: solid 2px orange;
-  /*设置边框*/ }
+.footer {
+  justify-content: center;
+  width: 100vw;
+  padding: 0; }
+  .footer input {
+    background: #fbb435;
+    width: 40%;
+    height: 35px;
+    color: white;
+    margin: 0 5%;
+    border-radius: 5px; }

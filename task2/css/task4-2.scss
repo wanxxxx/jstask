@@ -1,40 +1,79 @@
 @import'common';
 body {
     background: $blue;
+    background: #eee;
 }
-.main{
-@include abs (70px);
-	
-	&-div{
-		width: 351px;
-		white-space: normal;
-		>div{
-			margin: 15px;
-			display: inline-block;
-@extend .center2;width: 80px;height: 80px;
-		border:2px solid #fff;
-		.choose1{
-			@extend .size-m;
-			color: #000;
-			width: inherit;
-			background: #f5c97b;
-			height: 70%;
-			
-		}
-		.choose2{
-			color: #fff;width: 15px;
-			width: inherit;
-			height: 30%;
-			@extend .size-s;
-			background: #83b09a;
-		}}
-	}
+main {
+    @extend .size-m;
+    >div {
+        background: #fff;
+        width: 95vw;
+        border: 2px solid #ccc;
+        margin-top: 5px;
+        @extend .center2;
+    }
+    p {
+        @extend .center3;
+    }
+    .div1 {
+        height: 40px;
+        @extend .center3;
+        >p {
+            color: $blue;
+        }
+    }
+    .div2 {
+        padding:  25px 0;
+        @extend .center3;
+        flex-direction: row;
+        span {
+            height: 140px;
+            width: 2px;
+            background: #ccc;
+            margin: 0 20px
+        }
+        >div>div {
+            position: relative;
+        }
+        .sj {
+            position: absolute;
+            left: -2px;
+            top: 7px;
+            height: 0;
+            width: 0;
+            border-right: 18px solid #24a7c6;
+            border-top: 8px solid transparent;
+            border-bottom: 8px solid transparent;
+        }
+        img{
+        	position: absolute;
+            left: -37px;
+            height: 30px;	
+            width: 30px;
+
+        }
+        p {
+            background: #24a7c6;
+            margin: 12px;
+            height: 30px;
+            width: 70vw;
+            color: #fff;
+            position: relative;
+        }
+    }
 }
-.footer{
-	input{
-	background: #fbb435;
-		justify-content: center;
-	width: 80vw;
-	height: 40px;
-		color: white;
- }}
+.footer {
+        justify-content: center;
+        @extend .center;
+        width: 100vw;
+        padding: 0;
+        
+    input {
+        background: #fbb435;
+        width: 40%;
+        height: 35px;
+        color: white;
+        margin: 0 5%;
+        border-radius: 5px;
+    }
+}

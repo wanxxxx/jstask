@@ -29,11 +29,5 @@ for (i = 0; i < msg.length; i++) {
 }
 
 function back() {
-    window.location.href = 'task3.html';
-}
-function end() {
-    window.location.href = 'task3.html';
-}
-function abc() {
-    window.location.href = 'task4-2-2.html';
+    window.location.href = 'task4-2.html';
 }
