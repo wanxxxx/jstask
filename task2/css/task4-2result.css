@@ -112,7 +112,7 @@ body {
   margin: 0;
   font-family: arial; }
 
-.center {
+.center, .footer {
   display: flex;
   align-items: center;
   justify-content: space-between; }
@@ -136,10 +136,10 @@ body {
 .size-l {
   font-size: 18px; }
 
-.size-m {
+.size-m, .main-div > div .choose1 {
   font-size: 16px; }
 
-.size-s {
+.size-s, .main-div > div .choose2 {
   font-size: 12px; }
 
 .center-y {
@@ -147,7 +147,7 @@ body {
   top: 50%;
   transform: translatey(-50%); }
 
-.center-x {
+.center-x, .main-div > div .img {
   position: absolute;
   left: 50%;
   transform: translatex(-50%); }
@@ -184,7 +184,7 @@ main {
   top: 50%;
   transform: translatey(-50%); }
 
-.center-x {
+.center-x, .main-div > div .img {
   position: absolute;
   left: 50%;
   transform: translatex(-50%); }
@@ -201,3 +201,70 @@ input {
   border: none;
   text-align: center;
   background: none; }
+
+body {
+  background: #29bde0; }
+
+.a {
+  background: #b9e9f5;
+  position: absolute;
+  top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90vw;
+  height: 60px; }
+  .a .s {
+    position: absolute;
+    top: 60px;
+    left: 10vw;
+    border-top: 10px solid #b9e9f5;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    z-index: 1; }
+
+.main {
+  position: absolute;
+  top: 120px; }
+  .main-div {
+    width: 351px;
+    white-space: normal; }
+    .main-div > div {
+      margin: 15px;
+      display: inline-block;
+      width: 80px;
+      height: 80px;
+      border: 2px solid #fff;
+      position: relative; }
+      .main-div > div .choose1 {
+        color: #000;
+        width: inherit;
+        background: #f5c97b;
+        height: 70%; }
+      .main-div > div .choose2 {
+        color: #fff;
+        width: 15px;
+        width: inherit;
+        height: 30%;
+        background: #83b09a; }
+      .main-div > div .img {
+        height: 20px;
+        width: 20px;
+        z-index: 100;
+        position: absolute;
+        top: 85px;
+        visibility: hidden; }
+
+.footer {
+  justify-content: center;
+  width: 100vw;
+  padding: 0; }
+  .footer input {
+    background: #fbb435;
+    width: 40%;
+    height: 35px;
+    color: white;
+    margin: 0 5%;
+    border-radius: 5px; }
+
+/*# sourceMappingURL=task4-2result.css.map */

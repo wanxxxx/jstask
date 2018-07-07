@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>javascript-state-machine</title>
+</head>
+<body>
+<script src="lib/javascript-state-machine-master/state-machine.js"></script>
+<script>
+    var fsm = StateMachine.create({
+        initial: 'hungry',
+        events: [
+            {name: 'eat', from: 'hungry', to: 'satisfied'},
+            {name: 'eat', from: 'satisfied', to: 'full'},
+            {name: 'eat', from: 'full', to: 'sick'},
+            {name: 'rest', from: ['hungry', 'satisfied', 'full', 'sick'], to: 'hungry'},
+        ],
+        callbacks: {
+            onbeforeeat: function(event, from, to) {
+                console.log('马上吃东西了');
+            },
+            onleavehungry: function(event, from, to) {
+                console.log('终于没那么饿了');
+            },
+            onentersatisfied: function(event, from, to) {
+                console.log('真开心');
+            },
+            onaftereat: function(event, from, to) {
+                console.log('我吃地差不多了');
+            }
+        }
+    });
+    console.log('fsm初始化完毕！');
+
+    fsm.onentersatisfied = null;
+    fsm.onleavestate = function(event, from, to) {
+        console.log('状态变了！，变之前：' + from + '，变之后：' + to);
+    }
+
+</script>
+</body>
+</html>

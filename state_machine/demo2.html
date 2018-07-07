@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>javascript-state-machine</title>
+</head>
+<body>
+<script src="lib/javascript-state-machine-master/state-machine.js"></script>
+<script>
+    var fsm = StateMachine.create({
+        initial: 'hungry',
+        events: [
+            {name: 'eat', from: 'hungry', to: 'satisfied'},
+            {name: 'eat', from: 'satisfied', to: 'full'},
+            {name: 'eat', from: 'full', to: 'sick'},
+            {name: 'rest', from: ['hungry', 'satisfied', 'full', 'sick'], to: 'hungry'},
+        ]
+    });
+    console.log('fsm初始化完毕！');
+</script>
+</body>
+</html>

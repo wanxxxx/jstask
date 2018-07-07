@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>javascript-state-machine</title>
+</head>
+<body>
+<script src="lib/javascript-state-machine-master/state-machine.js"></script>
+<script>
+    var fsm = StateMachine.create({
+        initial: 'green',
+        events: [
+            { name: 'warn',  from: 'green',  to: 'yellow' },
+            { name: 'panic', from: 'yellow', to: 'red'    },
+            { name: 'calm',  from: 'red',    to: 'yellow' },
+            { name: 'clear', from: 'yellow', to: 'green'  }
+        ]});
+    console.log('fsm初始化完毕！');
+</script>
+</body>
+</html>

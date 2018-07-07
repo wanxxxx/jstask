@@ -1,0 +1,155 @@
+@import'common';
+@mixin flex($ali:center, $jus:center, $w:100vw, $h:60px) {
+    display: flex;
+    align-items: $ali;
+    justify-content: $jus;
+    width: $w;
+    height: $h;
+}
+@mixin abs ($top:60px) {
+    position: absolute;
+    top: $top;
+}
+
+body {
+    background: $blue;
+    background: #eee;
+}
+#main1 {
+    @extend .size-m;
+    >div {
+        background: #fff;
+        width: 95vw;
+        border: 2px solid #ccc;
+        margin-top: 5px;
+        @extend .center2;
+    }
+    p {
+        @extend .center3;
+    }
+    .div1 {
+        height: 40px;
+        @extend .center3;
+        >p {
+            color: $blue;
+        }
+    }
+    .div2 {
+        padding: 25px 0;
+        @extend .center3;
+        flex-direction: row;
+        position: relative;
+        span {
+            height: 140px;
+            width: 2px;
+            background: #ccc;
+            margin: 0 20px;
+        }
+        .sj2 {
+            position: absolute;
+            top: -9px;
+            height: 0;
+            width: 0;
+            border-bottom: 10px solid white;
+            border-right: 8px solid transparent;
+            border-left: 8px solid transparent;
+        }
+        >div>div {
+            position: relative;
+        }
+        .sj {
+            position: absolute;
+            left: -2px;
+            top: 7px;
+            height: 0;
+            width: 0;
+            border-right: 18px solid #24a7c6;
+            border-top: 8px solid transparent;
+            border-bottom: 8px solid transparent;
+        }
+        img {
+            position: absolute;
+            left: -37px;
+            height: 30px;
+            width: 30px;
+        }
+        p {
+            background: #24a7c6;
+            margin: 12px;
+            height: 30px;
+            width: 70vw;
+            color: #fff;
+            position: relative;
+        }
+    }
+}
+.a {
+        background: #b9e9f5;
+        @include abs;
+        @include flex ($w: 90vw, $jus:space-between);
+        .s {
+            @include abs;
+            left: 10vw;
+            border-top: 10px solid #b9e9f5;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            z-index: 1;
+        }
+    }
+.main {
+    //task4-1
+
+    @include abs (120px);
+    &-div {
+        width: 351px;
+        white-space: normal;
+        >div {
+            margin: 15px;
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+            border: 2px solid #fff;
+            position: relative;
+            .choose1 {
+                @extend .size-m;
+                color: #000;
+                width: inherit;
+                background: #f5c97b;
+                height: 70%;
+            }
+            .choose2 {
+                color: #fff;
+                width: 15px;
+                width: inherit;
+                height: 30%;
+                @extend .size-s;
+                background: #83b09a;
+            }
+            .img{
+                height: 15px;
+                width: 15px;
+                z-index: 100;
+                @include abs(85px);
+                @extend .center-x;
+                visibility:hidden;
+            }
+            &:hover .img{
+    visibility: visible ;
+
+        }
+    }
+}}
+.footer {
+    justify-content: center;
+    @extend .center;
+    width: 100vw;
+    padding: 0;
+    input {
+        background: #fbb435;
+        width: 40%;
+        height: 35px;
+        color: white;
+        margin: 0 5%;
+        border-radius: 5px;
+    }
+}

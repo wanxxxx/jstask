@@ -117,12 +117,12 @@ body {
   align-items: center;
   justify-content: space-between; }
 
-.center2, main > div {
+.center2, #main1 > div {
   display: flex;
   align-items: center;
   flex-direction: column; }
 
-.center3, main p, main .div1, main .div2 {
+.center3, #main1 p, #main1 .div1, #main1 .div2 {
   display: flex;
   align-items: center;
   justify-content: center; }
@@ -136,10 +136,10 @@ body {
 .size-l {
   font-size: 18px; }
 
-.size-m, main {
+.size-m, #main1, .main-div > div .choose1 {
   font-size: 16px; }
 
-.size-s {
+.size-s, .main-div > div .choose2 {
   font-size: 12px; }
 
 .center-y {
@@ -147,7 +147,7 @@ body {
   top: 50%;
   transform: translatey(-50%); }
 
-.center-x {
+.center-x, .main-div > div .img {
   position: absolute;
   left: 50%;
   transform: translatex(-50%); }
@@ -184,7 +184,7 @@ main {
   top: 50%;
   transform: translatey(-50%); }
 
-.center-x {
+.center-x, .main-div > div .img {
   position: absolute;
   left: 50%;
   transform: translatex(-50%); }
@@ -206,26 +206,35 @@ body {
   background: #29bde0;
   background: #eee; }
 
-main > div {
+#main1 > div {
   background: #fff;
   width: 95vw;
   border: 2px solid #ccc;
   margin-top: 5px; }
-main .div1 {
+#main1 .div1 {
   height: 40px; }
-  main .div1 > p {
+  #main1 .div1 > p {
     color: #29bde0; }
-main .div2 {
+#main1 .div2 {
   padding: 25px 0;
-  flex-direction: row; }
-  main .div2 span {
+  flex-direction: row;
+  position: relative; }
+  #main1 .div2 span {
     height: 140px;
     width: 2px;
     background: #ccc;
     margin: 0 20px; }
-  main .div2 > div > div {
+  #main1 .div2 .sj2 {
+    position: absolute;
+    top: -9px;
+    height: 0;
+    width: 0;
+    border-bottom: 10px solid white;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent; }
+  #main1 .div2 > div > div {
     position: relative; }
-  main .div2 .sj {
+  #main1 .div2 .sj {
     position: absolute;
     left: -2px;
     top: 7px;
@@ -234,18 +243,70 @@ main .div2 {
     border-right: 18px solid #24a7c6;
     border-top: 8px solid transparent;
     border-bottom: 8px solid transparent; }
-  main .div2 img {
+  #main1 .div2 img {
     position: absolute;
     left: -37px;
     height: 30px;
     width: 30px; }
-  main .div2 p {
+  #main1 .div2 p {
     background: #24a7c6;
     margin: 12px;
     height: 30px;
     width: 70vw;
     color: #fff;
     position: relative; }
+
+.a {
+  background: #b9e9f5;
+  position: absolute;
+  top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90vw;
+  height: 60px; }
+  .a .s {
+    position: absolute;
+    top: 60px;
+    left: 10vw;
+    border-top: 10px solid #b9e9f5;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    z-index: 1; }
+
+.main {
+  position: absolute;
+  top: 120px; }
+  .main-div {
+    width: 351px;
+    white-space: normal; }
+    .main-div > div {
+      margin: 15px;
+      display: inline-block;
+      width: 80px;
+      height: 80px;
+      border: 2px solid #fff;
+      position: relative; }
+      .main-div > div .choose1 {
+        color: #000;
+        width: inherit;
+        background: #f5c97b;
+        height: 70%; }
+      .main-div > div .choose2 {
+        color: #fff;
+        width: 15px;
+        width: inherit;
+        height: 30%;
+        background: #83b09a; }
+      .main-div > div .img {
+        height: 15px;
+        width: 15px;
+        z-index: 100;
+        position: absolute;
+        top: 85px;
+        visibility: hidden; }
+      .main-div > div:hover .img {
+        visibility: visible; }
 
 .footer {
   justify-content: center;

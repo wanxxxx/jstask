@@ -7,10 +7,12 @@
             配比页
         </title>
         <link href="css/task4-2.css" rel="stylesheet" type="text/css"/>
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js">
+        <script src="js/jquery-3.2.1.min.js">
+        </script>
+        <script src="js/state-machine.js">
         </script>
     </head>
-    <body>
+    <body id="body">
         <header class="header">
             <p onclick="back()" style="font-size:40px;">
                 ‹
@@ -22,31 +24,35 @@
                 ×
             </p>
         </header>
-        <main>
-            <div class="div1">
+        <main id="main1">
+            <div class="div1" id="div1">
                 <p>
                     第一天
                 </p>
             </div>
-            <div class="div2">
+            <div class="div2" id="div2">
                 <span>
                 </span>
+                <div class="sj2">
+                </div>
                 <div>
-                    <div>
+                    <div id="btn1">
                         <div class="sj">
                         </div>
-                        <img src="img/moon.png" alt="" >
-                        <p>
-                            杀手杀人
-                        </p>
+                        <img alt="" src="img/moon.png">
+                            <p>
+                                杀手杀人
+                            </p>
+                        </img>
                     </div>
                     <div>
                         <div class="sj">
                         </div>
-                        <img src="img/sun.png" alt="" >
-                        <p>
-                            亡灵发表遗言
-                        </p>
+                        <img alt="" src="img/sun.png">
+                            <p>
+                                亡灵发表遗言
+                            </p>
+                        </img>
                     </div>
                     <div>
                         <div class="sj">
@@ -65,11 +71,12 @@
                 </div>
             </div>
         </main>
-        <footer class="footer">
-            <input onclick="end()" type="button" value="结束游戏"/>
+<footer class="footer">
+    <input onclick="end()" type="button" value="结束游戏"/>
             <input onclick="abc()" type="button" value="法官日志"/>
         </footer>
     </body>
+
     <script src="js/task4-2.js">
     </script>
 </html>

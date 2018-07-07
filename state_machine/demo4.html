@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>javascript-state-machine</title>
+</head>
+<body>
+<script src="lib/javascript-state-machine-master/state-machine.js"></script>
+<script>
+    var fsm = StateMachine.create({
+        initial: 'green',
+        error: function(eventName, from, to, args, errorCode, errorMessage) {
+            console.log('event ' + eventName + ' was naughty :- ' + errorMessage);
+        },
+        events: [
+            { name: 'panic', from: 'green', to: 'red'   },
+            { name: 'calm',  from: 'red',   to: 'green' },
+        ]});
+    fsm.calm();
+</script>
+</body>
+</html>

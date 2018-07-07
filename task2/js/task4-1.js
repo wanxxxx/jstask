@@ -14,11 +14,7 @@ for (i = 0; i < msg.length; i++) { //根据人数动态生成
             var divdiv = document.getElementsByClassName("main-div-div")
             divdiv[i].appendChild(newinput1);
             divdiv[i].appendChild(newinput2);
-        } else {
-            break;
-        }
-    } else {
-        break;
+        } 
     }
 }
 var input1 = document.getElementsByClassName("choose1")
@@ -33,6 +29,12 @@ function start() {
 function back() {
     window.location.href = 'task3.html';
 }
+function back2() {
+    window.location.href = 'task4-2.html';
+}
 function end() {
     window.location.href = 'task3.html';
+}
+function confirmm() {
+    window.location.href = 'task4-2.html';
 }

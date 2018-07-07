@@ -112,17 +112,17 @@ body {
   margin: 0;
   font-family: arial; }
 
-.center {
+.center, .footer {
   display: flex;
   align-items: center;
   justify-content: space-between; }
 
-.center2, .main-div > div {
+.center2, #main1 > div, #main2-div > div {
   display: flex;
   align-items: center;
   flex-direction: column; }
 
-.center3 {
+.center3, #main1 p, #main1 .div1, #main1 .div2 {
   display: flex;
   align-items: center;
   justify-content: center; }
@@ -136,10 +136,10 @@ body {
 .size-l {
   font-size: 18px; }
 
-.size-m, .main-div > div .choose1 {
+.size-m, #main1, #main2-div > div .choose1 {
   font-size: 16px; }
 
-.size-s, .main-div > div .choose2 {
+.size-s, #main2-div > div .choose2 {
   font-size: 12px; }
 
 .center-y {
@@ -203,38 +203,94 @@ input {
   background: none; }
 
 body {
-  background: #29bde0; }
+  background: #29bde0;
+  background: #eee; }
 
-.header {
-  justify-content: center; }
+#main1 > div {
+  background: #fff;
+  width: 95vw;
+  border: 2px solid #ccc;
+  margin-top: 5px; }
+#main1 .div1 {
+  height: 40px; }
+  #main1 .div1 > p {
+    color: #29bde0; }
+#main1 .div2 {
+  padding: 25px 0;
+  flex-direction: row;
+  position: relative; }
+  #main1 .div2 span {
+    height: 140px;
+    width: 2px;
+    background: #ccc;
+    margin: 0 20px; }
+  #main1 .div2 .sj2 {
+    position: absolute;
+    top: -9px;
+    height: 0;
+    width: 0;
+    border-bottom: 10px solid white;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent; }
+  #main1 .div2 > div > div {
+    position: relative; }
+  #main1 .div2 .sj {
+    position: absolute;
+    left: -2px;
+    top: 7px;
+    height: 0;
+    width: 0;
+    border-right: 18px solid #24a7c6;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent; }
+  #main1 .div2 img {
+    position: absolute;
+    left: -37px;
+    height: 30px;
+    width: 30px; }
+  #main1 .div2 p {
+    background: #24a7c6;
+    margin: 12px;
+    height: 30px;
+    width: 70vw;
+    color: #fff;
+    position: relative; }
 
-.main {
+#main2 {
+  display: none;
   position: absolute;
   top: 70px; }
-  .main-div {
+  #main2-div {
     width: 351px;
     white-space: normal; }
-    .main-div > div {
+    #main2-div > div {
       margin: 15px;
       display: inline-block;
       width: 80px;
       height: 80px;
       border: 2px solid #fff; }
-      .main-div > div .choose1 {
+      #main2-div > div .choose1 {
         color: #000;
         width: inherit;
         background: #f5c97b;
         height: 70%; }
-      .main-div > div .choose2 {
+      #main2-div > div .choose2 {
         color: #fff;
         width: 15px;
         width: inherit;
         height: 30%;
         background: #83b09a; }
 
-.footer input {
-  background: #fbb435;
+.footer {
   justify-content: center;
-  width: 80vw;
-  height: 40px;
-  color: white; }
+  width: 100vw;
+  padding: 0; }
+  .footer input {
+    background: #fbb435;
+    width: 40%;
+    height: 35px;
+    color: white;
+    margin: 0 5%;
+    border-radius: 5px; }
+
+/*# sourceMappingURL=task4-2.css.map */
