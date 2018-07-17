@@ -10,7 +10,6 @@
     position: absolute;
     top: $top;
 }
-
 body {
     background: $blue;
     background: #eee;
@@ -45,7 +44,8 @@ body {
             background: #ccc;
             margin: 0 20px;
         }
-        .sj2 {
+        &::before {
+            content: '';
             position: absolute;
             top: -9px;
             height: 0;
@@ -57,48 +57,56 @@ body {
         >div>div {
             position: relative;
         }
-        .sj {
-            position: absolute;
-            left: -2px;
-            top: 7px;
-            height: 0;
-            width: 0;
-            border-right: 18px solid #24a7c6;
-            border-top: 8px solid transparent;
-            border-bottom: 8px solid transparent;
-        }
         img {
             position: absolute;
             left: -37px;
             height: 30px;
             width: 30px;
         }
-        p {
+        
+    }
+    .p {
             background: #24a7c6;
             margin: 12px;
             height: 30px;
             width: 70vw;
             color: #fff;
             position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                left: -16px;
+                top: 7px;
+                height: 0;
+                width: 0;
+                border-right: 18px solid #24a7c6;
+                border-top: 8px solid transparent;
+                border-bottom: 8px solid transparent;
+            }
+        }
+    .p-click {
+        @extend .p;
+        background: #83b09b;
+        &::before {
+            border-right: 18px solid #83b09b;
         }
     }
 }
 .a {
-        background: #b9e9f5;
+    background: #b9e9f5;
+    @include abs;
+    @include flex ($w: 90vw, $jus:space-between);
+    .s {
         @include abs;
-        @include flex ($w: 90vw, $jus:space-between);
-        .s {
-            @include abs;
-            left: 10vw;
-            border-top: 10px solid #b9e9f5;
-            border-left: 5px solid transparent;
-            border-right: 5px solid transparent;
-            z-index: 1;
-        }
+        left: 10vw;
+        border-top: 10px solid #b9e9f5;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        z-index: 1;
     }
+}
 .main {
     //task4-1
-
     @include abs (120px);
     &-div {
         width: 351px;
@@ -125,20 +133,20 @@ body {
                 @extend .size-s;
                 background: #83b09a;
             }
-            .img{
+            .img {
                 height: 15px;
                 width: 15px;
                 z-index: 100;
                 @include abs(85px);
                 @extend .center-x;
-                visibility:hidden;
+                visibility: hidden;
             }
-            &:hover .img{
-    visibility: visible ;
-
+            &:hover .img {
+                visibility: visible;
+            }
         }
     }
-}}
+}
 .footer {
     justify-content: center;
     @extend .center;

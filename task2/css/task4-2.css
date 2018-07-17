@@ -224,7 +224,8 @@ body {
     width: 2px;
     background: #ccc;
     margin: 0 20px; }
-  #main1 .div2 .sj2 {
+  #main1 .div2::before {
+    content: '';
     position: absolute;
     top: -9px;
     height: 0;
@@ -234,27 +235,32 @@ body {
     border-left: 8px solid transparent; }
   #main1 .div2 > div > div {
     position: relative; }
-  #main1 .div2 .sj {
+  #main1 .div2 img {
     position: absolute;
-    left: -2px;
+    left: -37px;
+    height: 30px;
+    width: 30px; }
+#main1 .p, #main1 .p-click {
+  background: #24a7c6;
+  margin: 12px;
+  height: 30px;
+  width: 70vw;
+  color: #fff;
+  position: relative; }
+  #main1 .p::before, #main1 .p-click::before {
+    content: '';
+    position: absolute;
+    left: -16px;
     top: 7px;
     height: 0;
     width: 0;
     border-right: 18px solid #24a7c6;
     border-top: 8px solid transparent;
     border-bottom: 8px solid transparent; }
-  #main1 .div2 img {
-    position: absolute;
-    left: -37px;
-    height: 30px;
-    width: 30px; }
-  #main1 .div2 p {
-    background: #24a7c6;
-    margin: 12px;
-    height: 30px;
-    width: 70vw;
-    color: #fff;
-    position: relative; }
+#main1 .p-click {
+  background: #83b09b; }
+  #main1 .p-click::before {
+    border-right: 18px solid #83b09b; }
 
 .a {
   background: #b9e9f5;

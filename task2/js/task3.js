@@ -4,7 +4,8 @@ function back() {
 function end() {
 	window.location.href = 'task2.html';
 }
-var msg = sessionStorage.getItem("data").split(",");
+var get = sessionStorage.data; //读取
+var msg = JSON.parse(get); //重新转换为数组
 console.info(msg);
 var main1 = document.getElementById('main1')
 var main2 = document.getElementById('main2')
@@ -16,7 +17,6 @@ $(document).ready(function() {
 		$("#main2").toggle();
 		var num2 = parseInt(input[2].value)
 		if (main1.style.display === "none") {
-
 			input[2].value = num2 + 1;
 			input[3].value = msg[num2]
 			input[4].value = parseInt(input[2].value) + 1
@@ -32,6 +32,6 @@ $(document).ready(function() {
 	});
 
 	$("#btn2").click(function() {
-		window.location.href = "task4-1.html"
+		window.location.href = "task4-1.html";
 	});
 })
