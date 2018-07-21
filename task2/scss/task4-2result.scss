@@ -48,6 +48,7 @@ body {
                 background: #f5c97b;
                 height: 70%;
             }
+
             .choose2 {
                 color: #fff;
                 width: 15px;
@@ -63,6 +64,14 @@ body {
                 @include abs(85px);
                 @extend .center-x;
                 visibility: hidden;
+            }
+            .img-click{
+                 height: 20px;
+                width: 20px;
+                z-index: 100;
+                @include abs(85px);
+                @extend .center-x;
+                visibility: visible;
             }
 
     }

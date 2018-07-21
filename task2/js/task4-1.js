@@ -38,4 +38,8 @@ function end() {
 }
 function confirmm() {
     window.location.href = 'task4-2.html';
+
 }
+
+
+

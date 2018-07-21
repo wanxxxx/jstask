@@ -1,6 +1,10 @@
 var get = sessionStorage.data; //读取
 var msg = JSON.parse(get); //重新转换为数组
+var daynum = +sessionStorage.getItem('daynum')
+var checknum = +sessionStorage.getItem('checknum') ;
 console.log(msg);
+console.log(daynum + 1);
+console.log(checknum + 1);
 
 function back() {
     window.location.href = 'task3.html';
@@ -17,7 +21,6 @@ $(".img").click(function() {
     window.location.href = 'task4-2-2.html';
 })
 var p = document.getElementsByClassName('p');
-var daynum;
 //状态机
 var killgame = new StateMachine({
     init: 'ready',
@@ -42,39 +45,31 @@ var killgame = new StateMachine({
         //全局
         onBeforeTransition: function(lifecycle) {
             console.log('现在是' + lifecycle.transition + '状态');
+            console.log("今天是第" + daynum + "天")
         },
         //
         onKill: function() {
-            p[0].setAttribute("class", "p-click");
             console.log('杀人');
-            daynum = 1;
+            p[0].setAttribute("class", "p-click");
+            var daynum = sessionStorage.getItem("daynum");
         },
-        onlastwords: function() {
+        onLastwords: function() {
             p[0].setAttribute("class", "p-click");
             console.log('发表遗言')
         },
-        onallspeak: function() {
+        onAllspeak: function() {
             p[0].setAttribute("class", "p-click");
             console.log('依次发言')
         },
-        onvote: function() {
+        onVote: function() {
             p[0].setAttribute("class", "p-click");
             console.log('依次发言')
         },
     }
 })
-//调用状态机
-var bd = $(".btn")
-console.log(bd)
-var bd1=bd[0];
-var bd2=bd[1];
-var bd3=bd[2];
-var bd4=bd[3]
-switch (daynum) {
+switch (checknum) {
     case 1:
-        window.location.href = 'task4-2result.html';
         break;
-        killgame.action1();
     case 2:
         killgame.action1();
         break;
@@ -87,15 +82,29 @@ switch (daynum) {
         killgame.action2();
         killgame.action3();
 }
-bd1.onclick = function () {
-    killgame.action1();
+//调用状态机
+var bd = $(".btn")[0].querySelectorAll('div'),
+    bd1 = bd[0];
+bd2 = bd[1];
+bd3 = bd[2];
+bd4 = bd[3];
+bd[0].onclick = function() {
+    console.log(daynum);
+    if (daynum == 1) {
+        killgame.action1();
+        window.location.href = 'task4-2result.html';
+        daynum = daynum + 1;
+        sessionStorage.setItem('daynum', daynum);
+    } else {
+        alert('请按顺序操作');
+    }
 }
-bd2.onclick = function () {}
-bd3.onclick = function () {}
-bd4.onclick = function () {}
-
-
-
-var daynum = sessionStorage.getItem("daynum");
-
-
+bd[1].onclick = function() {
+    var daynum = sessionStorage.getItem("daynum");
+    console.log(daynum);
+    if (daynum == 2) {
+        killgame.action2();
+    } else {
+        alert('请按顺序操作');
+    }
+}

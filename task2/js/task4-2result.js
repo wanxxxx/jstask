@@ -1,6 +1,7 @@
 var get = sessionStorage.data; //读取
 var msg = JSON.parse(get); //重新转换为数组
-console.info(msg);
+var daynum = sessionStorage.getItem("daynum");
+console.log(daynum - 1 + "次杀人");
 
 function back() {
     window.location.href = 'task3.html';
@@ -13,10 +14,8 @@ function end() {
 function abc() {
     window.location.href = 'task4-2-2.html';
 }
-$("#btn1").click(function() {
-    window.history.back(); 
-});
-//根据人数动态生成
+
+//根据人数动态生成div...
 for (i = 0; i < msg.length; i++) {
     if (i < msg.length) { //插入div
         var div = document.getElementById('div');
@@ -42,44 +41,24 @@ for (i = 0; i < msg.length; i++) {
         var input2 = document.getElementsByClassName("choose2")
         input1[i].value = msg[i];
         input2[i].value = i + 1 + "号";
-        //杀人了
+        //显示图片
         divdiv[i].onclick = function() {
+            for (i = 0; i < msg.length; i++) {
+                $("img")[i].setAttribute("class", "img");
+            }
             var img = this.querySelector('.img');
-            var name = this.querySelector('.choose1');
-            $(".main-div-div img").attr('style', 'visibility = visible');
-            img.style.visibility = 'visible';
-            var deadnum = $('.main-div-div').index(this) + 1
-            console.log("将杀死第" + deadnum + '人');
-            
-            $("#btn2").click(function() {
-                if (name.value == "杀手") {
-                    alert("你是杀手不能杀死本职业，请选择其他玩家杀死")
-                } else {
-                    var daynum = sessionStorage.getItem("daynum");
-
-                    console.log(daynum)
-               }
-            });
+            img.setAttribute("class", "img-click");
+            var deadnum = $('.main-div-div').index(this) + 1;
+            sessionStorage.setItem('deadnum', deadnum);
         }
     }
 }
-//状态机
-var fsm = new StateMachine({
-    init: '1',
-    transitions: [{
-        name: 'kill',
-        from: '1',
-        to: '2'
-    }, {
-        name: 'lastwords',
-        from: '2',
-        to: '3'
-    }, {
-        name: 'allspeak',
-        from: '3',
-        to: '4'
-    }],
-    method: {}
-})
-//调用状态机
-
+$("#btn2").click(function() {
+    var killed = $(".img-click").prev().prev().val();
+    console.log(killed)
+    if (killed === "杀手") {
+        alert("你是杀手不能杀死本职业，请选择其他玩家杀死")
+    } else {
+    window.location.href = 'task4-2.html';
+    }
+});

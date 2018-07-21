@@ -147,7 +147,7 @@ body {
   top: 50%;
   transform: translatey(-50%); }
 
-.center-x, .main-div > div .img {
+.center-x, .main-div > div .img, .main-div > div .img-click {
   position: absolute;
   left: 50%;
   transform: translatex(-50%); }
@@ -184,7 +184,7 @@ main {
   top: 50%;
   transform: translatey(-50%); }
 
-.center-x, .main-div > div .img {
+.center-x, .main-div > div .img, .main-div > div .img-click {
   position: absolute;
   left: 50%;
   transform: translatex(-50%); }
@@ -254,6 +254,13 @@ body {
         position: absolute;
         top: 85px;
         visibility: hidden; }
+      .main-div > div .img-click {
+        height: 20px;
+        width: 20px;
+        z-index: 100;
+        position: absolute;
+        top: 85px;
+        visibility: visible; }
 
 .footer {
   justify-content: center;
