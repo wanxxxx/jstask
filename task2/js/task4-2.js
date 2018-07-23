@@ -1,10 +1,13 @@
 var get = sessionStorage.data; //读取
 var msg = JSON.parse(get); //重新转换为数组
 var daynum = +sessionStorage.getItem('daynum')
-var checknum = +sessionStorage.getItem('checknum') ;
+var checknum = +sessionStorage.getItem('checknum');
+var sss = sessionStorage.people; //读取
+var people = JSON.parse(sss); //重新转换为数组
 console.log(msg);
 console.log(daynum + 1);
 console.log(checknum + 1);
+console.log(people);
 
 function back() {
     window.location.href = 'task3.html';
@@ -72,6 +75,7 @@ switch (checknum) {
         break;
     case 2:
         killgame.action1();
+        $(".p2").css('display', 'flex')
         break;
     case 3:
         killgame.action1();
@@ -90,20 +94,41 @@ bd3 = bd[2];
 bd4 = bd[3];
 bd[0].onclick = function() {
     console.log(daynum);
-    if (daynum == 1) {
+    if (checknum == 1) {
         killgame.action1();
         window.location.href = 'task4-2result.html';
-        daynum = daynum + 1;
+        checknum = checknum + 1;
         sessionStorage.setItem('daynum', daynum);
     } else {
         alert('请按顺序操作');
     }
 }
 bd[1].onclick = function() {
-    var daynum = sessionStorage.getItem("daynum");
-    console.log(daynum);
-    if (daynum == 2) {
-        killgame.action2();
+    if (checknum == 2) {
+        var con = confirm('请死者亮明身份，发表遗言')
+        if (con == true) {
+            killgame.action2();
+            checknum = checknum + 1;
+        }
+    } else {
+        alert('请按顺序操作');
+    }
+}
+bd[2].onclick = function() {
+    if (checknum == 3) {
+        var con = confirm('玩家依次发言')
+        if (con == true) {
+            killgame.action3();
+            checknum = checknum + 1;
+        }
+    } else {
+        alert('请按顺序操作');
+    }
+}
+bd[3].onclick = function() {
+    if (checknum == 4) {
+        killgame.action4();
+        window.location.href = 'task4-2result.html';
     } else {
         alert('请按顺序操作');
     }

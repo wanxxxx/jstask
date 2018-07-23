@@ -1,6 +1,6 @@
 var get = sessionStorage.data; //读取
 var msg = JSON.parse(get); //重新转换为数组
-var daynum = sessionStorage.getItem("daynum");
+var daynum = +sessionStorage.getItem('daynum')
 console.log(daynum - 1 + "次杀人");
 
 function back() {
@@ -14,7 +14,8 @@ function end() {
 function abc() {
     window.location.href = 'task4-2-2.html';
 }
-
+var input1 = document.getElementsByClassName("choose1")
+var input2 = document.getElementsByClassName("choose2")
 //根据人数动态生成div...
 for (i = 0; i < msg.length; i++) {
     if (i < msg.length) { //插入div
@@ -37,8 +38,6 @@ for (i = 0; i < msg.length; i++) {
             $("img").attr("src", "img/kill.png");
         }
         //在input内放入名称号码
-        var input1 = document.getElementsByClassName("choose1")
-        var input2 = document.getElementsByClassName("choose2")
         input1[i].value = msg[i];
         input2[i].value = i + 1 + "号";
         //显示图片
@@ -48,17 +47,26 @@ for (i = 0; i < msg.length; i++) {
             }
             var img = this.querySelector('.img');
             img.setAttribute("class", "img-click");
-            var deadnum = $('.main-div-div').index(this) + 1;
-            sessionStorage.setItem('deadnum', deadnum);
+            var people = []; //这是一个数组
+            for (i = 0; i < msg.length; i++) {
+                people[i] = 'live'
+            }
+            var deanum = $('.main-div-div').index(this) + 1;
+            people[deanum] = 'dead'
+            sessionStorage.setItem('deanum', dea
+                num);
+            var sss = JSON.stringify(people); //转换为字符串
+            sessionStorage.people = sss; //存入
+            console.log(people)
         }
     }
 }
 $("#btn2").click(function() {
     var killed = $(".img-click").prev().prev().val();
-    console.log(killed)
+    input1[]
     if (killed === "杀手") {
         alert("你是杀手不能杀死本职业，请选择其他玩家杀死")
     } else {
-    window.location.href = 'task4-2.html';
+        window.location.href = 'task4-2.html';
     }
 });

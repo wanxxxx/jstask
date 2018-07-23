@@ -53,3 +53,5 @@ function fapai() { //存入数据
     sessionStorage.setItem('daynum', 1);
 sessionStorage.setItem('checknum', 1);
 }
+
+

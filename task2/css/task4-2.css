@@ -136,7 +136,7 @@ body {
 .size-l {
   font-size: 18px; }
 
-.size-m, #main1, .main-div > div .choose1 {
+.size-m, #main1, #main1 .p2 input, .main-div > div .choose1 {
   font-size: 16px; }
 
 .size-s, .main-div > div .choose2 {
@@ -261,6 +261,10 @@ body {
   background: #83b09b; }
   #main1 .p-click::before {
     border-right: 18px solid #83b09b; }
+#main1 .p2 {
+  display: flex; }
+  #main1 .p2 input {
+    width: 70vw; }
 
 .a {
   background: #b9e9f5;

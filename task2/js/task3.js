@@ -35,3 +35,11 @@ $(document).ready(function() {
 		window.location.href = "task4-1.html";
 	});
 })
+
+ var people = []; //这是一个数组
+            for (i = 0; i < msg.length; i++) {
+                people[i] = 'live'
+            }
+ var sss = JSON.stringify(people); 
+sessionStorage.people = sss; //存入
+console.info(sss);

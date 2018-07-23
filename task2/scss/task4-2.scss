@@ -91,9 +91,13 @@ body {
             border-right: 18px solid #83b09b;
         }
     }
-    .p2{
-        visibility: hidden;
+   .p2{
+    display: flex;
+    input{
+        @extend .size-m;
+        width: 70vw;
     }
+   }
 }
 .a {
     background: #b9e9f5;
