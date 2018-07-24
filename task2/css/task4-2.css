@@ -117,12 +117,12 @@ body {
   align-items: center;
   justify-content: space-between; }
 
-.center2, #main1 > div {
+.center2, .main1 > div {
   display: flex;
   align-items: center;
   flex-direction: column; }
 
-.center3, #main1 p, #main1 .div1, #main1 .div2 {
+.center3, .main1 p, .main1 .div1, .main1 .div2 {
   display: flex;
   align-items: center;
   justify-content: center; }
@@ -136,7 +136,7 @@ body {
 .size-l {
   font-size: 18px; }
 
-.size-m, #main1, #main1 .p2 input, .main-div > div .choose1 {
+.size-m, .main1, .main1 .input, .main-div > div .choose1 {
   font-size: 16px; }
 
 .size-s, .main-div > div .choose2 {
@@ -206,25 +206,25 @@ body {
   background: #29bde0;
   background: #eee; }
 
-#main1 > div {
+.main1 > div {
   background: #fff;
   width: 95vw;
   border: 2px solid #ccc;
   margin-top: 5px; }
-#main1 .div1 {
+.main1 .div1 {
   height: 40px; }
-  #main1 .div1 > p {
+  .main1 .div1 > p {
     color: #29bde0; }
-#main1 .div2 {
+.main1 .div2 {
   padding: 25px 0;
   flex-direction: row;
   position: relative; }
-  #main1 .div2 span {
+  .main1 .div2 span {
     height: 140px;
     width: 2px;
     background: #ccc;
     margin: 0 20px; }
-  #main1 .div2::before {
+  .main1 .div2::before {
     content: '';
     position: absolute;
     top: -9px;
@@ -233,21 +233,21 @@ body {
     border-bottom: 10px solid white;
     border-right: 8px solid transparent;
     border-left: 8px solid transparent; }
-  #main1 .div2 > div > div {
+  .main1 .div2 > div > div {
     position: relative; }
-  #main1 .div2 img {
+  .main1 .div2 img {
     position: absolute;
     left: -37px;
     height: 30px;
     width: 30px; }
-#main1 .p, #main1 .p-click {
+.main1 .p, .main1 .p-click {
   background: #24a7c6;
   margin: 12px;
   height: 30px;
   width: 70vw;
   color: #fff;
   position: relative; }
-  #main1 .p::before, #main1 .p-click::before {
+  .main1 .p::before, .main1 .p-click::before {
     content: '';
     position: absolute;
     left: -16px;
@@ -257,14 +257,13 @@ body {
     border-right: 18px solid #24a7c6;
     border-top: 8px solid transparent;
     border-bottom: 8px solid transparent; }
-#main1 .p-click {
+.main1 .p-click {
   background: #83b09b; }
-  #main1 .p-click::before {
+  .main1 .p-click::before {
     border-right: 18px solid #83b09b; }
-#main1 .p2 {
-  display: flex; }
-  #main1 .p2 input {
-    width: 70vw; }
+.main1 .input {
+  width: 70vw;
+  display: none; }
 
 .a {
   background: #b9e9f5;

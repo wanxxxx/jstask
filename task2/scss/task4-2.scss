@@ -14,7 +14,7 @@ body {
     background: $blue;
     background: #eee;
 }
-#main1 {
+.main1 {
     @extend .size-m;
     >div {
         background: #fff;
@@ -63,27 +63,26 @@ body {
             height: 30px;
             width: 30px;
         }
-        
     }
     .p {
-            background: #24a7c6;
-            margin: 12px;
-            height: 30px;
-            width: 70vw;
-            color: #fff;
-            position: relative;
-            &::before {
-                content: '';
-                position: absolute;
-                left: -16px;
-                top: 7px;
-                height: 0;
-                width: 0;
-                border-right: 18px solid #24a7c6;
-                border-top: 8px solid transparent;
-                border-bottom: 8px solid transparent;
-            }
+        background: #24a7c6;
+        margin: 12px;
+        height: 30px;
+        width: 70vw;
+        color: #fff;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            left: -16px;
+            top: 7px;
+            height: 0;
+            width: 0;
+            border-right: 18px solid #24a7c6;
+            border-top: 8px solid transparent;
+            border-bottom: 8px solid transparent;
         }
+    }
     .p-click {
         @extend .p;
         background: #83b09b;
@@ -91,14 +90,14 @@ body {
             border-right: 18px solid #83b09b;
         }
     }
-   .p2{
-    display: flex;
-    input{
-        @extend .size-m;
-        width: 70vw;
+    
+        .input {
+            @extend .size-m;
+            width: 70vw;
+            display: none;
+        }
     }
-   }
-}
+
 .a {
     background: #b9e9f5;
     @include abs;

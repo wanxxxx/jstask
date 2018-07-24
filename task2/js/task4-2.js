@@ -4,9 +4,10 @@ var daynum = +sessionStorage.getItem('daynum')
 var checknum = +sessionStorage.getItem('checknum');
 var sss = sessionStorage.people; //读取
 var people = JSON.parse(sss); //重新转换为数组
+
 console.log(msg);
-console.log(daynum + 1);
-console.log(checknum + 1);
+console.log(daynum);
+console.log(checknum);
 console.log(people);
 
 function back() {
@@ -75,7 +76,7 @@ switch (checknum) {
         break;
     case 2:
         killgame.action1();
-        $(".p2").css('display', 'flex')
+        $(".input").css('display', 'flex')
         break;
     case 3:
         killgame.action1();
@@ -98,7 +99,7 @@ bd[0].onclick = function() {
         killgame.action1();
         window.location.href = 'task4-2result.html';
         checknum = checknum + 1;
-        sessionStorage.setItem('daynum', daynum);
+        sessionStorage.setItem('checknum', checknum);
     } else {
         alert('请按顺序操作');
     }
@@ -109,6 +110,7 @@ bd[1].onclick = function() {
         if (con == true) {
             killgame.action2();
             checknum = checknum + 1;
+            sessionStorage.setItem('checknum', checknum);
         }
     } else {
         alert('请按顺序操作');
@@ -120,6 +122,7 @@ bd[2].onclick = function() {
         if (con == true) {
             killgame.action3();
             checknum = checknum + 1;
+            sessionStorage.setItem('checknum', checknum);
         }
     } else {
         alert('请按顺序操作');
