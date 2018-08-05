@@ -1,8 +1,9 @@
 function back() {
-	window.location.href = 'task2.html';
+    window.location.href = 'task2.html';
 }
+
 function end() {
-	window.location.href = 'task2.html';
+    window.location.href = 'task2.html';
 }
 var get = sessionStorage.data; //读取
 var msg = JSON.parse(get); //重新转换为数组
@@ -12,34 +13,36 @@ var main2 = document.getElementById('main2')
 var input = $(":input");
 input[2].value = 0;
 $(document).ready(function() {
-	$(".btn").click(function() {
-		$("#main1").toggle();
-		$("#main2").toggle();
-		var num2 = parseInt(input[2].value)
-		if (main1.style.display === "none") {
-			input[2].value = num2 + 1;
-			input[3].value = msg[num2]
-			input[4].value = parseInt(input[2].value) + 1
-		}
-		if (main2.style.display === "none") {
-			input[0].value = input[4].value
-			input[1].value = input[0].value
-		}
-		if (input[1].value >= msg.length) {
-			$("#btn1").hide();
-			$("#btn2").show();
-		}
-	});
-
-	$("#btn2").click(function() {
-		window.location.href = "task4-1.html";
-	});
+    $(".btn").click(function() {
+        $("#main1").toggle();
+        $("#main2").toggle();
+        var num2 = parseInt(input[2].value)
+        if (main1.style.display === "none") {
+            input[2].value = num2 + 1;
+            input[3].value = msg[num2]
+            input[4].value = parseInt(input[2].value) + 1
+        }
+        if (main2.style.display === "none") {
+            input[0].value = input[4].value
+            input[1].value = input[0].value
+        }
+        if (input[1].value >= msg.length) {
+            $("#btn1").hide();
+            $("#btn2").show();
+        }
+    });
+    $("#btn2").click(function() {
+        window.location.href = "task4-1.html";
+    });
 })
+var people = []; //这是一个数组
+var deadnum = new Array()
+for (i = 0; i < msg.length; i++) {
+    people[i] = 'live';
+}
+for (i = 0; i < 2*msg.length; i++) {
+    deadnum[i] = 0;
+}
 
- var people = []; //这是一个数组
-            for (i = 0; i < msg.length; i++) {
-                people[i] = 'live'
-            }
- var sss = JSON.stringify(people); 
-sessionStorage.people = sss; //存入
-console.info(sss);
+sessionStorage.people = JSON.stringify(people); //存入
+sessionStorage.deadnum = JSON.stringify(deadnum);

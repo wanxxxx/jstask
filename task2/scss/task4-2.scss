@@ -14,8 +14,15 @@ body {
     background: $blue;
     background: #eee;
 }
+.show {
+    display: flex;
+}
+.hide {
+    display: none;
+}
 .main1 {
-    @extend .size-m;
+    @extend .size-s;
+    display: none;
     >div {
         background: #fff;
         width: 95vw;
@@ -23,13 +30,13 @@ body {
         margin-top: 5px;
         @extend .center2;
     }
-    p {
+    input {
         @extend .center3;
     }
     .div1 {
         height: 40px;
         @extend .center3;
-        >p {
+        input {
             color: $blue;
         }
     }
@@ -38,12 +45,7 @@ body {
         @extend .center3;
         flex-direction: row;
         position: relative;
-        span {
-            height: 140px;
-            width: 2px;
-            background: #ccc;
-            margin: 0 20px;
-        }
+        display: none;
         &::before {
             content: '';
             position: absolute;
@@ -54,6 +56,12 @@ body {
             border-right: 8px solid transparent;
             border-left: 8px solid transparent;
         }
+        span {
+            height: 140px;
+            width: 2px;
+            background: #ccc;
+            margin: 0 20px;
+        }
         >div>div {
             position: relative;
         }
@@ -63,18 +71,10 @@ body {
             height: 30px;
             width: 30px;
         }
-    }
-    .p {
-        background: #24a7c6;
-        margin: 12px;
-        height: 30px;
-        width: 70vw;
-        color: #fff;
-        position: relative;
-        &::before {
+        .btn::before {
             content: '';
             position: absolute;
-            left: -16px;
+            left: -4px;
             top: 7px;
             height: 0;
             width: 0;
@@ -82,22 +82,22 @@ body {
             border-top: 8px solid transparent;
             border-bottom: 8px solid transparent;
         }
-    }
-    .p-click {
-        @extend .p;
-        background: #83b09b;
-        &::before {
-            border-right: 18px solid #83b09b;
+        .btn-click {
+             @extend .btn;
+            >input {
+                background: #83b09b;
+            }
+            &::before {
+                border-right: 18px solid #83b09b;
+            }
         }
     }
-    
-        .input {
-            @extend .size-m;
-            width: 70vw;
-            display: none;
-        }
+    .input1 {
+        @extend .size-m;
+        width: 70vw;
+        display: none;
     }
-
+}
 .a {
     background: #b9e9f5;
     @include abs;
@@ -110,6 +110,14 @@ body {
         border-right: 5px solid transparent;
         z-index: 1;
     }
+}
+.input {
+    background: #24a7c6;
+    margin: 12px;
+    height: 30px;
+    width: 70vw;
+    color: #fff;
+    position: relative;
 }
 .main {
     //task4-1

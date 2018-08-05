@@ -51,7 +51,7 @@ function fapai() { //存入数据
     
     window.location.href = "task3.html"
     sessionStorage.setItem('daynum', 1);
-sessionStorage.setItem('checknum', 1);
+sessionStorage.setItem('checknum', 0);
 }
 
 

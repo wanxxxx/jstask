@@ -122,7 +122,7 @@ body {
   align-items: center;
   flex-direction: column; }
 
-.center3, .main1 p, .main1 .div1, .main1 .div2 {
+.center3, .main1 input, .main1 .div1, .main1 .div2 {
   display: flex;
   align-items: center;
   justify-content: center; }
@@ -136,10 +136,10 @@ body {
 .size-l {
   font-size: 18px; }
 
-.size-m, .main1, .main1 .input, .main-div > div .choose1 {
+.size-m, .main1 .input1, .main-div > div .choose1 {
   font-size: 16px; }
 
-.size-s, .main-div > div .choose2 {
+.size-s, .main1, .main-div > div .choose2 {
   font-size: 12px; }
 
 .center-y {
@@ -206,64 +206,66 @@ body {
   background: #29bde0;
   background: #eee; }
 
-.main1 > div {
-  background: #fff;
-  width: 95vw;
-  border: 2px solid #ccc;
-  margin-top: 5px; }
-.main1 .div1 {
-  height: 40px; }
-  .main1 .div1 > p {
-    color: #29bde0; }
-.main1 .div2 {
-  padding: 25px 0;
-  flex-direction: row;
-  position: relative; }
-  .main1 .div2 span {
-    height: 140px;
-    width: 2px;
-    background: #ccc;
-    margin: 0 20px; }
-  .main1 .div2::before {
-    content: '';
-    position: absolute;
-    top: -9px;
-    height: 0;
-    width: 0;
-    border-bottom: 10px solid white;
-    border-right: 8px solid transparent;
-    border-left: 8px solid transparent; }
-  .main1 .div2 > div > div {
-    position: relative; }
-  .main1 .div2 img {
-    position: absolute;
-    left: -37px;
-    height: 30px;
-    width: 30px; }
-.main1 .p, .main1 .p-click {
-  background: #24a7c6;
-  margin: 12px;
-  height: 30px;
-  width: 70vw;
-  color: #fff;
-  position: relative; }
-  .main1 .p::before, .main1 .p-click::before {
-    content: '';
-    position: absolute;
-    left: -16px;
-    top: 7px;
-    height: 0;
-    width: 0;
-    border-right: 18px solid #24a7c6;
-    border-top: 8px solid transparent;
-    border-bottom: 8px solid transparent; }
-.main1 .p-click {
-  background: #83b09b; }
-  .main1 .p-click::before {
-    border-right: 18px solid #83b09b; }
-.main1 .input {
-  width: 70vw;
+.show {
+  display: flex; }
+
+.hide {
   display: none; }
+
+.main1 {
+  display: none; }
+  .main1 > div {
+    background: #fff;
+    width: 95vw;
+    border: 2px solid #ccc;
+    margin-top: 5px; }
+  .main1 .div1 {
+    height: 40px; }
+    .main1 .div1 input {
+      color: #29bde0; }
+  .main1 .div2 {
+    padding: 25px 0;
+    flex-direction: row;
+    position: relative;
+    display: none; }
+    .main1 .div2::before {
+      content: '';
+      position: absolute;
+      top: -9px;
+      height: 0;
+      width: 0;
+      border-bottom: 10px solid white;
+      border-right: 8px solid transparent;
+      border-left: 8px solid transparent; }
+    .main1 .div2 span {
+      height: 140px;
+      width: 2px;
+      background: #ccc;
+      margin: 0 20px; }
+    .main1 .div2 > div > div {
+      position: relative; }
+    .main1 .div2 img {
+      position: absolute;
+      left: -37px;
+      height: 30px;
+      width: 30px; }
+    .main1 .div2 .btn::before, .main1 .div2 .btn-click::before {
+      content: '';
+      position: absolute;
+      left: -4px;
+      top: 7px;
+      height: 0;
+      width: 0;
+      border-right: 18px solid #24a7c6;
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent; }
+    .main1 .div2 .btn-click > input {
+      background: #83b09b; }
+    .main1 .div2 .btn-click::before {
+      border-right: 18px solid #83b09b; }
+  .main1 .input1 {
+    width: 70vw;
+    display: none; }
 
 .a {
   background: #b9e9f5;
@@ -282,6 +284,14 @@ body {
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
     z-index: 1; }
+
+.input {
+  background: #24a7c6;
+  margin: 12px;
+  height: 30px;
+  width: 70vw;
+  color: #fff;
+  position: relative; }
 
 .main {
   position: absolute;

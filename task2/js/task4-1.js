@@ -1,6 +1,7 @@
 var get = sessionStorage.data; //读取
 var msg = JSON.parse(get); //重新转换为数组
 console.info(msg);
+
 for (i = 0; i < msg.length; i++) { //根据人数动态生成
     if (i < msg.length) { //插入div
         var div = document.getElementById('div');
