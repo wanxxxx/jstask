@@ -62,9 +62,10 @@ for (i = 0; i < msg.length; i++) {
         }
     }
 }
+var list=[]
 //--------------点击确认--------------
 $("#btn2").click(function() {
-    var imgc = $(".img-click").length
+    var imgc = $(".img-click").length;
     console.log(imgc)
     var killed = $(".img-click").prev().prev();
     if (imgc == 0) { //没点击任何玩家
@@ -73,10 +74,10 @@ $("#btn2").click(function() {
         } else {
             window.location.href = 'task4-2.html';
         }
-    } else if (killed.val() === "杀手"&checknum !== 4) {
+    } else if (killed.val() === "杀手" & checknum !== 4) {
         alert("你是杀手不能杀死本职业，请选择其他玩家杀死")
     } else { //点击过玩家
-        var deadthis = +sessionStorage.getItem('deadthis')
+        var deadthis = +sessionStorage.getItem('deadthis');
         if (people[deadthis] == 'dead') {
             alert('当前玩家已死亡，请选择其他玩家')
         } else {
@@ -84,13 +85,15 @@ $("#btn2").click(function() {
             sessionStorage.people = JSON.stringify(people);
             if (checknum !== 4) {
                 deadnum[2 * daynum - 2] = deadthis + 1;
+                window.location.href = 'task4-2.html';
+
             } else {
                 deadnum[2 * daynum - 1] = deadthis + 1;
                 sessionStorage.setItem('daynum', daynum + 1);
                 sessionStorage.setItem('checknum', 0);
+                window.location.href = 'task4-2.html';
             }
             sessionStorage.deadnum = JSON.stringify(deadnum);
-            window.location.href = 'task4-2.html';
         }
         console.log(deadthis)
     }
@@ -101,3 +104,4 @@ $.each(people, function(idx) {
         input1[idx].setAttribute('style', ' background: #83b09a')
     }
 });
+

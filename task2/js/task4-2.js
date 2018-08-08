@@ -178,13 +178,28 @@ $(".img").click(function() {
     window.location.href = 'task4-2-2.html';
 })
 //--------------gameover------------
-$.each(people, function(idx) {
-    if (people[idx] == 'dead') {
-   console.log(idx)    }
-});
+var killer = [];
 $.each(msg, function(idx) {
     if (msg[idx] == '杀手') {
-        console.log(idx)
-
+        killer.push(people[idx])
     }
-});
+})
+
+function over1() {
+    return people.indexOf('live');
+};
+
+function over2() {
+    return killer.indexOf('live');
+};
+var over1 = over1()
+var over2 = over2()
+var over = '平民';
+if (over1 == -1) {
+    window.location.href = 'over.html';
+    sessionStorage.setItem('over', '杀手');
+}
+if (over2 == -1) {
+    sessionStorage.setItem('over', '平民');
+    window.location.href = 'over.html';
+}

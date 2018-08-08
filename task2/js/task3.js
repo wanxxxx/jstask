@@ -40,9 +40,7 @@ var deadnum = new Array()
 for (i = 0; i < msg.length; i++) {
     people[i] = 'live';
 }
-for (i = 0; i < 2*msg.length; i++) {
-    deadnum[i] = 0;
-}
+
 
 sessionStorage.people = JSON.stringify(people); //存入
 sessionStorage.deadnum = JSON.stringify(deadnum);
