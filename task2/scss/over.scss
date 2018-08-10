@@ -47,36 +47,21 @@ body {
 }
 .main2 {
     color: #c2c2c2;
-    background:white;
+    background: white;
     width: 95vw;
     margin: 0 2.5vw;
-     .box{border: $border;}
+    .box {
+        border: $border;
+    }
     input {
-        @extend .size-m,.center2;
+        @extend .size-m, .center2;
         text-align: left;
         width: 95vw;
         padding: 5px 7.5vw;
-       
     }
 }
-.footer {
-    filter: alpha(opacity=70);
-    /*支持 IE 浏览器*/
-    -moz-opacity: 0.70;
-    /*支持 FireFox 浏览器*/
-    opacity: 0.70;
-    /*支持 Chrome, Opera, Safari 等浏览器*/
-}
-.button1 {
-    height: 40px;
-    width: 35vw;
-    background: #f66f6f;
-    border: none;
-    color: white;
-    font-size: 150%;
-    border-radius: 5px;
-}
-.button2 {
+
+button {
     height: 40px;
     width: 35vw;
     background: #fbb435;
@@ -84,6 +69,8 @@ body {
     color: white;
     font-size: 150%;
     border-radius: 5px;
+    text-align: center;
+    @extend .center2,.center-x;
 }
 .div3 {
     height: 60px;

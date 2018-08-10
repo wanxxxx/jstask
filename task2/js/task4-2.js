@@ -177,29 +177,37 @@ function abc() {
 $(".img").click(function() {
     window.location.href = 'task4-2-2.html';
 })
+var deadnum = JSON.parse(sessionStorage.deadnum);
 //--------------gameover------------
-var killer = [];
-$.each(msg, function(idx) {
-    if (msg[idx] == '杀手') {
-        killer.push(people[idx])
-    }
-})
-
-function over1() {
-    return people.indexOf('live');
-};
-
-function over2() {
-    return killer.indexOf('live');
-};
-var over1 = over1()
-var over2 = over2()
-var over = '平民';
-if (over1 == -1) {
-    window.location.href = 'over.html';
-    sessionStorage.setItem('over', '杀手');
+var killed = []
+for (i = 0; i < deadnum.length; i++) {
+    killed[i] = msg[deadnum[i] - 1]
 }
-if (over2 == -1) {
-    sessionStorage.setItem('over', '平民');
+sessionStorage.killed = JSON.stringify(killed);
+var res = [];
+var killernum = +sessionStorage.getItem('killernum');
+killed.sort();
+for (var i = 0; i < killed.length;) { //xunz
+    var count = 0;
+    for (var j = i; j < killed.length; j++) {
+        if (killed[i] == killed[j]) {
+            count++;
+        }
+    }
+    res.push([killed[i], count]);
+    i += count;
+}
+console.log(res)
+if (msg.length - killernum - res[0][1] == 0) {
     window.location.href = 'over.html';
+    sessionStorage.setItem('result1', '杀手0人');
+    sessionStorage.setItem('result2', res[0][0] + (msg.length - killernum - res[0][1]) + '人');
+    console.log('1')
+}
+if (killernum - res[1][1] == 0) {
+    window.location.href = 'over.html';
+    sessionStorage.setItem('result1', res[1][0] + (killernum - res[1][1]) + '人');
+    sessionStorage.setItem('result2', '平民' + (msg.length - killernum - res[0][1]) + '人');
+        console.log('2')
+
 }

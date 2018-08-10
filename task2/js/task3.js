@@ -36,11 +36,9 @@ $(document).ready(function() {
     });
 })
 var people = []; //这是一个数组
-var deadnum = new Array()
+var deadnum = []
 for (i = 0; i < msg.length; i++) {
     people[i] = 'live';
 }
-
-
 sessionStorage.people = JSON.stringify(people); //存入
 sessionStorage.deadnum = JSON.stringify(deadnum);

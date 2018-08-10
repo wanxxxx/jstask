@@ -62,7 +62,7 @@ for (i = 0; i < msg.length; i++) {
         }
     }
 }
-var list=[]
+
 //--------------点击确认--------------
 $("#btn2").click(function() {
     var imgc = $(".img-click").length;
@@ -83,17 +83,13 @@ $("#btn2").click(function() {
         } else {
             people[deadthis] = 'dead';
             sessionStorage.people = JSON.stringify(people);
-            if (checknum !== 4) {
-                deadnum[2 * daynum - 2] = deadthis + 1;
-                window.location.href = 'task4-2.html';
-
-            } else {
-                deadnum[2 * daynum - 1] = deadthis + 1;
+            deadnum.push(deadthis + 1);
+            if (checknum == 4) {
                 sessionStorage.setItem('daynum', daynum + 1);
                 sessionStorage.setItem('checknum', 0);
-                window.location.href = 'task4-2.html';
             }
             sessionStorage.deadnum = JSON.stringify(deadnum);
+            window.location.href = 'task4-2.html';
         }
         console.log(deadthis)
     }
@@ -104,4 +100,3 @@ $.each(people, function(idx) {
         input1[idx].setAttribute('style', ' background: #83b09a')
     }
 });
-

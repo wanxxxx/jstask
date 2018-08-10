@@ -117,7 +117,7 @@ body {
   align-items: center;
   justify-content: space-between; }
 
-.center2, .main2 input, button {
+.center2 {
   display: flex;
   align-items: center;
   flex-direction: column; }
@@ -136,7 +136,7 @@ body {
 .size-l {
   font-size: 18px; }
 
-.size-m, .main-part3 > p, .main-part3 > input, .main2 input {
+.size-m {
   font-size: 16px; }
 
 .size-s {
@@ -147,7 +147,7 @@ body {
   top: 50%;
   transform: translatey(-50%); }
 
-.center-x, button {
+.center-x {
   position: absolute;
   left: 50%;
   transform: translatex(-50%); }
@@ -183,7 +183,7 @@ main {
   top: 50%;
   transform: translatey(-50%); }
 
-.center-x, button {
+.center-x {
   position: absolute;
   left: 50%;
   transform: translatex(-50%); }
@@ -200,57 +200,4 @@ input {
   text-align: center;
   background: none; }
 
-body {
-  background: #5fc0cd; }
-
-.main {
-  background: #5fc0cd;
-  padding: 60px 10vw;
-  position: relative;
-  height: 200px; }
-  .main-part1 .img1 {
-    position: absolute;
-    top: 70px; }
-  .main-part1 .img2 {
-    position: absolute;
-    top: 60px; }
-  .main-part1 > input {
-    position: absolute;
-    top: 145px;
-    font-weight: bold;
-    color: white; }
-  .main-part3 {
-    left: 10vw;
-    position: absolute;
-    top: 230px; }
-    .main-part3 > p, .main-part3 > input {
-      width: 100px;
-      color: white;
-      text-align: left;
-      margin: 7px; }
-
-.main2 {
-  color: #c2c2c2;
-  background: white;
-  width: 95vw;
-  margin: 0 2.5vw; }
-  .main2 .box {
-    border: 1px solid #c4c4c4; }
-  .main2 input {
-    text-align: left;
-    width: 95vw;
-    padding: 5px 7.5vw; }
-
-button {
-  height: 40px;
-  width: 35vw;
-  background: #fbb435;
-  border: none;
-  color: white;
-  font-size: 150%;
-  border-radius: 5px;
-  text-align: center; }
-
-.div3 {
-  height: 60px;
-  width: 100%; }
+/*# sourceMappingURL=common.css.map */

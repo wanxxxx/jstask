@@ -33,6 +33,7 @@ function checkField() { //修改事件
     } else {
         alert("请输入正确数字")
     }
+    sessionStorage.setItem('killernum', killer.value);
     var arr2 = new Array(val); //1-N玩家的集合
     var arr1 = arra(val);
     for (i = 0; i < val; i++) { //全赋予平民
@@ -48,10 +49,7 @@ function fapai() { //存入数据
     var data = checkField(); //这是一个数组
     var send = JSON.stringify(data); //转换为字符串
     sessionStorage.data = send; //存入
-    
     window.location.href = "task3.html"
     sessionStorage.setItem('daynum', 1);
-sessionStorage.setItem('checknum', 0);
+    sessionStorage.setItem('checknum', 0);
 }
-
-

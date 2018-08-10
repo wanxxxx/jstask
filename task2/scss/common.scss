@@ -92,7 +92,6 @@ body{
 @mixin abs($t:50px){position: absolute;top:$t;}
 body{margin: 0;padding: 0;}
 .header{
-	background:$blue;
 	width: 90%;
 	height: 45px;
 	padding: 0 5%;
@@ -131,7 +130,7 @@ main{
 	bottom:0;
 	width: 80vw;
 	height: 60px;
-	background: #29bde0;
+
 	padding: 0 10vw;
 }
 input {
