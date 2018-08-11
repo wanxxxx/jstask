@@ -112,31 +112,31 @@ body {
   margin: 0;
   font-family: arial; }
 
-.center {
+.center, .main-part1-div2 > div:nth-child(1) > div {
   display: flex;
   align-items: center;
   justify-content: space-between; }
 
-.center2, .main2 input, button {
+.center2, .main-part1-div2 {
   display: flex;
   align-items: center;
   flex-direction: column; }
 
-.center3 {
+.center3, .main-part1, .main-part1-div1, .main-part1-div2 > div:nth-child(1), .main-part1-div2 > div:nth-child(2) {
   display: flex;
   align-items: center;
   justify-content: center; }
 
-.padding-a {
+.padding-a, .main-part1-div1 > p {
   padding: 0 5vw; }
 
 .padding-b {
   padding: 10px 0; }
 
-.size-l {
+.size-l, .main-part1 {
   font-size: 18px; }
 
-.size-m, .main-part3 > p, .main-part3 > input, .main2 input {
+.size-m, .main-part1-div2 > div:nth-child(1) > div input {
   font-size: 16px; }
 
 .size-s {
@@ -147,7 +147,7 @@ body {
   top: 50%;
   transform: translatey(-50%); }
 
-.center-x, button {
+.center-x {
   position: absolute;
   left: 50%;
   transform: translatex(-50%); }
@@ -178,12 +178,12 @@ main {
 .orange {
   color: orange; }
 
-.center-v {
+.center-v, .main-part3 img {
   position: absolute;
   top: 50%;
   transform: translatey(-50%); }
 
-.center-x, button {
+.center-x {
   position: absolute;
   left: 50%;
   transform: translatex(-50%); }
@@ -200,56 +200,130 @@ input {
   text-align: center;
   background: none; }
 
-body {
-  background: #5fc0cd; }
-
-.main {
-  background: #5fc0cd;
-  padding: 60px 10vw;
-  position: relative;
-  height: 200px; }
-  .main-part1 .img1 {
-    position: absolute;
-    top: 70px; }
-  .main-part1 .img2 {
-    position: absolute;
-    top: 60px; }
-  .main-part1 > input {
-    position: absolute;
-    top: 145px;
-    font-weight: bold;
-    color: white; }
-  .main-part3 {
-    left: 10vw;
-    position: absolute;
-    top: 230px; }
-    .main-part3 > p, .main-part3 > input {
-      width: 100px;
-      color: white;
-      text-align: left;
-      margin: 7px; }
-
-.main2 {
-  color: #c2c2c2;
-  background: white;
-  width: 95vw;
-  margin: 0 2.5vw; }
-  .main2 .box {
-    border: 1px solid #c4c4c4; }
-  .main2 input {
-    text-align: left;
-    width: 95vw;
-    padding: 5px 7.5vw; }
-
-button {
-  height: 40px;
-  width: 35vw;
-  background: #fbb435;
+.main input {
   border: none;
-  color: white;
-  border-radius: 5px;
-  text-align: center; }
+  text-align: center;
+  font-size: 20px; }
+.main > div {
+  margin-top: 10px;
+  width: 90vw;
+  background: #fff; }
+.main-part1-div1 {
+  width: 20vw;
+  height: 300px;
+  border-right: 1px solid #eee; }
+  .main-part1-div1 > p {
+    width: 20px; }
+.main-part1-div2 {
+  width: 70vw;
+  background: #fbfbfb;
+  height: 300px; }
+  .main-part1-div2 > div {
+    width: 60vw;
+    padding: 0 5vw; }
+    .main-part1-div2 > div:nth-child(1) {
+      height: 250px;
+      border-bottom: 1px solid #eee;
+      color: #ccc;
+      flex-wrap: wrap; }
+      .main-part1-div2 > div:nth-child(1) > div {
+        margin: 5px 1vw; }
+        .main-part1-div2 > div:nth-child(1) > div span {
+          width: 10px;
+          height: 10px;
+          background: orange;
+          margin: 5px; }
+        .main-part1-div2 > div:nth-child(1) > div input {
+          height: 15px;
+          background: none;
+          width: 1.5em; }
+    .main-part1-div2 > div:nth-child(2) {
+      height: 50px;
+      font-family: 宋体;
+      color: #29bde0; }
+.main-part2 {
+  padding-bottom: 15px; }
+  .main-part2 input {
+    text-align: left !important; }
+  .main-part2 > div {
+    width: 80vw;
+    color: #ccc;
+    padding: 15px 0;
+    border-bottom: 1px solid #ccc;
+    margin: 0 10px; }
+  .main-part2 input {
+    margin: 0 10px;
+    font-size: 14px; }
+.main-part3 {
+  padding-bottom: 15px; }
+  .main-part3 img {
+    width: 40px;
+    height: 40px; }
+    .main-part3 img:last-child {
+      left: 5px; }
+    .main-part3 img:first-child {
+      right: 5px; }
+  .main-part3 > input {
+    width: 40px;
+    height: 35px;
+    background: #f4f5f5;
+    color: orange;
+    margin: 0 10px; }
+.main > input {
+  margin: 10px 0;
+  width: 90vw;
+  color: #fff;
+  background: orange;
+  padding: 15px 0; }
 
-.div3 {
-  height: 60px;
-  width: 100%; }
+input[type=range] {
+  -webkit-appearance: none;
+  border-radius: 10px;
+  /*这个属性设置使填充进度条时的图形为圆角*/
+  width: 80%; }
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none; }
+
+input[type=range]:focus {
+  outline: none; }
+
+input[type=range]::-webkit-slider-runnable-track {
+  height: 3px;
+  border-radius: 1px;
+  /*将轨道设为圆角的*/
+  width: 80%;
+  background: orange; }
+
+input[type=range]::-moz-range-track {
+  height: 3px;
+  border-radius: 1px;
+  /*将轨道设为圆角的*/
+  width: 80%;
+  background: orange; }
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 23px;
+  width: 40px;
+  margin-top: -10px;
+  /*使滑块超出轨道部分的偏移量相等*/
+  background: #fff;
+  border-radius: 5px;
+  /*外观设置为圆形*/
+  border: solid 2px orange;
+  /*设置边框*/ }
+
+input[type=range]::-moz-range-thumb {
+  -webkit-appearance: none;
+  height: 23px;
+  width: 40px;
+  margin-top: -10px;
+  /*使滑块超出轨道部分的偏移量相等*/
+  background: #fff;
+  border-radius: 5px;
+  /*外观设置为圆形*/
+  border: solid 2px orange;
+  /*设置边框*/ }
+
+/*# sourceMappingURL=task2.css.map */

@@ -86,12 +86,18 @@
             width: 80vw;
             color: #000;
             margin: 20px 0;
-            >input {
-                width: 40px;
-                height: 35px;
-                background: #f4f5f5;
-                color: orange;
-                margin: 0 10px;
+            @extend .center;
+            img {
+                width: 20px;
+                height: 20px;
+                @extend .center-v;
+                top: 478px;
+                &:last-child {
+                    right: 12vw;
+                }
+                &:first-child {
+                    left: 12vw;
+                }
             }
         }
     }
@@ -102,6 +108,9 @@
         background: orange;
         padding: 15px 0;
     }
+}
+button[type=button] {
+    @extend .size-m;
 }
 @mixin track {
     height: 3px;

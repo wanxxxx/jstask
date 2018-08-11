@@ -112,7 +112,7 @@ body {
   margin: 0;
   font-family: arial; }
 
-.center, .main-part1-div2 > div:nth-child(1) > div {
+.center, .main-part1-div2 > div:nth-child(1) > div, .main-part3 > div {
   display: flex;
   align-items: center;
   justify-content: space-between; }
@@ -136,7 +136,7 @@ body {
 .size-l, .main-part1 {
   font-size: 18px; }
 
-.size-m, .main-part1-div2 > div:nth-child(1) > div input {
+.size-m, .main-part1-div2 > div:nth-child(1) > div input, button[type=button] {
   font-size: 16px; }
 
 .size-s {
@@ -157,7 +157,6 @@ body {
   padding: 0; }
 
 .header {
-  background: #29bde0;
   width: 90%;
   height: 45px;
   padding: 0 5%;
@@ -179,7 +178,7 @@ main {
 .orange {
   color: orange; }
 
-.center-v {
+.center-v, .main-part3 > div img {
   position: absolute;
   top: 50%;
   transform: translatey(-50%); }
@@ -194,7 +193,6 @@ main {
   bottom: 0;
   width: 80vw;
   height: 60px;
-  background: #29bde0;
   padding: 0 10vw; }
 
 input {
@@ -262,12 +260,14 @@ input {
     width: 80vw;
     color: #000;
     margin: 20px 0; }
-    .main-part3 > div > input {
-      width: 40px;
-      height: 35px;
-      background: #f4f5f5;
-      color: orange;
-      margin: 0 10px; }
+    .main-part3 > div img {
+      width: 20px;
+      height: 20px;
+      top: 478px; }
+      .main-part3 > div img:last-child {
+        right: 12vw; }
+      .main-part3 > div img:first-child {
+        left: 12vw; }
 .main > input {
   margin: 10px 0;
   width: 90vw;

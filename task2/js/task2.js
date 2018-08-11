@@ -12,44 +12,58 @@ function arra(m) { //1-m的随机排列数组
     }
     return arr;
 }
-
-function checkField() { //修改事件
-    var val = document.getElementById('player').value;
-    if (val >= 6 && val <= 18) {
+var range = document.getElementById('range')
+var img = document.getElementsByClassName('img')
+var player = document.getElementById('player')
+img[0].onclick = function() {
+    range.value--;
+    player.value = range.value;
+    change()
+}
+img[1].onclick = function() {
+    range.value++;
+    player.value = range.value;
+    change()
+}
+//------------------1
+function change() {
+    player.value = range.value;
+    if (player.value >= 4 && player.value <= 8) {
         killer.value = 1;
-    }
-    if (val >= 6 && val <= 8) {
-        killer.value = 1;
-        civilian.value = val - killer.value
-    } else if (val >= 9 && val <= 11) {
+        civilian.value = player.value - killer.value
+    } else if (player.value >= 9 && player.value <= 11) {
         killer.value = 2;
-        civilian.value = val - killer.value
-    } else if (val >= 12 && val <= 15) {
+        civilian.value = player.value - killer.value
+    } else if (player.value >= 12 && player.value <= 15) {
         killer.value = 3;
-        civilian.value = val - killer.value
-    } else if (val >= 16 && val <= 18) {
+        civilian.value = player.value - killer.value
+    } else if (player.value >= 16 && player.value <= 18) {
         killer.value = 4;
-        civilian.value = val - killer.value
+        civilian.value = player.value - killer.value
     } else {
-        alert("请输入正确数字")
+        killer.value = ' ';
+        civilian.value = ' ';
     }
     sessionStorage.setItem('killernum', killer.value);
-    var arr2 = new Array(val); //1-N玩家的集合
-    var arr1 = arra(val);
-    for (i = 0; i < val; i++) { //全赋予平民
-        arr2[i] = "平民";
+    player.value = range.value;
+    var msg = []; //1-N玩家的集合
+    var arr1 = arra(player.value);
+    for (i = 0; i < player.value; i++) { //全赋予平民
+        msg[i] = "平民";
     }
     for (i = 0; i < killer.value; i++) { //随机赋予杀手
-        arr2[arr1[i]] = "杀手";
+        msg[arr1[i]] = "杀手";
     }
-    return arr2;
+    sessionStorage.msg = JSON.stringify(msg);
+    console.log(msg.length)
 }
 
 function fapai() { //存入数据
-    var data = checkField(); //这是一个数组
-    var send = JSON.stringify(data); //转换为字符串
-    sessionStorage.data = send; //存入
-    window.location.href = "task3.html"
-    sessionStorage.setItem('daynum', 1);
-    sessionStorage.setItem('checknum', 0);
+    if (player.value > 3 && player.value < 19) {
+        window.location.href = "task3.html";
+        sessionStorage.setItem('daynum', 1);
+        sessionStorage.setItem('checknum', 0);
+    } else {
+        alert("请输入正确数字")
+    }
 }

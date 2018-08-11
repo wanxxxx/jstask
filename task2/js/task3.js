@@ -5,8 +5,8 @@ function back() {
 function end() {
     window.location.href = 'task2.html';
 }
-var get = sessionStorage.data; //读取
-var msg = JSON.parse(get); //重新转换为数组
+
+var msg = JSON.parse(sessionStorage.msg)
 console.info(msg);
 var main1 = document.getElementById('main1')
 var main2 = document.getElementById('main2')

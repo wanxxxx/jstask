@@ -7,7 +7,8 @@
             配比页
         </title>
         <link href="css/task2.css" rel="stylesheet" type="text/css"/>
-
+        <script src="js/jquery-3.2.1.min.js">
+        </script>
     </head>
     <body>
         <header class="header">
@@ -28,45 +29,34 @@
                             <span>
                             </span>
                             杀手
-                            <input id="killer" type="text" value="1"/>
+                            <input id="killer" type="text" value=""/>
                             人
                         </div>
                         <div>
                             <span>
                             </span>
                             平民
-                            <input id="civilian" type="text" value="5"/>
+                            <input id="civilian" type="text" value=""/>
                             人
                         </div>
                     </div>
-                    <div>
-                        点击设置
-                        <img alt="" src="img/pencil.png"/>
-                    </div>
-                </div>
-            </div>
-            <div class="main-part2 center2 size-m">
-                <div>
-                    水民词组
-                    <input maxlength="10" placeholder="输入..." type="text"/>
-                </div>
-                <div>
-                    幽灵词组
-                    <input maxlength="10" placeholder="输入..." type="text"/>
                 </div>
             </div>
             <div class="main-part3 center2 size-m">
                 <div class="size-m">
                     玩家数量
-                    <input id="player" onkeyup="checkField()" type="text" value="6"/>
-
+                    <input id="player" oninput="change()" type="text" value=""/>
                     人
                 </div>
-                <input id="range" max="18" min="6" type="range" value="12"/>
+                <div id="img">
+                    <img alt="" class="img"  height="30" src="img/---.png" width="30"/>
+                    <img alt="" class="img" height="30" src="img/+++.png" width="30"/>
+                </div>
+                <input id="range" max="18" min="4" oninput="change()" type="range" value=""/>
             </div>
-             <input id="setData" type="button" value="去发牌" onClick="fapai()"/> 
+            <input id="setData" onclick="fapai()" type="button" value="去发牌"/>
         </main>
     </body>
-    <script  src="js/task2.js">
+    <script src="js/task2.js">
     </script>
 </html>

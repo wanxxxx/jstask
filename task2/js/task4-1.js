@@ -1,5 +1,5 @@
-var get = sessionStorage.data; //读取
-var msg = JSON.parse(get); //重新转换为数组
+var msg = JSON.parse(sessionStorage.msg)
+
 console.info(msg);
 
 for (i = 0; i < msg.length; i++) { //根据人数动态生成

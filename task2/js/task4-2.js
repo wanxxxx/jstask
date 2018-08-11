@@ -1,4 +1,4 @@
-var msg = JSON.parse(sessionStorage.data); //重新转换为数组
+var msg = JSON.parse(sessionStorage.msg)
 var daynum = +sessionStorage.getItem('daynum')
 var deadnum = JSON.parse(sessionStorage.deadnum); //重新转换为数组
 var checknum = +sessionStorage.getItem('checknum');
@@ -208,6 +208,5 @@ if (killernum - res[1][1] == 0) {
     window.location.href = 'over.html';
     sessionStorage.setItem('result1', res[1][0] + (killernum - res[1][1]) + '人');
     sessionStorage.setItem('result2', '平民' + (msg.length - killernum - res[0][1]) + '人');
-        console.log('2')
-
+    console.log('2')
 }

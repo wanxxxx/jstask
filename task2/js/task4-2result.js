@@ -1,5 +1,5 @@
-var get = sessionStorage.data; //读取
-var msg = JSON.parse(get); //重新转换为数组
+var msg = JSON.parse(sessionStorage.msg)
+
 var sss = sessionStorage.people; //读取
 var people = JSON.parse(sss); //重新转换为数组
 var daynum = +sessionStorage.getItem('daynum')
