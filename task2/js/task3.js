@@ -5,7 +5,6 @@ function back() {
 function end() {
     window.location.href = 'task2.html';
 }
-
 var msg = JSON.parse(sessionStorage.msg)
 console.info(msg);
 var main1 = document.getElementById('main1')
@@ -13,8 +12,6 @@ var main2 = document.getElementById('main2')
 var two = document.getElementById('two')
 var one = document.getElementsByClassName('one')
 var three = document.getElementsByClassName('three')
-
-
 $(document).ready(function() {
     $(".btn").click(function() {
         $("#main1").toggle();
@@ -43,5 +40,7 @@ var deadnum = []
 for (i = 0; i < msg.length; i++) {
     people[i] = 'live';
 }
+sessionStorage.setItem('daynum', 1);
+sessionStorage.setItem('checknum', 0);
 sessionStorage.people = JSON.stringify(people); //存入
 sessionStorage.deadnum = JSON.stringify(deadnum);

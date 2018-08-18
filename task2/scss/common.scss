@@ -53,7 +53,6 @@ body, th, td, input, select, textarea, button {
 /* 重置页面文字属性 */
 
 a {
-    color: #666;
     text-decoration: none
 }
 /* 重置链接a标签 */
@@ -204,13 +203,15 @@ footer {
     position: fixed;
     bottom: 25px;
     width: 70vw;
-    background: #fbb435;
     height: 45px;
     @extend .center3;
-    color: white;
+background: #fbb435;
     a {
         width: inherit;
         text-align: center;
+        color: white;
+        background: #fbb435;
+        border-radius: 5px;
     }
 }
 input {

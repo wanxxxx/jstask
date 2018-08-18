@@ -83,7 +83,7 @@ body {
             border-bottom: 8px solid transparent;
         }
         .btn-click {
-             @extend .btn;
+            @extend .btn;
             >input {
                 background: #83b09b;
             }
@@ -161,17 +161,15 @@ body {
         }
     }
 }
-.footer {
-    justify-content: center;
-    @extend .center;
+footer {
+    bottom: 0;
     width: 100vw;
-    padding: 0;
-    input {
-        background: #fbb435;
-        width: 40%;
-        height: 35px;
-        color: white;
-        margin: 0 5%;
-        border-radius: 5px;
+    height: 75px;
+    background-color: rgba(41, 189, 224, 0.5);
+    a {
+        width: 40vw;
+        padding: 10px;
+        margin: 0 5vw;
+        
     }
 }

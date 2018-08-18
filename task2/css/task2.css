@@ -43,7 +43,6 @@ body, th, td, input, select, textarea, button {
 
 /* 重置页面文字属性 */
 a {
-  color: #666;
   text-decoration: none; }
 
 /* 重置链接a标签 */
@@ -118,7 +117,7 @@ hr {
   align-items: center;
   flex-direction: column; }
 
-.center3, .footer, .main > p, .main .part1 {
+.center3, footer, .main > p, .main .part1 {
   display: flex;
   align-items: center;
   justify-content: center; }
@@ -172,16 +171,18 @@ main {
   overflow: hidden;
   flex-direction: column; }
 
-.footer {
+footer {
   position: fixed;
   bottom: 25px;
   width: 70vw;
-  background: #fbb435;
-  height: 45px; }
-  .footer a {
+  height: 45px;
+  background: #fbb435; }
+  footer a {
     width: inherit;
+    text-align: center;
     color: white;
-    text-align: center; }
+    background: #fbb435;
+    border-radius: 5px; }
 
 input {
   border: none;

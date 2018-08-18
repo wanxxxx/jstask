@@ -43,7 +43,6 @@ body, th, td, input, select, textarea, button {
 
 /* 重置页面文字属性 */
 a {
-  color: #666;
   text-decoration: none; }
 
 /* 重置链接a标签 */
@@ -103,10 +102,6 @@ hr {
   margin: 0;
   padding: 0; }
 
-body {
-  overflow-x: hidden;
-  background: #eee; }
-
 * {
   padding: 0;
   margin: 0;
@@ -117,12 +112,12 @@ body {
   align-items: center;
   justify-content: space-between; }
 
-.center2, .main2 input, button {
+.center2, body, .main2 input, button {
   display: flex;
   align-items: center;
   flex-direction: column; }
 
-.center3 {
+.center3, footer {
   display: flex;
   align-items: center;
   justify-content: center; }
@@ -158,14 +153,15 @@ body {
 
 .header {
   width: 90%;
-  height: 45px;
+  height: 60px;
   padding: 0 5%;
   color: #FFF;
   z-index: 2;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid #eee; }
+  border-bottom: 1px solid #eee;
+  background: #29bde0; }
 
 main {
   width: 100%;
@@ -175,30 +171,32 @@ main {
   overflow: hidden;
   flex-direction: column; }
 
-.orange {
-  color: orange; }
-
-.center-v {
-  position: absolute;
-  top: 50%;
-  transform: translatey(-50%); }
-
-.center-x, button {
-  position: absolute;
-  left: 50%;
-  transform: translatex(-50%); }
-
-.footer {
+footer {
   position: fixed;
-  bottom: 0;
-  width: 80vw;
-  height: 60px;
-  padding: 0 10vw; }
+  bottom: 25px;
+  width: 70vw;
+  height: 45px;
+  background: #fbb435; }
+  footer a {
+    width: inherit;
+    text-align: center;
+    color: white;
+    background: #fbb435;
+    border-radius: 5px; }
 
 input {
   border: none;
   text-align: center;
   background: none; }
+
+body {
+  overflow-x: hidden;
+  background: #eee; }
+
+.center-v {
+  position: absolute;
+  top: 50%;
+  transform: translatey(-50%); }
 
 body {
   background: #5fc0cd; }
@@ -253,3 +251,5 @@ button {
 .div3 {
   height: 60px;
   width: 100%; }
+
+/*# sourceMappingURL=over.css.map */

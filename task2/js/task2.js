@@ -1,7 +1,7 @@
 function back() {
     window.location.href = 'task1.html';
 }
-
+console.log('daynum=' + daynum)
 function arra(m) { //1-m的随机排列数组
     var arr = new Array(m);
     arr[0] = 0;
@@ -60,8 +60,7 @@ function change() {
 function fapai() {
     if (player.value > 3 && player.value < 19) {
         window.location.href = "task3.html";
-        sessionStorage.setItem('daynum', 1);
-        sessionStorage.setItem('checknum', 0);
+
     } else {
         alert("请输入正确数字")
     }

@@ -3,6 +3,7 @@ body {
     background: $blue;
 }
 .main {
+    padding: 10px;
     @include abs (70px);
     &-div {
         width: 351px;

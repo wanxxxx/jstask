@@ -43,7 +43,6 @@ body, th, td, input, select, textarea, button {
 
 /* 重置页面文字属性 */
 a {
-  color: #666;
   text-decoration: none; }
 
 /* 重置链接a标签 */
@@ -103,26 +102,22 @@ hr {
   margin: 0;
   padding: 0; }
 
-body {
-  overflow-x: hidden;
-  background: #eee; }
-
 * {
   padding: 0;
   margin: 0;
   font-family: arial; }
 
-.center, .footer {
+.center {
   display: flex;
   align-items: center;
   justify-content: space-between; }
 
-.center2, .main1 > div {
+.center2, body, .main1 > div {
   display: flex;
   align-items: center;
   flex-direction: column; }
 
-.center3, .main1 input, .main1 .div1, .main1 .div2 {
+.center3, footer, .main1 input, .main1 .div1, .main1 .div2 {
   display: flex;
   align-items: center;
   justify-content: center; }
@@ -176,29 +171,32 @@ main {
   overflow: hidden;
   flex-direction: column; }
 
-.orange {
-  color: orange; }
-
-.center-v {
-  position: absolute;
-  top: 50%;
-  transform: translatey(-50%); }
-
-.center-x, .main-div > div .img {
-  position: absolute;
-  left: 50%;
-  transform: translatex(-50%); }
-
-.footer {
+footer {
   position: fixed;
-  bottom: 10px;
+  bottom: 25px;
   width: 70vw;
+  height: 45px;
   background: #fbb435; }
+  footer a {
+    width: inherit;
+    text-align: center;
+    color: white;
+    background: #fbb435;
+    border-radius: 5px; }
 
 input {
   border: none;
   text-align: center;
   background: none; }
+
+body {
+  overflow-x: hidden;
+  background: #eee; }
+
+.center-v {
+  position: absolute;
+  top: 50%;
+  transform: translatey(-50%); }
 
 body {
   background: #29bde0;
@@ -325,16 +323,14 @@ body {
       .main-div > div:hover .img {
         visibility: visible; }
 
-.footer {
-  justify-content: center;
+footer {
+  bottom: 0;
   width: 100vw;
-  padding: 0; }
-  .footer input {
-    background: #fbb435;
-    width: 40%;
-    height: 35px;
-    color: white;
-    margin: 0 5%;
-    border-radius: 5px; }
+  height: 75px;
+  background-color: rgba(41, 189, 224, 0.5); }
+  footer a {
+    width: 40vw;
+    padding: 10px;
+    margin: 0 5vw; }
 
 /*# sourceMappingURL=task4-2.css.map */
