@@ -118,7 +118,7 @@ hr {
   align-items: center;
   flex-direction: column; }
 
-.center3, footer, main > div:nth-child(1), main > div:nth-child(1) > span {
+.center3, footer {
   display: flex;
   align-items: center;
   justify-content: center; }
@@ -197,54 +197,4 @@ body {
   top: 50%;
   transform: translatey(-50%); }
 
-body {
-  background: #29bde0; }
-
-input {
-  border: none;
-  text-align: center;
-  background: none;
-  font-size: 20px;
-  color: #fff; }
-
-main .one {
-  color: #f3425e; }
-main > div:nth-child(1) {
-  width: 70vw;
-  height: 300px;
-  background: #ffedc5;
-  border: 3px solid #fff;
-  position: relative;
-  margin: 25px 0 20px 0; }
-  main > div:nth-child(1) > span {
-    width: 35px;
-    height: 35px;
-    border: 2px solid #ffedc5;
-    border-radius: 50%;
-    position: absolute;
-    top: -17.5px;
-    background: #fff; }
-    main > div:nth-child(1) > span > input {
-      color: #f3425e; }
-  main > div:nth-child(1) > div > input {
-    color: #29bde0;
-    margin: 20px;
-    width: 50px; }
-  main > div:nth-child(1) > div > div {
-    height: 10px;
-    width: 70vw;
-    margin: 20px 0;
-    border-top: 2px solid #fff; }
-
-footer:hover {
-  box-shadow: 0 0 5px #666 inset; }
-
-.btn {
-  width: inherit;
-  color: white;
-  text-align: center; }
-
-#main2, #btn2 {
-  display: none; }
-
-/*# sourceMappingURL=task3.css.map */
+/*# sourceMappingURL=common.css.map */

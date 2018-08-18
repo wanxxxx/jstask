@@ -25,22 +25,8 @@ for (i = 0; i < msg.length; i++) {
     input1[i].value = msg[i];
     input2[i].value = i + 1 + "号";
 }
-function start() {
-    window.location.href = 'task4-2.html';
-}
-function back() {
-    window.location.href = 'task3.html';
-}
-function back2() {
-    window.location.href = 'task4-2.html';
-}
-function end() {
-    window.location.href = 'task3.html';
-}
-function confirmm() {
-    window.location.href = 'task4-2.html';
 
-}
+
 
 
 

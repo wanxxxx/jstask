@@ -10,23 +10,26 @@ var msg = JSON.parse(sessionStorage.msg)
 console.info(msg);
 var main1 = document.getElementById('main1')
 var main2 = document.getElementById('main2')
-var input = $(":input");
-input[2].value = 0;
+var two = document.getElementById('two')
+var one = document.getElementsByClassName('one')
+var three = document.getElementsByClassName('three')
+
+
 $(document).ready(function() {
     $(".btn").click(function() {
         $("#main1").toggle();
         $("#main2").toggle();
-        var num2 = parseInt(input[2].value)
+        var num2 = parseInt(one[1].textContent)
         if (main1.style.display === "none") {
-            input[2].value = num2 + 1;
-            input[3].value = msg[num2]
-            input[4].value = parseInt(input[2].value) + 1
+            one[1].textContent = num2 + 1;
+            two.textContent = msg[num2]
+            three[1].textContent = parseInt(one[1].textContent) + 1
         }
         if (main2.style.display === "none") {
-            input[0].value = input[4].value
-            input[1].value = input[0].value
+            one[0].textContent = three[1].textContent
+            three[0].textContent = one[0].textContent
         }
-        if (input[1].value >= msg.length) {
+        if (three[0].textContent >= msg.length) {
             $("#btn1").hide();
             $("#btn2").show();
         }

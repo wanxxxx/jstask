@@ -9,7 +9,10 @@ input {
     font-size: 20px;
     color: #fff;
 }
-main {
+main{
+    .one {
+        color: #f3425e
+    }
     >div:nth-child(1) {
         width: 70vw;
         height: 300px;
@@ -43,27 +46,14 @@ main {
         }
     }
 }
-.f {
-    margin-bottom: 10px;
-    @extend .center3;
-    height: 42px;
-    width: 75vw;
-    background: #fbb435;
-    color: #fff;
-    font-size: 20px;
-    position: relative;
-    >div {
-        width: 60vw;
-        text-align: center;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-    }
-    &:hover {
-        box-shadow: 0 0 5px #666 inset;
-    }
+footer:hover {
+    box-shadow: 0 0 5px #666 inset;
 }
-#main2,#btn2 {
-    display: none
+.btn {
+        width: inherit;
+        color: white;
+        text-align: center;
+    }
+#main2, #btn2 {
+    display: none;
 }
