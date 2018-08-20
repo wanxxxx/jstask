@@ -178,6 +178,19 @@ $border:1px solid #eee;
 body {
     margin: 0;
     padding: 0;
+    min-width: 280px;
+    height: 640px;
+    position: relative;
+    main {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        flex-direction: column;
+        min-width: 280px;
+        @extend .size-m;
+    }
 }
 .header {
     width: 90%;
@@ -191,21 +204,13 @@ body {
     border-bottom: $border;
     background: $blue;
 }
-main {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    flex-direction: column;
-}
 footer {
-    position: fixed;
+    position: absolute;
     bottom: 25px;
     width: 70vw;
     height: 45px;
     @extend .center3;
-background: #fbb435;
+    background: #fbb435;
     a {
         width: inherit;
         text-align: center;
@@ -220,7 +225,6 @@ input {
     background: none;
 }
 body {
-    overflow-x: hidden;
     background: #eee;
     @extend .center2;
 }

@@ -15,7 +15,7 @@ var result = document.getElementsByClassName('result');
 console.log('进行了' + daynum + '天')
 console.log('死掉的人顺序：' + killed)
 var day = document.getElementsByClassName('day');
-for (i = 1; i < daynum - 1; i++) {
+for (i = 1; i < daynum ; i++) {
     main2.append(box[0].cloneNode(1));
 
 }

@@ -117,7 +117,7 @@ hr {
   align-items: center;
   flex-direction: column; }
 
-.center3, footer, .main1 input, .main1 .div1, .main1 .div2 {
+.center3, footer, .main1 input, .main1 .div1, .main1 .div2, .p {
   display: flex;
   align-items: center;
   justify-content: center; }
@@ -131,10 +131,10 @@ hr {
 .size-l {
   font-size: 18px; }
 
-.size-m, .main1 .input1, .main-div > div .choose1 {
+.size-m, body main, .p, .main-div > div .choose1 {
   font-size: 16px; }
 
-.size-s, .main1, .main-div > div .choose2 {
+.size-s {
   font-size: 12px; }
 
 .center-y {
@@ -149,7 +149,18 @@ hr {
 
 body {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  min-width: 280px;
+  height: 640px;
+  position: relative; }
+  body main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    flex-direction: column;
+    min-width: 280px; }
 
 .header {
   width: 90%;
@@ -163,16 +174,8 @@ body {
   border-bottom: 1px solid #eee;
   background: #29bde0; }
 
-main {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  flex-direction: column; }
-
 footer {
-  position: fixed;
+  position: absolute;
   bottom: 25px;
   width: 70vw;
   height: 45px;
@@ -190,7 +193,6 @@ input {
   background: none; }
 
 body {
-  overflow-x: hidden;
   background: #eee; }
 
 .center-v {
@@ -233,7 +235,7 @@ body {
       border-bottom: 10px solid white;
       border-right: 8px solid transparent;
       border-left: 8px solid transparent; }
-    .main1 .div2 span {
+    .main1 .div2 .line {
       height: 140px;
       width: 2px;
       background: #ccc;
@@ -255,13 +257,18 @@ body {
       border-right: 18px solid #24a7c6;
       border-top: 8px solid transparent;
       border-bottom: 8px solid transparent; }
-    .main1 .div2 .btn-click > input {
+    .main1 .div2 .btn-click > p {
       background: #83b09b; }
     .main1 .div2 .btn-click::before {
       border-right: 18px solid #83b09b; }
   .main1 .input1 {
     width: 70vw;
-    display: none; }
+    display: none;
+    padding-left: 10px; }
+  .main1 .input2 {
+    color: #29bde0;
+    font-weight: bold;
+    padding-left: 10px; }
 
 .a {
   background: #b9e9f5;
@@ -281,7 +288,7 @@ body {
     border-right: 5px solid transparent;
     z-index: 1; }
 
-.input {
+.p {
   background: #24a7c6;
   margin: 12px;
   height: 30px;

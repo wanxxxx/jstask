@@ -1,26 +1,20 @@
-function back() {
-    window.location.href = 'task2.html';
-}
-
-function end() {
-    window.location.href = 'task2.html';
-}
 var msg = JSON.parse(sessionStorage.msg)
-console.info(msg);
 var main1 = document.getElementById('main1')
 var main2 = document.getElementById('main2')
 var two = document.getElementById('two')
 var one = document.getElementsByClassName('one')
 var three = document.getElementsByClassName('three')
 $(document).ready(function() {
+    three[0].textContent = 2
     $(".btn").click(function() {
+        console.info(one,two,three);
         $("#main1").toggle();
         $("#main2").toggle();
         var num2 = parseInt(one[1].textContent)
         if (main1.style.display === "none") {
             one[1].textContent = num2 + 1;
             two.textContent = msg[num2]
-            three[1].textContent = parseInt(one[1].textContent) + 1
+            three[1].textContent = num2+2
         }
         if (main2.style.display === "none") {
             one[0].textContent = three[1].textContent

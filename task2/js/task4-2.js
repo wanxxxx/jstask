@@ -6,7 +6,7 @@ var people = JSON.parse(sessionStorage.people); //重新转换为数组
 var imgc = +sessionStorage.getItem('imgc')
 console.log(people)
 console.log(msg)
-console.log(deadnum)
+console.log('deadnum=' + deadnum)
 console.log('daynum=' + daynum)
 console.log('imgc=' + imgc)
 console.log("checknum=" + checknum)
@@ -21,7 +21,7 @@ var div2 = document.getElementsByClassName('div2');
 for (i = 0; i < msg.length; i++) {
     main.append(main1[0].cloneNode(1));
     var num = ['零', '一', '二', '三', '四', '五', '六', '七', '八', '九']
-    input2[i].value = '第' + num[i + 1] + '天'
+    input2[i].textContent = '第' + num[i + 1] + '天'
 }
 //--------------根据天数显示------------’
 div2[daynum - 1].setAttribute('style', 'display:flex')
@@ -30,9 +30,9 @@ for (i = 0; i < daynum; i++) {
 }
 for (i = 0; i < 2 * msg.length; i++) {
     if (deadnum[i] == 0) {
-        input1[i].value = '没有进行任何操作'
+        input1[i].textContent = '没有进行任何操作'
     } else {
-        input1[i].value = deadnum[i] + '号被杀手杀死，真实身份是' + msg[deadnum[i] - 1];
+        input1[i].textContent = deadnum[i] + '号被杀手杀死，真实身份是' + msg[deadnum[i] - 1];
     }
 }
 console.log(msg[deadnum[i]])
@@ -116,8 +116,7 @@ switch (checknum) {
         killgame.action4();
 }
 //--------------调用状态机------------
-var inputt = $(".btn").children('input')
-console.log(inputt[4 * daynum - 4])
+var inputt = $(".btn").children('p')
 inputt[4 * daynum - 4].onclick = function() {
     var checknum = +sessionStorage.getItem('checknum');
     if (checknum == 0) {
@@ -156,57 +155,36 @@ inputt[4 * daynum - 1].onclick = function() {
     var checknum = +sessionStorage.getItem('checknum');
     if (checknum == 3) {
         killgame.action4();
+        
         sessionStorage.setItem('checknum', 4);
         window.location.href = 'task4-2result.html ';
     } else {
         alert('请按顺序操作');
     }
 }
-//--------------按钮------------
-function back() {
-    window.location.href = 'task3.html';
-}
-
-function end() {
-    window.location.href = 'task3.html';
-}
-
-function abc() {
-    window.location.href = 'task4-2-2.html';
-}
-$(".img").click(function() {
-    window.location.href = 'task4-2-2.html';
-})
 var deadnum = JSON.parse(sessionStorage.deadnum);
 //--------------gameover------------
-var killed = []
-for (i = 0; i < deadnum.length; i++) {
-    killed[i] = msg[deadnum[i] - 1]
-}
+
 sessionStorage.killed = JSON.stringify(killed);
-var res = [];
 var killernum = +sessionStorage.getItem('killernum');
-killed.sort();
-for (var i = 0; i < killed.length;) { //xunz
-    var count = 0;
-    for (var j = i; j < killed.length; j++) {
-        if (killed[i] == killed[j]) {
-            count++;
-        }
+console.log(killed)
+var p = [];
+var k = []
+$.each(killed, function(idx) {
+    if (killed[idx] == '平民') {
+        p.push(idx)
     }
-    res.push([killed[i], count]);
-    i += count;
+    if (killed[idx] == '杀手') {
+        k.push(idx)
+    }
+});
+if (k.length == killernum || p.length == (msg.length - killernum)) {
+    window.location.href = 'over.html '
+    console.log("杀手" + (killernum - k.length) + '人')
+    console.log('平民' + (msg.length - p.length) + '人')
+} else {
+    console.log('出问题啦')
 }
-console.log(res)
-if (msg.length - killernum - res[0][1] == 0) {
-    window.location.href = 'over.html';
-    sessionStorage.setItem('result1', '杀手0人');
-    sessionStorage.setItem('result2', res[0][0] + (msg.length - killernum - res[0][1]) + '人');
-    console.log('1')
-}
-if (killernum - res[1][1] == 0) {
-    window.location.href = 'over.html';
-    sessionStorage.setItem('result1', res[1][0] + (killernum - res[1][1]) + '人');
-    sessionStorage.setItem('result2', '平民' + (msg.length - killernum - res[0][1]) + '人');
-    console.log('2')
-}
+sessionStorage.setItem('result1', "杀手" + (killernum - k.length) + '人');
+sessionStorage.setItem('result2', '平民' + (msg.length - p.length) + '人');
+console.log('daynum=' + daynum)

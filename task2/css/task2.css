@@ -149,7 +149,18 @@ hr {
 
 body {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  min-width: 280px;
+  height: 640px;
+  position: relative; }
+  body main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    flex-direction: column;
+    min-width: 280px; }
 
 .header {
   width: 90%;
@@ -163,16 +174,8 @@ body {
   border-bottom: 1px solid #eee;
   background: #29bde0; }
 
-main {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  flex-direction: column; }
-
 footer {
-  position: fixed;
+  position: absolute;
   bottom: 25px;
   width: 70vw;
   height: 45px;
@@ -190,7 +193,6 @@ input {
   background: none; }
 
 body {
-  overflow-x: hidden;
   background: #eee; }
 
 .center-v, .main .part2 img {
@@ -204,23 +206,26 @@ body {
   background: #fff;
   text-align: center; }
 .main > p {
-  height: 60px;
+  height: 50px;
   text-align: center;
   box-shadow: 2px 2px 2px #aaa; }
 .main .part1 {
-  height: 150px; }
+  height: 170px; }
   .main .part1 > div {
     margin: 10vw; }
 .main .part2 {
   position: relative;
-  height: 150px;
+  height: 140px;
   justify-content: center; }
   .main .part2 > p, .main .part2 > div {
     margin: 15px 0; }
+  .main .part2 .span1 {
+    font-size: 12px;
+    color: orange; }
   .main .part2 img {
-    width: 30px;
-    height: 30px;
-    top: 73%; }
+    width: 20px;
+    height: 20px;
+    top: 80%; }
     .main .part2 img:last-child {
       right: 2vw; }
     .main .part2 img:first-child {
@@ -228,7 +233,9 @@ body {
   .main .part2 #player {
     border: 1px solid #eee;
     width: 30px;
-    height: 30px; }
+    height: 30px;
+    background: #eee;
+    color: orange; }
 
 input[type=range] {
   -webkit-appearance: none;

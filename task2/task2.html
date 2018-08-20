@@ -7,7 +7,7 @@
             配比页
         </title>
         <link href="css/task2.css" rel="stylesheet" type="text/css"/>
-		<link href="css/task2.scss" rel="stylesheet" type="text/css"/>
+        <link href="css/task2.scss" rel="stylesheet" type="text/css"/>
         <script src="js/jquery-3.2.1.min.js">
         </script>
     </head>
@@ -18,31 +18,41 @@
             </p>
         </header>
         <main class="main">
-<p>
-      玩家配比
-  </p>
-          <div class="part1">
-<div id="player1">杀手 人</div>
-<div id="player2"> 平民 人</div>
-          </div>
-          
+            <p style="font-weight: bold;">
+                玩家配比
+            </p>
+            <div class="part1">
+                <div id="player1">
+                    杀手 人
+                </div>
+                <div id="player2">
+                    平民 人
+                </div>
+            </div>
+            <div style="height: 80px"></div>
             <div class="part2">
-<div>
-               <span>请输入玩家数量</span> 
-                <input id="player" oninput="change()" type="text" value=""/>
-              <span>玩家数量为 4 - 18</span></div>
-            
+                <div>
+                    <span style="font-weight: bold;">
+                        请输入玩家数量
+                    </span>
+                    <input id="player" oninput="change()" type="text" value=""/>
+                    <span class="span1">
+                        玩家数量为 4 - 18
+                    </span>
+                </div>
                 <div id="img">
-                    <img alt="" class="img"  height="30" src="img/---.png" width="30"/>
+                    <img alt="" class="img" height="30" src="img/---.png" width="30"/>
                     <img alt="" class="img" height="30" src="img/+++.png" width="30"/>
                 </div>
                 <input id="range" max="18" min="4" oninput="change()" type="range" value=""/>
             </div>
-</main>
+        </main>
         <footer class="footer">
-          <a href="task3.html">开始游戏</a>
+            <a   onclick="fapai()" >
+               去发牌
+            </a>
         </footer>
-</body>
+    </body>
     <script src="js/task2.js">
     </script>
 </html>

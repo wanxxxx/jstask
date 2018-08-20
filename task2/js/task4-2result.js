@@ -1,5 +1,4 @@
 var msg = JSON.parse(sessionStorage.msg)
-
 var sss = sessionStorage.people; //读取
 var people = JSON.parse(sss); //重新转换为数组
 var daynum = +sessionStorage.getItem('daynum')
@@ -8,18 +7,6 @@ var deadnum = JSON.parse(sessionStorage.deadnum); //重新转换为数组
 console.log("daynum=" + daynum);
 console.log(people)
 console.log("checknum=" + checknum)
-
-function back() {
-    window.location.href = 'task3.html';
-}
-
-function end() {
-    window.location.href = 'task3.html';
-}
-
-function abc() {
-    window.location.href = 'task4-2-2.html';
-}
 var input1 = document.getElementsByClassName("choose1")
 var input2 = document.getElementsByClassName("choose2")
 //--------------根据人数动态生成------------
@@ -62,7 +49,6 @@ for (i = 0; i < msg.length; i++) {
         }
     }
 }
-
 //--------------点击确认--------------
 $("#btn2").click(function() {
     var imgc = $(".img-click").length;
@@ -72,6 +58,8 @@ $("#btn2").click(function() {
         if (checknum == 4) {
             alert("请先选择要操作的玩家");
         } else {
+            deadnum.push(0)
+            sessionStorage.deadnum = JSON.stringify(deadnum);
             window.location.href = 'task4-2.html';
         }
     } else if (killed.val() === "杀手" & checknum !== 4) {
@@ -91,8 +79,8 @@ $("#btn2").click(function() {
             sessionStorage.deadnum = JSON.stringify(deadnum);
             window.location.href = 'task4-2.html';
         }
-        console.log(deadthis)
     }
+    sessionStorage.deadnum = JSON.stringify(deadnum);
 });
 //--------------杀掉后变色--------------
 $.each(people, function(idx) {
