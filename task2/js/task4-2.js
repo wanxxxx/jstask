@@ -155,7 +155,6 @@ inputt[4 * daynum - 1].onclick = function() {
     var checknum = +sessionStorage.getItem('checknum');
     if (checknum == 3) {
         killgame.action4();
-        
         sessionStorage.setItem('checknum', 4);
         window.location.href = 'task4-2result.html ';
     } else {
@@ -164,27 +163,34 @@ inputt[4 * daynum - 1].onclick = function() {
 }
 var deadnum = JSON.parse(sessionStorage.deadnum);
 //--------------gameover------------
-
-sessionStorage.killed = JSON.stringify(killed);
+var klist = []
+for (i = 0; i < deadnum.length; i++) {
+    if (deadnum[i] != 0) {
+        klist[i] = msg[deadnum[i] - 1]
+    } else {
+        klist[i] = "无"
+    }
+}
 var killernum = +sessionStorage.getItem('killernum');
-console.log(killed)
+console.log(klist)
 var p = [];
 var k = []
-$.each(killed, function(idx) {
-    if (killed[idx] == '平民') {
+$.each(klist, function(idx) {
+    if (klist[idx] == '平民') {
         p.push(idx)
     }
-    if (killed[idx] == '杀手') {
+    if (klist[idx] == '杀手') {
         k.push(idx)
     }
 });
 if (k.length == killernum || p.length == (msg.length - killernum)) {
+    sessionStorage.klist = JSON.stringify(klist);
     window.location.href = 'over.html '
     console.log("杀手" + (killernum - k.length) + '人')
-    console.log('平民' + (msg.length - p.length) + '人')
+    console.log('平民' + (msg.length-killernum - p.length) + '人')
 } else {
     console.log('出问题啦')
 }
 sessionStorage.setItem('result1', "杀手" + (killernum - k.length) + '人');
-sessionStorage.setItem('result2', '平民' + (msg.length - p.length) + '人');
+sessionStorage.setItem('result2', '平民' + (msg.length-killernum - p.length) + '人');
 console.log('daynum=' + daynum)

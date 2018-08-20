@@ -21,56 +21,58 @@ body {
     position: relative;
     height: 200px;
     &-part1 {
+        @extend .center2;
         .img1 {
             @include abs(70px);
         }
         .img2 {
             @include abs(60px);
         }
-        >input {
-            @include abs(145px);
+        >p {
+            @include abs(149px);
             font-weight: bold;
-            color: white
+            color: white;
+            white-space: nowrap
         }
     }
     &-part3 {
-        left: 10vw;
         @include abs(230px);
-        >p, >input {
+        left: -32vw;
+        p {
             width: 100px;
             @extend .size-m;
             color: white;
             text-align: left;
             margin: 7px;
         }
+        >div {
+            @extend .center3
+        }
     }
 }
 .main2 {
-    color: #c2c2c2;
+    color: #868686;
     background: white;
     width: 95vw;
     margin: 0 2.5vw;
     .box {
         border: $border;
     }
-    input {
-        @extend .size-m, .center2;
+    p {
         text-align: left;
         width: 95vw;
         padding: 5px 7.5vw;
     }
 }
-
 button {
     height: 40px;
     width: 35vw;
     background: #fbb435;
     border: none;
     color: white;
- 
     border-radius: 5px;
     text-align: center;
-    @extend .center2,.center-x;
+    @extend .center2, .center-x;
 }
 .div3 {
     height: 60px;

@@ -43,7 +43,6 @@ body, th, td, input, select, textarea, button {
 
 /* 重置页面文字属性 */
 a {
-  color: #666;
   text-decoration: none; }
 
 /* 重置链接a标签 */
@@ -103,26 +102,22 @@ hr {
   margin: 0;
   padding: 0; }
 
-body {
-  overflow-x: hidden;
-  background: #eee; }
-
 * {
   padding: 0;
   margin: 0;
   font-family: arial; }
 
-.center, .footer {
+.center {
   display: flex;
   align-items: center;
   justify-content: space-between; }
 
-.center2 {
+.center2, body {
   display: flex;
   align-items: center;
   flex-direction: column; }
 
-.center3 {
+.center3, footer {
   display: flex;
   align-items: center;
   justify-content: center; }
@@ -136,10 +131,10 @@ body {
 .size-l {
   font-size: 18px; }
 
-.size-m, .main-div > div .choose1 {
+.size-m, body main {
   font-size: 16px; }
 
-.size-s, .main-div > div .choose2 {
+.size-s {
   font-size: 12px; }
 
 .center-y {
@@ -147,60 +142,63 @@ body {
   top: 50%;
   transform: translatey(-50%); }
 
-.center-x, .main-div > div .img, .main-div > div .img-click {
+.center-x, .main .img, .main .img-click {
   position: absolute;
   left: 50%;
   transform: translatex(-50%); }
 
 body {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  min-width: 280px;
+  height: 640px;
+  position: relative; }
+  body main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    flex-direction: column;
+    min-width: 280px; }
 
 .header {
-  background: #29bde0;
   width: 90%;
-  height: 45px;
+  height: 60px;
   padding: 0 5%;
   color: #FFF;
   z-index: 2;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid #eee; }
+  border-bottom: 1px solid #eee;
+  background: #29bde0; }
 
-main {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  flex-direction: column; }
-
-.orange {
-  color: orange; }
-
-.center-v {
+footer {
   position: absolute;
-  top: 50%;
-  transform: translatey(-50%); }
-
-.center-x, .main-div > div .img, .main-div > div .img-click {
-  position: absolute;
-  left: 50%;
-  transform: translatex(-50%); }
-
-.footer {
-  position: fixed;
-  bottom: 0;
-  width: 80vw;
-  height: 60px;
-  background: #29bde0;
-  padding: 0 10vw; }
+  bottom: 25px;
+  width: 70vw;
+  height: 45px;
+  background: #fbb435; }
+  footer a {
+    width: inherit;
+    text-align: center;
+    color: white;
+    background: #fbb435;
+    border-radius: 5px; }
 
 input {
   border: none;
   text-align: center;
   background: none; }
+
+body {
+  background: #eee; }
+
+.center-v {
+  position: absolute;
+  top: 50%;
+  transform: translatey(-50%); }
 
 body {
   background: #29bde0; }
@@ -226,52 +224,15 @@ body {
 .main {
   position: absolute;
   top: 120px; }
-  .main-div {
-    width: 351px;
-    white-space: normal; }
-    .main-div > div {
-      margin: 15px;
-      display: inline-block;
-      width: 80px;
-      height: 80px;
-      border: 2px solid #fff;
-      position: relative; }
-      .main-div > div .choose1 {
-        color: #000;
-        width: inherit;
-        background: #f5c97b;
-        height: 70%; }
-      .main-div > div .choose2 {
-        color: #fff;
-        width: 15px;
-        width: inherit;
-        height: 30%;
-        background: #83b09a; }
-      .main-div > div .img {
-        height: 20px;
-        width: 20px;
-        z-index: 100;
-        position: absolute;
-        top: 85px;
-        visibility: hidden; }
-      .main-div > div .img-click {
-        height: 20px;
-        width: 20px;
-        z-index: 100;
-        position: absolute;
-        top: 85px;
-        visibility: visible; }
-
-.footer {
-  justify-content: center;
-  width: 100vw;
-  padding: 0; }
-  .footer input {
-    background: #fbb435;
-    width: 40%;
-    height: 35px;
-    color: white;
-    margin: 0 5%;
-    border-radius: 5px; }
+  .main .choose {
+    position: relative; }
+  .main .img, .main .img-click {
+    height: 20px;
+    width: 20px;
+    z-index: 100;
+    top: 100px;
+    visibility: hidden; }
+  .main .img-click {
+    visibility: visible; }
 
 /*# sourceMappingURL=task4-2result.css.map */

@@ -112,12 +112,12 @@ hr {
   align-items: center;
   justify-content: space-between; }
 
-.center2, body, .main2 input, button {
+.center2, body, .main-part1, button {
   display: flex;
   align-items: center;
   flex-direction: column; }
 
-.center3, footer {
+.center3, footer, .main-part3 > div {
   display: flex;
   align-items: center;
   justify-content: center; }
@@ -131,7 +131,7 @@ hr {
 .size-l {
   font-size: 18px; }
 
-.size-m, .main-part3 > p, .main-part3 > input, .main2 input {
+.size-m, body main, .main-part3 p {
   font-size: 16px; }
 
 .size-s {
@@ -149,7 +149,18 @@ hr {
 
 body {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  min-width: 280px;
+  height: 640px;
+  position: relative; }
+  body main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    flex-direction: column;
+    min-width: 280px; }
 
 .header {
   width: 90%;
@@ -163,16 +174,8 @@ body {
   border-bottom: 1px solid #eee;
   background: #29bde0; }
 
-main {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  flex-direction: column; }
-
 footer {
-  position: fixed;
+  position: absolute;
   bottom: 25px;
   width: 70vw;
   height: 45px;
@@ -190,7 +193,6 @@ input {
   background: none; }
 
 body {
-  overflow-x: hidden;
   background: #eee; }
 
 .center-v {
@@ -212,29 +214,30 @@ body {
   .main-part1 .img2 {
     position: absolute;
     top: 60px; }
-  .main-part1 > input {
+  .main-part1 > p {
     position: absolute;
-    top: 145px;
+    top: 149px;
     font-weight: bold;
-    color: white; }
+    color: white;
+    white-space: nowrap; }
   .main-part3 {
-    left: 10vw;
     position: absolute;
-    top: 230px; }
-    .main-part3 > p, .main-part3 > input {
+    top: 230px;
+    left: -32vw; }
+    .main-part3 p {
       width: 100px;
       color: white;
       text-align: left;
       margin: 7px; }
 
 .main2 {
-  color: #c2c2c2;
+  color: #868686;
   background: white;
   width: 95vw;
   margin: 0 2.5vw; }
   .main2 .box {
     border: 1px solid #c4c4c4; }
-  .main2 input {
+  .main2 p {
     text-align: left;
     width: 95vw;
     padding: 5px 7.5vw; }
