@@ -1,4 +1,3 @@
-
 var range = document.getElementById('range')
 var img = document.getElementsByClassName('img')
 var player = document.getElementById('player')
@@ -23,6 +22,16 @@ img[1].onclick = function() {
     range.value++;
     player.value = range.value;
     change()
+}
+
+function change1() {
+    range.value = player.value;
+    if (player.value > 3 && player.value < 19) {
+        change();
+    } else {
+        alert('请输入数字4-18之间');
+        player.value = '';
+    }
 }
 //------------------滑动条
 function change() {
