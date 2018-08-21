@@ -112,12 +112,12 @@ hr {
   align-items: center;
   justify-content: space-between; }
 
-.center2, body, .main .part2 {
+.center2, body {
   display: flex;
   align-items: center;
   flex-direction: column; }
 
-.center3, footer, .main > p, .main .part1 {
+.center3, footer {
   display: flex;
   align-items: center;
   justify-content: center; }
@@ -131,7 +131,7 @@ hr {
 .size-l {
   font-size: 18px; }
 
-.size-m, body main, .main > div, .main > p {
+.size-m, body main {
   font-size: 16px; }
 
 .size-s {
@@ -195,96 +195,9 @@ input {
 body {
   background: #eee; }
 
-.center-v, .main .part2 img {
+.center-v {
   position: absolute;
   top: 50%;
   transform: translatey(-50%); }
 
-.main > div, .main > p {
-  width: 90vw;
-  margin: 5px;
-  background: #fff;
-  text-align: center; }
-.main > p {
-  height: 50px;
-  text-align: center;
-  box-shadow: 2px 2px 2px #aaa; }
-.main .part1 {
-  height: 170px; }
-  .main .part1 > div {
-    margin: 10vw; }
-.main .part2 {
-  position: relative;
-  height: 140px;
-  justify-content: center; }
-  .main .part2 > p, .main .part2 > div {
-    margin: 15px 0; }
-  .main .part2 .span1 {
-    font-size: 12px;
-    color: orange; }
-  .main .part2 img {
-    width: 20px;
-    height: 20px;
-    top: 80%; }
-    .main .part2 img:last-child {
-      right: 2vw; }
-    .main .part2 img:first-child {
-      left: 2vw; }
-  .main .part2 #player {
-    border: 1px solid #eee;
-    width: 30px;
-    height: 30px;
-    background: #eee;
-    color: orange; }
-
-input[type=range] {
-  -webkit-appearance: none;
-  border-radius: 10px;
-  /*这个属性设置使填充进度条时的图形为圆角*/
-  width: 80%; }
-
-input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none; }
-
-input[type=range]:focus {
-  outline: none; }
-
-input[type=range]::-webkit-slider-runnable-track {
-  height: 3px;
-  border-radius: 1px;
-  /*将轨道设为圆角的*/
-  width: 80%;
-  background: orange; }
-
-input[type=range]::-moz-range-track {
-  height: 3px;
-  border-radius: 1px;
-  /*将轨道设为圆角的*/
-  width: 80%;
-  background: orange; }
-
-input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  height: 23px;
-  width: 40px;
-  margin-top: -10px;
-  /*使滑块超出轨道部分的偏移量相等*/
-  background: #fff;
-  border-radius: 5px;
-  /*外观设置为圆形*/
-  border: solid 2px orange;
-  /*设置边框*/ }
-
-input[type=range]::-moz-range-thumb {
-  -webkit-appearance: none;
-  height: 23px;
-  width: 40px;
-  margin-top: -10px;
-  /*使滑块超出轨道部分的偏移量相等*/
-  background: #fff;
-  border-radius: 5px;
-  /*外观设置为圆形*/
-  border: solid 2px orange;
-  /*设置边框*/ }
-
-/*# sourceMappingURL=task2.css.map */
+/*# sourceMappingURL=common.css.map */

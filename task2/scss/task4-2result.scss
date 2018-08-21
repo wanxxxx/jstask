@@ -1,4 +1,6 @@
 @import'common';
+@import'task4-1';
+
 @mixin flex($ali:center, $jus:center, $w:100vw, $h:60px) {
     display: flex;
     align-items: $ali;

@@ -1,6 +1,6 @@
 var msg = JSON.parse(sessionStorage.msg)
 var choose = document.getElementsByClassName("choose")
-var main = document.getElementsByTagName("main")
+var main = document.getElementsByClassName("main")
 console.log(msg)
 for (i = 0; i < msg.length - 1; i++) {
     main[0].append(choose[0].cloneNode(1));

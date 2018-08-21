@@ -131,7 +131,7 @@ hr {
 .size-l {
   font-size: 18px; }
 
-.size-m {
+.size-m, body main {
   font-size: 16px; }
 
 .size-s {
@@ -149,7 +149,18 @@ hr {
 
 body {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  min-width: 280px;
+  height: 640px;
+  position: relative; }
+  body main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    flex-direction: column;
+    min-width: 280px; }
 
 .header {
   width: 90%;
@@ -163,16 +174,8 @@ body {
   border-bottom: 1px solid #eee;
   background: #29bde0; }
 
-main {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  flex-direction: column; }
-
 footer {
-  position: fixed;
+  position: absolute;
   bottom: 25px;
   width: 70vw;
   height: 45px;
@@ -190,7 +193,6 @@ input {
   background: none; }
 
 body {
-  overflow-x: hidden;
   background: #eee; }
 
 .center-v {

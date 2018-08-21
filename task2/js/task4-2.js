@@ -187,10 +187,17 @@ if (k.length == killernum || p.length == (msg.length - killernum)) {
     sessionStorage.klist = JSON.stringify(klist);
     window.location.href = 'over.html '
     console.log("杀手" + (killernum - k.length) + '人')
-    console.log('平民' + (msg.length-killernum - p.length) + '人')
+    console.log('平民' + (msg.length - killernum - p.length) + '人')
 } else {
     console.log('出问题啦')
 }
 sessionStorage.setItem('result1', "杀手" + (killernum - k.length) + '人');
-sessionStorage.setItem('result2', '平民' + (msg.length-killernum - p.length) + '人');
-console.log('daynum=' + daynum)
+sessionStorage.setItem('result2', '平民' + (msg.length - killernum - p.length) + '人');
+console.log('daynum=' + daynum);
+
+function end() {
+    var con = confirm('确定结束游戏')
+    if (con == true) {
+        window.location.href = 'task2.html '
+    }
+}
