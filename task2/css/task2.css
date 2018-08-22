@@ -112,12 +112,12 @@ hr {
   align-items: center;
   justify-content: space-between; }
 
-.center2, body, .main .part2 {
+.center2, body > div, body, .main .part2 {
   display: flex;
   align-items: center;
   flex-direction: column; }
 
-.center3, footer, .main > p, .main .part1 {
+.center3, body, footer, .main > p, .main .part1 {
   display: flex;
   align-items: center;
   justify-content: center; }
@@ -149,23 +149,28 @@ hr {
 
 body {
   margin: 0;
-  padding: 0;
-  min-width: 290px;
-  height: 640px;
-  position: relative; }
+  padding: 0; }
+  body > div {
+    height: 650px;
+    position: relative;
+    min-width: 290px;
+    max-width: 800px;
+    background: #29bde0; }
   body main {
-    width: 100%;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
     flex-direction: column;
-    min-width: 280px; }
+    min-width: 290px;
+    max-width: 650px;
+    overflow-y: auto; }
 
 .header {
-  width: 90%;
+  min-width: 290px;
+  max-width: 650px;
+  width: 100vw;
   height: 60px;
-  padding: 0 5%;
   color: #FFF;
   z-index: 2;
   display: flex;
@@ -173,12 +178,16 @@ body {
   justify-content: space-between;
   border-bottom: 1px solid #eee;
   background: #29bde0; }
+  .header > p {
+    margin: 2vw; }
 
 footer {
   position: absolute;
   bottom: 25px;
   width: 70vw;
   height: 45px;
+  min-width: 290px;
+  max-width: 455px;
   background: #fbb435; }
   footer a {
     width: inherit;
@@ -192,16 +201,16 @@ input {
   text-align: center;
   background: none; }
 
-body {
-  background: #eee; }
-
 .center-v, .main .part2 img {
   position: absolute;
   top: 50%;
   transform: translatey(-50%); }
 
+body > div {
+  background: #eee; }
+
 .main > div, .main > p {
-  width: 90vw;
+  width: 90%;
   margin: 5px;
   background: #fff;
   text-align: center; }
@@ -212,7 +221,7 @@ body {
 .main .part1 {
   height: 170px; }
   .main .part1 > div {
-    margin: 10vw; }
+    margin: 10%; }
 .main .part2 {
   position: relative;
   height: 140px;
@@ -227,9 +236,9 @@ body {
     height: 20px;
     top: 80%; }
     .main .part2 img:last-child {
-      right: 2vw; }
+      right: 2%; }
     .main .part2 img:first-child {
-      left: 2vw; }
+      left: 2%; }
   .main .part2 #player {
     border: 1px solid #eee;
     width: 30px;

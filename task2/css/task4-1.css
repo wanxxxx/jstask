@@ -112,12 +112,12 @@ hr {
   align-items: center;
   justify-content: space-between; }
 
-.center2, body {
+.center2, body > div, body {
   display: flex;
   align-items: center;
   flex-direction: column; }
 
-.center3, footer, main .choose > div {
+.center3, body, footer, main .choose > div {
   display: flex;
   align-items: center;
   justify-content: center; }
@@ -149,23 +149,28 @@ hr {
 
 body {
   margin: 0;
-  padding: 0;
-  min-width: 290px;
-  height: 640px;
-  position: relative; }
+  padding: 0; }
+  body > div {
+    height: 650px;
+    position: relative;
+    min-width: 290px;
+    max-width: 800px;
+    background: #29bde0; }
   body main {
-    width: 100%;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
     flex-direction: column;
-    min-width: 280px; }
+    min-width: 290px;
+    max-width: 650px;
+    overflow-y: auto; }
 
 .header {
-  width: 90%;
+  min-width: 290px;
+  max-width: 650px;
+  width: 100vw;
   height: 60px;
-  padding: 0 5%;
   color: #FFF;
   z-index: 2;
   display: flex;
@@ -173,12 +178,15 @@ body {
   justify-content: space-between;
   border-bottom: 1px solid #eee;
   background: #29bde0; }
+  .header > p {
+    margin: 2vw; }
 
 footer {
   position: absolute;
   bottom: 25px;
   width: 70vw;
   height: 45px;
+  max-width: 455px;
   background: #fbb435; }
   footer a {
     width: inherit;
@@ -192,37 +200,30 @@ input {
   text-align: center;
   background: none; }
 
-body {
-  background: #eee; }
-
 .center-v {
   position: absolute;
   top: 50%;
   transform: translatey(-50%); }
 
-body {
-  background: #29bde0; }
-
-main {
-  margin: 20px 0; }
-  main .main {
-    width: 91vw; }
-  main .choose {
-    width: 25vw;
-    height: 25vw;
-    border: 2px solid #fff;
-    display: inline-block;
-    margin: 4vw 2vw; }
-    main .choose .choose1 {
-      color: #000;
-      width: inherit;
-      background: #f5c97b;
-      height: 70%; }
-    main .choose .choose2 {
-      color: #fff;
-      width: 15px;
-      width: inherit;
-      height: 30%;
-      background: #83b09a; }
+main .main {
+  margin-top: 50px;
+  width: 389px; }
+main .choose {
+  width: 100px;
+  height: 100px;
+  border: 4px solid #fff;
+  display: inline-block;
+  margin: 20px 10px; }
+  main .choose .choose1 {
+    color: #000;
+    width: inherit;
+    background: #f5c97b;
+    height: 70%; }
+  main .choose .choose2 {
+    color: #fff;
+    width: 15px;
+    width: inherit;
+    height: 30%;
+    background: #83b09a; }
 
 /*# sourceMappingURL=task4-1.css.map */

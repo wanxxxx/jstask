@@ -1,5 +1,5 @@
 @import'common';
-body {
+body>div {
     background: $blue;
 }
 input {
@@ -10,11 +10,13 @@ input {
     color: #fff;
 }
 main{
+    margin-bottom: 100px;
+    width: 100%;
     .one {
         color: #f3425e
     }
     >div:nth-child(1) {
-        width: 70vw;
+        width: 70%;
         height: 300px;
         background: #ffedc5;
         border: 3px solid #fff;
@@ -40,13 +42,14 @@ main{
         }
         >div>div {
             height: 10px;
-            width: 70vw;
+            width: 70%;
             margin: 20px 0;
             border-top: 2px solid #fff;
         }
     }
 }
 footer:hover {
+    margin-top: 100px;
     box-shadow: 0 0 5px #666 inset;
 }
 .btn {

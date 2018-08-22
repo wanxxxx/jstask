@@ -1,18 +1,12 @@
 @import'common';
-@mixin flex($ali:center, $jus:center, $w:100vw, $h:60px) {
-    display: flex;
-    align-items: $ali;
-    justify-content: $jus;
-    width: $w;
-    height: $h;
-}
+
 @mixin abs ($top:60px) {
     position: absolute;
     top: $top;
 }
 body {
-    background: $blue;
-    background: #eee;
+>div
+    {background: #eee;}
 }
 .show {
     display: flex;
@@ -22,9 +16,10 @@ body {
 }
 .main1 {
     display: none;
+    width: 90%;
     >div {
         background: #fff;
-        width: 95vw;
+        width: 95%;
         border: 2px solid #ccc;
         margin-top: 5px;
         @extend .center2;
@@ -34,7 +29,7 @@ body {
     }
     .div1 {
         height: 40px;
-        @extend .center3;
+        @extend .center3;width: 100%;
         input {
             color: $blue;
         }
@@ -44,7 +39,8 @@ body {
         @extend .center3;
         flex-direction: row;
         position: relative;
-        display: none;
+        display: none;width: 100%;
+        >div{width: 100%;}
         &::before {
             content: '';
             position: absolute;
@@ -70,6 +66,7 @@ body {
             height: 30px;
             width: 30px;
         }
+        .btn{width: 70%;}
         .btn::before {
             content: '';
             position: absolute;
@@ -92,7 +89,7 @@ body {
         }
     }
     .input1 {
-        width: 70vw;
+        width: 70%;
         display: none;
         padding-left: 10px;
     }
@@ -105,10 +102,10 @@ body {
 .a {
     background: #b9e9f5;
     @include abs;
-    @include flex ($w: 90vw, $jus:space-between);
+
     .s {
         @include abs;
-        left: 10vw;
+        left: 10%;
         border-top: 10px solid #b9e9f5;
         border-left: 5px solid transparent;
         border-right: 5px solid transparent;
@@ -119,7 +116,7 @@ body {
     background: #24a7c6;
     margin: 12px;
     height: 30px;
-    width: 70vw;
+    width: 125%;
     color: #fff;
     position: relative;
     @extend .size-m, .center3;
@@ -167,12 +164,13 @@ body {
 }
 footer {
     bottom: 0;
-    width: 100vw;
     height: 75px;
     background-color: rgba(41, 189, 224, 0.5);
+    width: 100%;
+    max-width: 100%;
     a {
-        width: 40vw;
+        width: 40%;
         padding: 10px;
-        margin: 0 5vw;
+        margin: 0 5%;
     }
 }

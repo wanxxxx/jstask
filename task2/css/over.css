@@ -112,12 +112,12 @@ hr {
   align-items: center;
   justify-content: space-between; }
 
-.center2, body, .main-part1, button {
+.center2, body > div, body, .main-part1, button {
   display: flex;
   align-items: center;
   flex-direction: column; }
 
-.center3, footer, .main-part3 > div {
+.center3, body, footer, .main-part3 > div {
   display: flex;
   align-items: center;
   justify-content: center; }
@@ -149,23 +149,28 @@ hr {
 
 body {
   margin: 0;
-  padding: 0;
-  min-width: 290px;
-  height: 640px;
-  position: relative; }
+  padding: 0; }
+  body > div {
+    height: 650px;
+    position: relative;
+    min-width: 290px;
+    max-width: 800px;
+    background: #29bde0; }
   body main {
-    width: 100%;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
     flex-direction: column;
-    min-width: 280px; }
+    min-width: 290px;
+    max-width: 650px;
+    overflow-y: auto; }
 
 .header {
-  width: 90%;
+  min-width: 290px;
+  max-width: 650px;
+  width: 100vw;
   height: 60px;
-  padding: 0 5%;
   color: #FFF;
   z-index: 2;
   display: flex;
@@ -173,12 +178,15 @@ body {
   justify-content: space-between;
   border-bottom: 1px solid #eee;
   background: #29bde0; }
+  .header > p {
+    margin: 2vw; }
 
 footer {
   position: absolute;
   bottom: 25px;
   width: 70vw;
   height: 45px;
+  max-width: 455px;
   background: #fbb435; }
   footer a {
     width: inherit;
@@ -192,20 +200,14 @@ input {
   text-align: center;
   background: none; }
 
-body {
-  background: #eee; }
-
 .center-v {
   position: absolute;
   top: 50%;
   transform: translatey(-50%); }
 
-body {
-  background: #5fc0cd; }
-
 .main {
   background: #5fc0cd;
-  padding: 60px 10vw;
+  padding: 60px 10%;
   position: relative;
   height: 200px; }
   .main-part1 .img1 {
@@ -223,7 +225,7 @@ body {
   .main-part3 {
     position: absolute;
     top: 230px;
-    left: -32vw; }
+    left: -32%; }
     .main-part3 p {
       width: 100px;
       color: white;
@@ -233,18 +235,18 @@ body {
 .main2 {
   color: #868686;
   background: white;
-  width: 95vw;
-  margin: 0 2.5vw; }
+  width: 95%;
+  margin: 0 2.5%; }
   .main2 .box {
     border: 1px solid #c4c4c4; }
   .main2 p {
     text-align: left;
-    width: 95vw;
-    padding: 5px 7.5vw; }
+    width: 95%;
+    padding: 5px 7.5%; }
 
 button {
   height: 40px;
-  width: 35vw;
+  width: 35%;
   background: #fbb435;
   border: none;
   color: white;

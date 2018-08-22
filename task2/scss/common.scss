@@ -178,24 +178,32 @@ $border:1px solid #eee;
 body {
     margin: 0;
     padding: 0;
-    min-width: 290px;
-    height: 640px;
-    position: relative;
+    @extend .center3;
+    >div {
+        height: 650px;
+        position: relative;
+        @extend .center2;
+        min-width: 290px;
+        max-width: 800px;
+        background: $blue;
+    }
     main {
-        width: 100%;
+        width: 100vw;
         display: flex;
         justify-content: center;
         align-items: center;
-        overflow: hidden;
         flex-direction: column;
-        min-width: 280px;
         @extend .size-m;
+        min-width: 290px;
+        max-width: 650px;
+        overflow-y: auto;
     }
 }
 .header {
-    width: 90%;
+    min-width: 290px;
+    max-width: 650px;
+    width: 100vw;
     height: 60px;
-    padding: 0 5%;
     color: #FFF;
     z-index: 2;
     display: flex;
@@ -203,12 +211,16 @@ body {
     justify-content: space-between;
     border-bottom: $border;
     background: $blue;
+    >p {
+        margin: 2vw;
+    }
 }
 footer {
     position: absolute;
     bottom: 25px;
     width: 70vw;
     height: 45px;
+    max-width: 650px*0.7;
     @extend .center3;
     background: #fbb435;
     a {
@@ -225,7 +237,6 @@ input {
     background: none;
 }
 body {
-    background: #eee;
     @extend .center2;
 }
 .center-v {

@@ -1,7 +1,10 @@
 @import'common';
+body>div {
+    background: #eee;
+}
 .main {
     >div, >p {
-        width: 90vw;
+        width: 90%;
         margin: 5px;
         background: #fff;
         text-align: center;
@@ -17,7 +20,7 @@
         height: 170px;
         @extend .center3;
         >div {
-            margin: 10vw;
+            margin: 10%;
         }
     }
     .part2 {
@@ -38,17 +41,17 @@
             @extend .center-v;
             top: 80%;
             &:last-child {
-                right: 2vw;
+                right: 2%;
             }
             &:first-child {
-                left: 2vw;
+                left: 2%;
             }
         }
         #player {
             border: $border;
             width: 30px;
             height: 30px;
-            background:#eee;
+            background: #eee;
             color: orange;
         }
     }

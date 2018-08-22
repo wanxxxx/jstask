@@ -1,6 +1,6 @@
 @import'common';
 $blue:#5fc0cd;
-@mixin flex($ali:center, $jus:center, $w:100vw, $h:60px) {
+@mixin flex($ali:center, $jus:center, $w:100%, $h:60px) {
     display: flex;
     align-items: $ali;
     justify-content: $jus;
@@ -12,12 +12,10 @@ $blue:#5fc0cd;
     top: $top;
 }
 $border:1px solid #c4c4c4;
-body {
-    background: $blue;
-}
+
 .main {
     background: $blue;
-    padding: 60px 10vw;
+    padding: 60px 10%;
     position: relative;
     height: 200px;
     &-part1 {
@@ -37,7 +35,7 @@ body {
     }
     &-part3 {
         @include abs(230px);
-        left: -32vw;
+        left: -32%;
         p {
             width: 100px;
             @extend .size-m;
@@ -53,20 +51,20 @@ body {
 .main2 {
     color: #868686;
     background: white;
-    width: 95vw;
-    margin: 0 2.5vw;
+    width: 95%;
+    margin: 0 2.5%;
     .box {
         border: $border;
     }
     p {
         text-align: left;
-        width: 95vw;
-        padding: 5px 7.5vw;
+        width: 95%;
+        padding: 5px 7.5%;
     }
 }
 button {
     height: 40px;
-    width: 35vw;
+    width: 35%;
     background: #fbb435;
     border: none;
     color: white;

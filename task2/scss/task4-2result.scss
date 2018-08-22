@@ -1,7 +1,7 @@
 @import'common';
 @import'task4-1';
 
-@mixin flex($ali:center, $jus:center, $w:100vw, $h:60px) {
+@mixin flex($ali:center, $jus:center, $w:100%, $h:60px) {
     display: flex;
     align-items: $ali;
     justify-content: $jus;
@@ -12,21 +12,27 @@
     position: absolute;
     top: $top;
 }
-body {
+body>div {
     background: $blue;
 }
+#main2{width: 100%;}
 .a {
     background: #b9e9f5;
     @include abs;
-    @include flex ($w: 90vw, $jus:space-between);
+    @include flex ($w: 100%, $jus:space-between);
+    >div{
+        margin-left: 5%;
+    }
     .s {
         @include abs;
-        left: 10vw;
+        left: 10%;
         border-top: 10px solid #b9e9f5;
         border-left: 5px solid transparent;
         border-right: 5px solid transparent;
         z-index: 1;
     }
+}
+footer{
 }
 .main {
     //task4-1
@@ -39,7 +45,7 @@ body {
         width: 20px;
         z-index: 100;
         @extend .center-x;
-        top: 26vw;
+        top: 110px;
         visibility: hidden;
     }
     .img-click {
