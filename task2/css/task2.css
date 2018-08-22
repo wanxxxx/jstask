@@ -153,22 +153,16 @@ body {
   body > div {
     height: 650px;
     position: relative;
-    min-width: 290px;
+    min-width: 330px;
     max-width: 800px;
     background: #29bde0; }
   body main {
-    width: 100vw;
+    width: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
-    flex-direction: column;
-    min-width: 290px;
-    max-width: 650px;
-    overflow-y: auto; }
+    flex-direction: column; }
 
 .header {
-  min-width: 290px;
-  max-width: 650px;
   width: 100vw;
   height: 60px;
   color: #FFF;
@@ -186,7 +180,6 @@ footer {
   bottom: 25px;
   width: 70vw;
   height: 45px;
-  min-width: 290px;
   max-width: 455px;
   background: #fbb435; }
   footer a {

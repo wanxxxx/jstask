@@ -153,22 +153,16 @@ body {
   body > div {
     height: 650px;
     position: relative;
-    min-width: 290px;
+    min-width: 330px;
     max-width: 800px;
     background: #29bde0; }
   body main {
-    width: 100vw;
+    width: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
-    flex-direction: column;
-    min-width: 290px;
-    max-width: 650px;
-    overflow-y: auto; }
+    flex-direction: column; }
 
 .header {
-  min-width: 290px;
-  max-width: 650px;
   width: 100vw;
   height: 60px;
   color: #FFF;
@@ -205,11 +199,14 @@ input {
   top: 50%;
   transform: translatey(-50%); }
 
+* {
+  overflow-y: hidden; }
+
 .main {
-  background: #5fc0cd;
   padding: 60px 10%;
   position: relative;
-  height: 200px; }
+  height: 200px;
+  width: 80%; }
   .main-part1 .img1 {
     position: absolute;
     top: 70px; }
@@ -225,7 +222,7 @@ input {
   .main-part3 {
     position: absolute;
     top: 230px;
-    left: -32%; }
+    left: 10%; }
     .main-part3 p {
       width: 100px;
       color: white;
@@ -235,14 +232,12 @@ input {
 .main2 {
   color: #868686;
   background: white;
-  width: 95%;
-  margin: 0 2.5%; }
+  width: 90%; }
   .main2 .box {
     border: 1px solid #c4c4c4; }
   .main2 p {
     text-align: left;
-    width: 95%;
-    padding: 5px 7.5%; }
+    margin: 5px 0  5px 5%; }
 
 button {
   height: 40px;

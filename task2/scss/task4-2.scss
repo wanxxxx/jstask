@@ -122,8 +122,7 @@ body {
     @extend .size-m, .center3;
 }
 .main {
-    //task4-1
-    @include abs (120px);
+
     &-div {
         width: 351px;
         white-space: normal;

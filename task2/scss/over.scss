@@ -12,12 +12,13 @@ $blue:#5fc0cd;
     top: $top;
 }
 $border:1px solid #c4c4c4;
-
+*{overflow-y: hidden;}
 .main {
-    background: $blue;
     padding: 60px 10%;
     position: relative;
     height: 200px;
+    width: 80%;
+
     &-part1 {
         @extend .center2;
         .img1 {
@@ -34,8 +35,9 @@ $border:1px solid #c4c4c4;
         }
     }
     &-part3 {
+
         @include abs(230px);
-        left: -32%;
+        left: 10%;
         p {
             width: 100px;
             @extend .size-m;
@@ -51,15 +53,14 @@ $border:1px solid #c4c4c4;
 .main2 {
     color: #868686;
     background: white;
-    width: 95%;
-    margin: 0 2.5%;
+    width: 90%;
     .box {
         border: $border;
     }
     p {
         text-align: left;
-        width: 95%;
-        padding: 5px 7.5%;
+        
+        margin: 5px 0  5px 5%;
     }
 }
 button {

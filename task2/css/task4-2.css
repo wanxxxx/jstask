@@ -153,22 +153,16 @@ body {
   body > div {
     height: 650px;
     position: relative;
-    min-width: 290px;
+    min-width: 330px;
     max-width: 800px;
     background: #29bde0; }
   body main {
-    width: 100vw;
+    width: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
-    flex-direction: column;
-    min-width: 290px;
-    max-width: 650px;
-    overflow-y: auto; }
+    flex-direction: column; }
 
 .header {
-  min-width: 290px;
-  max-width: 650px;
   width: 100vw;
   height: 60px;
   color: #FFF;
@@ -302,39 +296,36 @@ body > div {
   color: #fff;
   position: relative; }
 
-.main {
-  position: absolute;
-  top: 120px; }
-  .main-div {
-    width: 351px;
-    white-space: normal; }
-    .main-div > div {
-      margin: 15px;
-      display: inline-block;
-      width: 80px;
-      height: 80px;
-      border: 2px solid #fff;
-      position: relative; }
-      .main-div > div .choose1 {
-        color: #000;
-        width: inherit;
-        background: #f5c97b;
-        height: 70%; }
-      .main-div > div .choose2 {
-        color: #fff;
-        width: 15px;
-        width: inherit;
-        height: 30%;
-        background: #83b09a; }
-      .main-div > div .img {
-        height: 15px;
-        width: 15px;
-        z-index: 100;
-        position: absolute;
-        top: 85px;
-        visibility: hidden; }
-      .main-div > div:hover .img {
-        visibility: visible; }
+.main-div {
+  width: 351px;
+  white-space: normal; }
+  .main-div > div {
+    margin: 15px;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    border: 2px solid #fff;
+    position: relative; }
+    .main-div > div .choose1 {
+      color: #000;
+      width: inherit;
+      background: #f5c97b;
+      height: 70%; }
+    .main-div > div .choose2 {
+      color: #fff;
+      width: 15px;
+      width: inherit;
+      height: 30%;
+      background: #83b09a; }
+    .main-div > div .img {
+      height: 15px;
+      width: 15px;
+      z-index: 100;
+      position: absolute;
+      top: 85px;
+      visibility: hidden; }
+    .main-div > div:hover .img {
+      visibility: visible; }
 
 footer {
   bottom: 0;

@@ -1,6 +1,5 @@
 @import'common';
 @import'task4-1';
-
 @mixin flex($ali:center, $jus:center, $w:100%, $h:60px) {
     display: flex;
     align-items: $ali;
@@ -15,12 +14,16 @@
 body>div {
     background: $blue;
 }
-#main2{width: 100%;}
+#main2 {
+    width: 100%;
+    height: 650px;
+}
 .a {
+
     background: #b9e9f5;
-    @include abs;
+    position: relative;
     @include flex ($w: 100%, $jus:space-between);
-    >div{
+    >div {
         margin-left: 5%;
     }
     .s {
@@ -32,11 +35,8 @@ body>div {
         z-index: 1;
     }
 }
-footer{
-}
 .main {
-    //task4-1
-    @include abs (120px);
+    height: 400px;
     .choose {
         position: relative;
     }
@@ -49,7 +49,7 @@ footer{
         visibility: hidden;
     }
     .img-click {
-       @extend .img;
+        @extend .img;
         visibility: visible;
     }
 }
