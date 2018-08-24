@@ -21,9 +21,7 @@ for (i = 0; i < msg.length; i++) {
     input1[i].textContent = msg[i];
     input2[i].textContent = (i + 1) + "号";
 }
-console.log(choose)
 //--------------点击显示图片--------------\
-
 for (i = 0; i < msg.length; i++) {
     choose[i].onclick = function() {
         for (i = 0; i < msg.length; i++) {
@@ -31,18 +29,18 @@ for (i = 0; i < msg.length; i++) {
         }
         var img = this.querySelector('.img');
         img.setAttribute("class", "img-click");
-        if (checknum == 1 || checknum == 4) {
-            var deadthis = $('.choose').index(this)
-            sessionStorage.setItem('deadthis', deadthis);
-            console.log(deadthis)
-        }
+        var deadthis = $('.choose').index(this)
+        sessionStorage.setItem('deadthis', deadthis);
+        console.log(deadthis)
+        var killed = $('.choose1')[deadthis]
+        sessionStorage.setItem('killed', killed.textContent);
+        console.log(killed.textContent)
     }
 }
 //--------------点击确认--------------
 $("#btn2").click(function() {
+    var killed = sessionStorage.getItem('killed')
     var imgc = $(".img-click").length;
-    console.log(imgc)
-    var killed = $(".img-click").prev().prev();
     if (imgc == 0) { //没点击任何玩家
         if (checknum == 4) {
             alert("请先选择要操作的玩家");
@@ -51,10 +49,14 @@ $("#btn2").click(function() {
             sessionStorage.deadnum = JSON.stringify(deadnum);
             window.location.href = 'task4-2.html';
         }
-    } else if (killed.textContent === "杀手" & checknum !== 4) {
+    } else if (killed == "杀手" && checknum == 1) {
+        console.log('1')
+        console.log(aaa)
         alert("你是杀手不能杀死本职业，请选择其他玩家杀死")
     } else { //点击过玩家
         var deadthis = +sessionStorage.getItem('deadthis');
+        var killed = $(".img-click").prev().prev();
+        var aaa = killed.textContent
         if (people[deadthis] == 'dead') {
             alert('当前玩家已死亡，请选择其他玩家')
         } else {
@@ -65,11 +67,10 @@ $("#btn2").click(function() {
                 sessionStorage.setItem('daynum', daynum + 1);
                 sessionStorage.setItem('checknum', 0);
             }
-            sessionStorage.deadnum = JSON.stringify(deadnum);
             window.location.href = 'task4-2.html';
+            sessionStorage.deadnum = JSON.stringify(deadnum);
         }
     }
-    sessionStorage.klist = JSON.stringify(klist);
 });
 //--------------杀掉后变色--------------
 $.each(people, function(idx) {

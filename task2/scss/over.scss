@@ -12,13 +12,14 @@ $blue:#5fc0cd;
     top: $top;
 }
 $border:1px solid #c4c4c4;
-*{overflow-y: hidden;}
+* {
+    overflow-y: hidden;
+}
 .main {
     padding: 60px 10%;
     position: relative;
     height: 200px;
     width: 80%;
-
     &-part1 {
         @extend .center2;
         .img1 {
@@ -35,7 +36,6 @@ $border:1px solid #c4c4c4;
         }
     }
     &-part3 {
-
         @include abs(230px);
         left: 10%;
         p {
@@ -59,8 +59,8 @@ $border:1px solid #c4c4c4;
     }
     p {
         text-align: left;
-        
-        margin: 5px 0  5px 5%;
+        margin: 5px 0 5px 5%;
+        display: block;
     }
 }
 button {
