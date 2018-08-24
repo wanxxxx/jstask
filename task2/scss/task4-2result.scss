@@ -18,6 +18,13 @@ body>div {
     width: 100%;
     height: 650px;
 }
+header{
+    width: 100%;
+    @extend .center2;
+    >div{
+        width: 100%;
+    }
+}
 .a {
 
     background: #b9e9f5;
@@ -36,7 +43,7 @@ body>div {
     }
 }
 .main {
-    height: 400px;
+   
     .choose {
         position: relative;
     }

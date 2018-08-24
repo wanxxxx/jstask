@@ -1,9 +1,10 @@
 @import'common';
-main {overflow-y: auto;
-    justify-content:auto;
+main {
+    overflow-y: auto;
+    justify-content: auto;
     .main {
         width: 330px;
-
+        padding-bottom:75px;
     }
     .choose {
         width: 80px;
