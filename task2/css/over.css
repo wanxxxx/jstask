@@ -112,12 +112,12 @@ hr {
   align-items: center;
   justify-content: space-between; }
 
-.center2, body > div, body, .main-part1, button {
+.center2, body > div, body, .main > div, .main-part1 {
   display: flex;
   align-items: center;
   flex-direction: column; }
 
-.center3, body, footer, .main-part3 > div {
+.center3, body, footer, .main-part3 > div, footer div {
   display: flex;
   align-items: center;
   justify-content: center; }
@@ -142,7 +142,7 @@ hr {
   top: 50%;
   transform: translatey(-50%); }
 
-.center-x, button {
+.center-x {
   position: absolute;
   left: 50%;
   transform: translatex(-50%); }
@@ -174,7 +174,7 @@ main {
   justify-content: space-between;
   border-bottom: 1px solid #eee;
   background: #29bde0; }
-  .header > p {
+  .header p {
     margin: 2vw; }
 
 footer {
@@ -202,29 +202,34 @@ input {
   transform: translatey(-50%); }
 
 * {
-  overflow-y: hidden; }
+  justify-content: auto; }
+
+main {
+  overflow-y: auto; }
 
 .main {
-  padding: 60px 10%;
-  position: relative;
-  height: 200px;
-  width: 80%; }
-  .main-part1 .img1 {
-    position: absolute;
-    top: 70px; }
-  .main-part1 .img2 {
-    position: absolute;
-    top: 60px; }
-  .main-part1 > p {
-    position: absolute;
-    top: 149px;
-    font-weight: bold;
-    color: white;
-    white-space: nowrap; }
+  overflow-y: auto;
+  width: 100%;
+  height: 650px; }
+  .main > div {
+    width: 80%; }
+  .main-part1 {
+    padding: 95px 0;
+    position: relative; }
+    .main-part1 .img1 {
+      position: absolute;
+      top: 70px; }
+    .main-part1 .img2 {
+      position: absolute;
+      top: 60px; }
+    .main-part1 > p {
+      position: absolute;
+      top: 149px;
+      font-weight: bold;
+      color: white;
+      white-space: nowrap; }
   .main-part3 {
-    position: absolute;
-    top: 230px;
-    left: 10%; }
+    margin-left: -50%; }
     .main-part3 p {
       width: 100px;
       color: white;
@@ -232,9 +237,11 @@ input {
       margin: 7px; }
 
 .main2 {
+  margin-top: 50px;
   color: #868686;
   background: white;
-  width: 90%; }
+  width: 90%;
+  margin-bottom: 100px; }
   .main2 .box {
     border: 1px solid #c4c4c4; }
   .main2 p {
@@ -242,17 +249,17 @@ input {
     margin: 5px 0 5px 5%;
     display: block; }
 
-button {
-  height: 40px;
-  width: 35%;
-  background: #fbb435;
-  border: none;
-  color: white;
-  border-radius: 5px;
-  text-align: center; }
-
-.div3 {
-  height: 60px;
-  width: 100%; }
+footer {
+  background: #29bde0;
+  width: 90%;
+  max-width: 90%;
+  height: 70px;
+  position: absolute;
+  bottom: 0; }
+  footer div {
+    width: 70%;
+    background: #fbb435;
+    height: 45px;
+    margin-bottom: 25px; }
 
 /*# sourceMappingURL=over.css.map */

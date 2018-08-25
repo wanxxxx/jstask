@@ -1,18 +1,22 @@
 @import'common';
-
 @mixin abs ($top:60px) {
     position: absolute;
     top: $top;
 }
 body {
->div
-    {background: #eee;}
+    >div {
+        background: #eee;
+    }
 }
 .show {
     display: flex;
 }
 .hide {
     display: none;
+}
+#main {
+    height: 520px;
+    overflow-y: auto;margin-bottom: 75px;
 }
 .main1 {
     display: none;
@@ -29,7 +33,8 @@ body {
     }
     .div1 {
         height: 40px;
-        @extend .center3;width: 100%;
+        @extend .center3;
+        width: 100%;
         input {
             color: $blue;
         }
@@ -39,8 +44,11 @@ body {
         @extend .center3;
         flex-direction: row;
         position: relative;
-        display: none;width: 100%;
-        >div{width: 100%;}
+        display: none;
+        width: 100%;
+        >div {
+            width: 100%;
+        }
         &::before {
             content: '';
             position: absolute;
@@ -66,7 +74,9 @@ body {
             height: 30px;
             width: 30px;
         }
-        .btn{width: 70%;}
+        .btn {
+            width: 70%;
+        }
         .btn::before {
             content: '';
             position: absolute;
@@ -102,7 +112,6 @@ body {
 .a {
     background: #b9e9f5;
     @include abs;
-
     .s {
         @include abs;
         left: 10%;
@@ -122,7 +131,6 @@ body {
     @extend .size-m, .center3;
 }
 .main {
-
     &-div {
         width: 351px;
         white-space: normal;
@@ -162,11 +170,12 @@ body {
     }
 }
 footer {
-    bottom: 0;
-    height: 75px;
-    background-color: rgba(41, 189, 224, 0.5);
+    background: $blue;
     width: 100%;
     max-width: 100%;
+    height: 70px;
+    position: absolute;
+    bottom: 0;
     a {
         width: 40%;
         padding: 10px;

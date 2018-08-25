@@ -7,20 +7,24 @@ $blue:#5fc0cd;
     width: $w;
     height: $h;
 }
-@mixin abs ($top:60px) {
-    position: absolute;
-    top: $top;
-}
 $border:1px solid #c4c4c4;
 * {
-    overflow-y: hidden;
+    justify-content: auto;
+}
+main {
+    overflow-y: auto;
 }
 .main {
-    padding: 60px 10%;
-    position: relative;
-    height: 200px;
-    width: 80%;
+    overflow-y: auto;
+    width: 100%;
+    height: 650px;
+    >div {
+        width: 80%;
+        @extend .center2;
+    }
     &-part1 {
+        padding: 95px 0;
+        position: relative;
         @extend .center2;
         .img1 {
             @include abs(70px);
@@ -36,8 +40,7 @@ $border:1px solid #c4c4c4;
         }
     }
     &-part3 {
-        @include abs(230px);
-        left: 10%;
+        margin-left: -50%;
         p {
             width: 100px;
             @extend .size-m;
@@ -51,9 +54,11 @@ $border:1px solid #c4c4c4;
     }
 }
 .main2 {
+    margin-top: 50px;
     color: #868686;
     background: white;
     width: 90%;
+    margin-bottom:100px;
     .box {
         border: $border;
     }
@@ -63,17 +68,18 @@ $border:1px solid #c4c4c4;
         display: block;
     }
 }
-button {
-    height: 40px;
-    width: 35%;
-    background: #fbb435;
-    border: none;
-    color: white;
-    border-radius: 5px;
-    text-align: center;
-    @extend .center2, .center-x;
-}
-.div3 {
-    height: 60px;
-    width: 100%;
+footer {
+    background: #29bde0;
+    width: 90%;
+    max-width: 90%;
+    height: 70px;
+    position: absolute;
+    bottom: 0;
+    div {
+        width: 70%;
+        background: #fbb435;
+        height: 45px;
+        margin-bottom: 25px;
+        @extend .center3;
+    }
 }

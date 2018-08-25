@@ -174,7 +174,7 @@ main {
   justify-content: space-between;
   border-bottom: 1px solid #eee;
   background: #29bde0; }
-  .header > p {
+  .header p {
     margin: 2vw; }
 
 footer {
