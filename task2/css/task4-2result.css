@@ -476,7 +476,6 @@ header {
 .main .img, .main .img-click {
   height: 20px;
   width: 20px;
-  z-index: 100;
   top: 90px;
   visibility: hidden; }
 .main .img-click {

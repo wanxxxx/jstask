@@ -36,6 +36,7 @@ body>div {
             color: orange;
         }
         img {
+            z-index: 1000;
             width: 20px;
             height: 20px;
             @extend .center-v;

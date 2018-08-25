@@ -227,6 +227,7 @@ body > div {
     font-size: 12px;
     color: orange; }
   .main .part2 img {
+    z-index: 1000;
     width: 20px;
     height: 20px;
     top: 80%; }
