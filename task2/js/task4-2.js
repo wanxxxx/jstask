@@ -183,7 +183,7 @@ $.each(klist, function(idx) {
         k.push(idx)
     }
 });
-if (k.length == killernum || p.length == (msg.length - killernum)) {
+if (k.length == killernum || killernum - k.length>=msg.length - killernum - p.length) {
     sessionStorage.klist = JSON.stringify(klist);
     window.location.href = 'over.html '
     console.log("杀手" + (killernum - k.length) + '人')
