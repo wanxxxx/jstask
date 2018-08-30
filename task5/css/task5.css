@@ -110,12 +110,12 @@ body {
   margin: 0;
   font-family: arial; }
 
-.center, .signin .input {
+.center, #signin .input {
   display: flex;
   align-items: center;
   justify-content: space-between; }
 
-.center2, .signin {
+.center2, body, #signin {
   display: flex;
   align-items: center;
   flex-direction: column; }
@@ -198,26 +198,35 @@ input {
   text-align: center;
   background: none; }
 
-.signin {
+#signin {
   background: #eee;
   position: absolute;
   top: 100px;
-  width: 90vw;
-  margin: 10px 5vw;
-  padding: 10px 0; }
-  .signin p {
+  width: 80%;
+  margin: 10px 5%;
+  padding: 10px 0;
+  max-width: 400px; }
+  #signin > p {
     color: #5fc0cd;
     margin: 20px; }
-  .signin .input {
+  #signin > p:nth-child(4) {
+    color: red; }
+  #signin .input {
     background: #fff;
     width: 76%;
     height: 35px;
-    margin: 5px 0;
-    padding: 2%; }
-    .signin .input > input {
-      width: 65vw;
-      text-align: left; }
-  .signin button {
+    padding: 2%;
+    margin: 10px 0; }
+    #signin .input img {
+      width: 20px;
+      margin: 0 3%; }
+    #signin .input > input {
+      width: 84%;
+      height: 24px;
+      text-align: left;
+      padding-left: 10px;
+      border-left: 2px solid #e8e8e8; }
+  #signin button {
     width: 80%;
     margin: 20px;
     background: #5fc0cd;

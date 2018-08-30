@@ -11,24 +11,25 @@
         </meta>
     </head>
     <body>
-        <div class="signin">
-            <p>后台登录</p>
+        <form id="signin">
+            <p>
+                后台登录
+            </p>
             <div class="input">
-                <img height="30.6" src="img/登陆_03.png" width="45"/>
-           
-                <input name="name" placeholder="账号" type="text"/>
+                <img src="img/登陆_03.png"/>
+                <input id="name" placeholder="账号" type="text" name="name" />
             </div>
             <div class="input">
-                <img height="30.6" src="img/登陆_06.png" width="45"/>
-                <input name="pass" placeholder="密码" type="password"/>
+                <img src="img/登陆_06.png"/>
+                <input id="pwd" placeholder="密码" type="password" name="pwd" />
             </div>
-            <button type="button" value="">
+            <p id="msg">
+            </p>
+            <button id="btn" type="submit" value="">
                 登录
             </button>
-        </div>
+        </form>
+        <script src="js/task5.js">
+        </script>
     </body>
-</html>
-<html>
-    <script src="js/task5.js">
-    </script>
 </html>
