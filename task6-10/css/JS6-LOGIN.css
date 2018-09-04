@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: url(../img/413471.png);
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+.loginform {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  height: 25rem;
+  width: 30rem;
+  text-align: center;
+  background-color: #20ce77;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+
+.wrap {
+  list-style: none;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+}
+
+.wrap img {
+  line-height: 2rem;
+  height: 2rem;
+  vertical-align: middle;
+  padding-right: 1rem;
+  border-right: 1px solid #ccc;
+}
+
+.wrap input[type="text"] {
+  width: 70%;
+  padding-left: 1rem;
+  height: 3rem;
+  line-height: 3rem;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+.wrap input[type="password"] {
+  width: 70%;
+  padding-left: 1rem;
+  height: 3rem;
+  line-height: 3rem;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+.login {
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  background-color: blue;
+  box-shadow: none;
+  outline: none;
+}
+
+.PointOut {
+  color: red;
+}

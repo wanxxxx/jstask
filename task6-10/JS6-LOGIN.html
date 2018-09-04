@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="css/JS6-LOGIN.css">
+
+<body>
+	<main class="loginform" ng-controller="login">
+		<!--控制器名称-->
+		<form name="check">
+			<h3>后台登陆</h3>
+			<div class="wrap">
+				<img src="img/JS5user.png" alt="" oncontextmenu="return false;" ondragstart="return false;">
+				<input autocomplete="off" type="text" placeholder="请输入用户名" ng-model="user" name="username" required>
+			</div>
+			<div class="PointOut" ng-if="check.username.$touched" ng-show="check.username.$error.required">
+				用户名不能为空
+			</div>
+			<div class="wrap">
+				<img src="img/JS5password.png" alt="" oncontextmenu="return false;" ondragstart="return false;">
+				<input autocomplete="off" type="password" placeholder="请输入密码" ng-model="pwd" name="password" required>
+			</div>
+			<div class="PointOut" ng-if="check.password.$touched" ng-show="check.password.$error.required">
+				密码不能为空
+			</div>
+		</form>
+		<button class="login" ng-click="login()">登陆</button>
+		<div class="PointOut">
+			<h4 ng-model="login_info">{{login_info}}</h4>
+		</div>
+	</main>
+</body>
+
+</html>
