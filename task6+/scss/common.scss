@@ -118,19 +118,9 @@ a:active {
 .clearfix:after {
     clear: both;
 }
-hr {
-    width: 100%;
-    border: none;
-    height: 1px;
-    margin: 0;
-    padding: 0
-}
 $blue:#29bde0;
 $border:1px solid #eee;
-body {
-    overflow-x: hidden;
 
-}
 * {
     padding: 0;
     margin: 0;
@@ -180,33 +170,8 @@ body {
     position: absolute;
     top: $t;
 }
-body {
-    margin: 0;
-    padding: 0;
-    @extend .center2;
-}
-.header {
-    width: 90%;
-    height: 45px;
-    padding: 0 5%;
-    color: #FFF;
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: $border;
-}
-main {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    flex-direction: column;
-}
-.orange {
-    color: orange;
-}
+
+
 .center-v {
     position: absolute;
     top: 50%;
@@ -217,13 +182,7 @@ main {
     left: 50%;
     transform: translatex(-50%)
 }
-.footer {
-    position: fixed;
-    bottom: 0;
-    width: 80vw;
-    height: 60px;
-    padding: 0 10vw;
-}
+
 input {
     border: none;
     text-align: center;

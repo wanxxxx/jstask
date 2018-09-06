@@ -1,0 +1,33 @@
+@import'common';
+#accordion {
+    background: #232a3a;
+    width: 250px;
+    >div {
+        padding: 0;
+        border-radius: 0;
+        border: none;
+        >div {
+            background: #232a3a;
+            border-radius: 0;
+            color: white;
+            .fa-pencil {
+                margin-right: 10px;
+            }
+            .fa-angle-right {
+                margin-left: 90px;
+            }
+        }
+        li {
+            height: 45px;
+            @extend .center3;
+            width: inherit;
+        }
+    }
+    .hover:hover {
+        background: #7b7f89;
+        cursor: pointer;
+    }
+    .hover:checked {
+        background: #7b7f89;
+    }
+}
