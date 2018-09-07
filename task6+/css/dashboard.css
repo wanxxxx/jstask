@@ -110,7 +110,7 @@ a:active {
   align-items: center;
   flex-direction: column; }
 
-.center3, #accordion > div li {
+.center3, #accordion .list, #accordion > div li {
   display: flex;
   align-items: center;
   justify-content: center; }
@@ -121,7 +121,7 @@ a:active {
 .padding-b {
   padding: 10px 0; }
 
-.size-l {
+.size-l, #accordion .list {
   font-size: 18px; }
 
 .size-m {
@@ -157,7 +157,13 @@ input {
 
 #accordion {
   background: #232a3a;
-  width: 250px; }
+  width: 250px;
+  height: 100vh;
+  color: white; }
+  #accordion .list {
+    height: 50px;
+    font-weight: bold;
+    margin-bottom: 10px; }
   #accordion > div {
     padding: 0;
     border-radius: 0;
