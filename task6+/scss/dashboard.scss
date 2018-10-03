@@ -1,16 +1,49 @@
 @import'common';
+
+.header {
+    height: 50px;
+    border-bottom: solid #e3e2e2 1px;
+    position: absolute;
+    top: 0;
+    @extend .center;
+    color: #fff;
+    width: 100vw;
+    height: 50px;
+    background: #fff;
+    .list {
+        width: 250px;
+        text-align: center;
+        @extend .size-l;
+        @extend .center3;
+
+        background: #232a3a;
+        height: 50px;
+        border-bottom: solid #737373 1px;
+    }
+    .top {
+        float: right;
+        color: #6565bd;
+        background: #fff;
+        >div {
+            display: inline-block;
+            width: 60px;
+            border-right: solid #d1d0d0 1px;
+            text-align: center;
+        }
+        >div:nth-child(3) {
+            border: none;
+        }
+    }
+}
+
 #accordion {
     background: #232a3a;
     width: 250px;
     height: 100vh;
     color: white;
-    .list {
-        height: 50px;
-        @extend .center3,.size-l;
-        font-weight: bold;
-
-        margin-bottom: 10px;
-    }
+    margin: 0;
+    padding-top: 75, px;
+    float: left;
     >div {
         padding: 0;
         border-radius: 0;
@@ -39,4 +72,10 @@
     .hover:checked {
         background: #7b7f89;
     }
+}
+
+.main {
+    height: 100vh;
+    padding: 50px 0 0 250px;
+    background: #f5f5f5;
 }

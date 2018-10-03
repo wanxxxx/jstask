@@ -2,64 +2,101 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    <script src="http://how2j.cn/study/js/jquery/2.0.0/jquery.min.js"></script>
+    <meta charset="utf-8">
+    <title>
+        Document
+    </title>
+    <script src="http://how2j.cn/study/js/jquery/2.0.0/jquery.min.js">
+    </script>
     <link href="http://how2j.cn/study/css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet">
-    <script src="http://how2j.cn/study/js/bootstrap/3.3.6/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
-    <link rel="stylesheet" href="css/dashboard.css">
-    <link rel="stylesheet" href="scss/dashboard.scss">
+    <script src="http://how2j.cn/study/js/bootstrap/3.3.6/bootstrap.min.js">
+    </script>
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+    <link href="css/dashboard.css" rel="stylesheet">
+    <link href="scss/dashboard.scss" rel="stylesheet">
 </head>
 
 <body>
-    <div class="panel-group" id="accordion" aria-multiselectable="true" role="tablist">
-        <div class="list">萝卜多后台管理系统</div>
-        <div class="panel panel-default">
-            <div class="panel-heading hover" id="headingOne" aria-controls="collapseOne" aria-expanded="true" role="tab" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+    <div class="header">
+        <b class="list"> 萝卜多后台管理系统 </b>
+        <div class="top">
+          <div>管理</div>
+          <div>admin</div>
+          <div class="glyphicon glyphicon-off"></div>
+        </div>
+    </div>
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+<div class="panel panel-default">
+      <div aria-controls="collapseOne" aria-expanded="true" class="panel-heading hover" data-parent="#accordion" data-toggle="collapse" href="#collapseOne" id="headingOne" role="tab">
                 <h4 class="panel-title">
-                    <span class="fa fa-pencil"></span>
-                    后台管理
-                    <span class="fa fa-angle-right" ></span>                </h4>
-            </div>
-            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                        <span class="fa fa-pencil">
+                        </span>
+                        后台管理
+                        <span class="fa fa-angle-right">
+                        </span>
+        </h4>
+    </div>
+            <div aria-labelledby="headingOne" class="panel-collapse collapse in" id="collapseOne" role="tabpanel">
                 <ul>
-                    <li class="hover">模块管理</li>
-                    <li class="hover">角色管理</li>
-                    <li class="hover">密码修改</li>
-                    <li class="hover">账户管理</li>
+                    <li class="hover">
+                        模块管理
+                    </li>
+                    <li class="hover">
+                        角色管理
+                    </li>
+                    <li class="hover">
+                        密码修改
+                    </li>
+                    <li class="hover">
+                        账户管理
+                    </li>
                 </ul>
             </div>
-        </div>
+  </div>
         <div class="panel panel-default">
-            <div class="panel-heading hover" role="tab" id="headingTwo" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            <div aria-controls="collapseTwo" aria-expanded="false" class="panel-heading hover" data-parent="#accordion" data-toggle="collapse" href="#collapseTwo" id="headingTwo" role="tab">
                 <h4 class="panel-title">
-                        <span class="fa fa-pencil"></span>
+                        <span class="fa fa-pencil">
+                        </span>
                         信息管理
-                        <span class="fa fa-angle-right" ></span>                    </h4>
+                        <span class="fa fa-angle-right">
+                        </span>
+              </h4>
             </div>
-            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+            <div aria-labelledby="headingTwo" class="panel-collapse collapse" id="collapseTwo" role="tabpanel">
                 <ul>
-                    <li class="hover">公司列表</li>
-                    <li class="hover">职位列表</li>
+                    <li class="hover">
+                        公司列表
+                    </li>
+                    <li class="hover">
+                        职位列表
+                    </li>
                 </ul>
             </div>
         </div>
         <div class="panel panel-default">
-            <div class="panel-heading hover" role="tab" id="headingThree" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            <div aria-controls="collapseThree" aria-expanded="false" class="panel-heading hover" data-parent="#accordion" data-toggle="collapse" href="#collapseThree" id="headingThree" role="tab">
                 <h4 class="panel-title">
-                            <span class="fa fa-pencil">
-                            </span>
-                            内容管理
-                            <span class="fa fa-angle-right" ></span>                    </h4>
-            <add/div>
-            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                <ul>
-                    <li class="hover">Article列表</li>
-                </ul>
+                        <span class="fa fa-pencil">
+                        </span>
+                        内容管理
+                        <span class="fa fa-angle-right">
+                        </span>
+              </h4>
+                <add7 div="">
+                    <div aria-labelledby="headingThree" class="panel-collapse collapse" id="collapseThree" role="tabpanel">
+                        <ul>
+                            <li class="hover">
+                                Article列表
+                            </li>
+                        </ul>
+                    </div>
+                </add7>
             </div>
         </div>
     </div>
+<div class="main">
+		<h1>Welcome!</h1></div>
 </body>
 
 </html>

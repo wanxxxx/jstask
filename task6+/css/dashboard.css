@@ -100,7 +100,7 @@ a:active {
   margin: 0;
   font-family: arial; }
 
-.center {
+.center, .header {
   display: flex;
   align-items: center;
   justify-content: space-between; }
@@ -110,7 +110,7 @@ a:active {
   align-items: center;
   flex-direction: column; }
 
-.center3, #accordion .list, #accordion > div li {
+.center3, .header .list, #accordion > div li {
   display: flex;
   align-items: center;
   justify-content: center; }
@@ -121,7 +121,7 @@ a:active {
 .padding-b {
   padding: 10px 0; }
 
-.size-l, #accordion .list {
+.size-l, .header .list {
   font-size: 18px; }
 
 .size-m {
@@ -155,15 +155,41 @@ input {
   text-align: center;
   background: none; }
 
+.header {
+  height: 50px;
+  border-bottom: solid #e3e2e2 1px;
+  position: absolute;
+  top: 0;
+  color: #fff;
+  width: 100vw;
+  height: 50px;
+  background: #fff; }
+  .header .list {
+    width: 250px;
+    text-align: center;
+    background: #232a3a;
+    height: 50px;
+    border-bottom: solid #737373 1px; }
+  .header .top {
+    float: right;
+    color: #6565bd;
+    background: #fff; }
+    .header .top > div {
+      display: inline-block;
+      width: 60px;
+      border-right: solid #d1d0d0 1px;
+      text-align: center; }
+    .header .top > div:nth-child(3) {
+      border: none; }
+
 #accordion {
   background: #232a3a;
   width: 250px;
   height: 100vh;
-  color: white; }
-  #accordion .list {
-    height: 50px;
-    font-weight: bold;
-    margin-bottom: 10px; }
+  color: white;
+  margin: 0;
+  padding-top: 75px;
+  float: left; }
   #accordion > div {
     padding: 0;
     border-radius: 0;
@@ -184,3 +210,8 @@ input {
     cursor: pointer; }
   #accordion .hover:checked {
     background: #7b7f89; }
+
+.main {
+  height: 100vh;
+  padding: 50px 0 0 250px;
+  background: #f5f5f5; }
