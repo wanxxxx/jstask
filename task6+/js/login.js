@@ -14,7 +14,7 @@ app.controller("login", function($scope, $http, $state) {
             if (xhr.data.code === 0) {
                 $state.go("dashboard");
             } else {
-                $scope.msg = xhr.data.message;
+                $scope.msg = xhr.data;
             }
         })
     }
