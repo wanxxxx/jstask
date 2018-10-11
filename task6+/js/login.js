@@ -1,5 +1,5 @@
-app.controller("login", function ($scope, $http, $state) {
-    $scope.login = function () {
+app.controller("login", function($scope, $http, $state) {
+    $scope.login = function() {
         $http({
             method: "POST",
             url: '/carrots-admin-ajax/a/login',
@@ -10,7 +10,7 @@ app.controller("login", function ($scope, $http, $state) {
             header: {
                 'Content-Type': 'application/x-www-form-urlencoded'
             }
-        }).then(function (xhr) {
+        }).then(function(xhr) {
             if (xhr.data.code === 0) {
                 $state.go("dashboard");
             } else {
@@ -19,4 +19,3 @@ app.controller("login", function ($scope, $http, $state) {
         })
     }
 })
-
